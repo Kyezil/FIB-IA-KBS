@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-; Sat Nov 17 19:10:40 CET 2018
-=======
-; Sat Nov 17 20:42:42 CET 2018
->>>>>>> Stashed changes
+; Sat Nov 17 22:06:37 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,17 +7,10 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
-<<<<<<< Updated upstream
-	(single-slot edad
-;+		(comment "edad del anciano")
-		(type INTEGER)
-;+		(cardinality 0 1)
-=======
 	(single-slot grado
 ;+		(comment "grado del nidel de dependencia")
 		(type STRING)
 ;+		(cardinality 1 1)
->>>>>>> Stashed changes
 		(create-accessor read-write))
 	(multislot tiene
 ;+		(comment "Un anciano puede tener varias necesidades, es un objetivo cubrirlas para el anciano")
@@ -117,19 +106,6 @@
 		(type INSTANCE)
 ;+		(allowed-classes Necesidad)
 		(create-accessor read-write))
-<<<<<<< Updated upstream
-	(single-slot edad
-;+		(comment "edad del anciano")
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot nombre
-;+		(comment "Nombre de la persona")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-=======
->>>>>>> Stashed changes
 	(multislot padece
 ;+		(comment "Un anciano puede padecer factores de riesgo que pueden limitar sus capacidades a realizar actividades")
 		(type INSTANCE)
@@ -170,11 +146,6 @@
 
 (defclass Actividad "Accion fisica"
 	(is-a USER)
-<<<<<<< Updated upstream
-	(role concrete)
-	(single-slot solitaria
-;+		(comment "indica si la actividad se realiza solo")
-=======
 	(role abstract)
 	(multislot llena
 ;+		(comment "Una actividad puede llenar necesidades segun su modalidad")
@@ -183,7 +154,6 @@
 		(create-accessor read-write))
 	(multislot intensidad
 ;+		(comment "nivel de intensidad de la actividad")
->>>>>>> Stashed changes
 		(type SYMBOL)
 		(allowed-values leve moderada intensa)
 		(cardinality 1 ?VARIABLE)

@@ -1,4 +1,4 @@
-; Sat Nov 17 14:10:16 CET 2018
+; Sat Nov 17 19:10:40 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class307]
-		[ontologia_ProjectKB_Class308]
-		[ontologia_ProjectKB_Class309]
-		[ontologia_ProjectKB_Class310]
-		[ontologia_ProjectKB_Class311]
-		[ontologia_ProjectKB_Class312]
-		[ontologia_ProjectKB_Class313]
-		[ontologia_ProjectKB_Class314]))
+		[ontologia_ProjectKB_Class451]
+		[ontologia_ProjectKB_Class452]
+		[ontologia_ProjectKB_Class453]
+		[ontologia_ProjectKB_Class454]
+		[ontologia_ProjectKB_Class455]
+		[ontologia_ProjectKB_Class456]
+		[ontologia_ProjectKB_Class457]
+		[ontologia_ProjectKB_Class458]))
 
 ([CLSES_TAB] of  Widget
 
@@ -1485,51 +1485,11 @@
 ([ontologia_ProjectKB_Class306] of  Property_List
 )
 
-([ontologia_ProjectKB_Class307] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_ProjectKB_Class308] of  String
-
-	(name "Deporte")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class309] of  String
-
-	(name "Actividad")
-	(string_value "%3ANAME"))
-
 ([ontologia_ProjectKB_Class31] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class32])
 	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
-
-([ontologia_ProjectKB_Class310] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([ontologia_ProjectKB_Class311] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class312] of  String
-
-	(name "Necesidad")
-	(string_value "necesidad"))
-
-([ontologia_ProjectKB_Class313] of  String
-
-	(name "Factor_de_Riesgo")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class314] of  String
-
-	(name "Ejercicio")
-	(string_value "actividad"))
 
 ([ontologia_ProjectKB_Class32] of  Property_List
 )
@@ -1596,6 +1556,46 @@
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class46])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
+
+([ontologia_ProjectKB_Class451] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ontologia_ProjectKB_Class452] of  String
+
+	(name "Deporte")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class453] of  String
+
+	(name "Actividad")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class454] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class455] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class456] of  String
+
+	(name "Necesidad")
+	(string_value "necesidad"))
+
+([ontologia_ProjectKB_Class457] of  String
+
+	(name "Factor_de_Riesgo")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class458] of  String
+
+	(name "Ejercicio")
+	(string_value "actividad"))
 
 ([ontologia_ProjectKB_Class46] of  Property_List
 )

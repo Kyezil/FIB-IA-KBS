@@ -1,4 +1,64 @@
-; Tue Nov 13 11:19:20 CET 2018
+; Sat Nov 17 14:10:16 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([ontologia_Class10] of  Ejercicio
+
+	(actividad "ejercicio de fuerza")
+	(intensidad leve moderada intensa)
+	(llena [ontologia_Class3])
+	(solitaria FALSE))
+
+([ontologia_Class26] of  Deporte
+
+	(actividad "caminar solo")
+	(intensidad leve)
+	(solitaria TRUE))
+
+([ontologia_Class27] of  Deporte
+
+	(actividad "natacion")
+	(intensidad moderada)
+	(llena [ontologia_Class7])
+	(solitaria TRUE))
+
+([ontologia_Class29] of  Ejercicio
+
+	(actividad "ejercicio de resistencia")
+	(intensidad leve moderada intensa)
+	(llena [ontologia_Class7])
+	(solitaria FALSE))
+
+([ontologia_Class3] of  Necesidad
+
+	(necesidad "fuerza"))
+
+([ontologia_Class30] of  Ejercicio
+
+	(actividad "ejercicio de equilibrio")
+	(intensidad leve moderada intensa)
+	(llena [ontologia_Class5])
+	(solitaria FALSE))
+
+([ontologia_Class4] of  Necesidad
+
+	(necesidad "flexibilidad"))
+
+([ontologia_Class5] of  Necesidad
+
+	(necesidad "equilibrio"))
+
+([ontologia_Class6] of  Necesidad
+
+	(necesidad "coordinacion"))
+
+([ontologia_Class7] of  Necesidad
+
+	(necesidad "resistencia"))
+
+([ontologia_Class8] of  Deporte
+
+	(actividad "caminar acompanado")
+	(intensidad leve)
+	(solitaria FALSE))

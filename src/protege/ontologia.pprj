@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ; Sat Nov 17 19:10:40 CET 2018
+=======
+; Sat Nov 17 20:42:42 CET 2018
+>>>>>>> Stashed changes
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,6 +24,7 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
+<<<<<<< Updated upstream
 		[ontologia_ProjectKB_Class451]
 		[ontologia_ProjectKB_Class452]
 		[ontologia_ProjectKB_Class453]
@@ -28,6 +33,16 @@
 		[ontologia_ProjectKB_Class456]
 		[ontologia_ProjectKB_Class457]
 		[ontologia_ProjectKB_Class458]))
+=======
+		[ontologia_ProjectKB_Class10093]
+		[ontologia_ProjectKB_Class10094]
+		[ontologia_ProjectKB_Class10095]
+		[ontologia_ProjectKB_Class10096]
+		[ontologia_ProjectKB_Class10097]
+		[ontologia_ProjectKB_Class10098]
+		[ontologia_ProjectKB_Class10099]
+		[ontologia_ProjectKB_Class10100]))
+>>>>>>> Stashed changes
 
 ([CLSES_TAB] of  Widget
 
@@ -68,7 +83,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_694548_Class0] of  Map
+([KB_500876_Class0] of  Map
 )
 
 ([KB_944513_Class0] of  String
@@ -176,7 +191,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class2])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
+	(widget_class_name "se.liu.ida.JessTab.JessTab"))
 
 ([ontologia_ProjectKB_Class10] of  Property_List
 )
@@ -195,9 +210,49 @@
 
 	(properties [ontologia_ProjectKB_Class10129]))
 
+([ontologia_ProjectKB_Class10093] of  String
+
+	(name "Factor_de_Riesgo")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class10094] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ontologia_ProjectKB_Class10095] of  String
+
+	(name "Necesidad")
+	(string_value "necesidad"))
+
+([ontologia_ProjectKB_Class10096] of  String
+
+	(name "Ejercicio")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class10097] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class10098] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class10099] of  String
+
+	(name "Deporte")
+	(string_value "actividad"))
+
 ([ontologia_ProjectKB_Class101] of  Property_List
 
 	(name "layout properties"))
+
+([ontologia_ProjectKB_Class10100] of  String
+
+	(name "Actividad")
+	(string_value "%3ANAME"))
 
 ([ontologia_ProjectKB_Class10115] of  Widget
 
@@ -336,7 +391,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class12])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
+	(widget_class_name "ezpal.EZPalTab"))
 
 ([ontologia_ProjectKB_Class110] of  Widget
 
@@ -361,430 +416,32 @@
 	(property_list [ontologia_ProjectKB_Class14])
 	(widget_class_name "edu.stanford.smi.protegex.server_changes.prompt.UsersTab"))
 
-([ontologia_ProjectKB_Class131] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "nombre")
-	(property_list [ontologia_ProjectKB_Class132])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 0))
-
-([ontologia_ProjectKB_Class132] of  Property_List
-)
-
 ([ontologia_ProjectKB_Class14] of  Property_List
-)
-
-([ontologia_ProjectKB_Class144] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "dependencia")
-	(property_list [ontologia_ProjectKB_Class145])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 240))
-
-([ontologia_ProjectKB_Class145] of  Property_List
-)
-
-([ontologia_ProjectKB_Class146] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class147])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class147] of  Property_List
-)
-
-([ontologia_ProjectKB_Class148] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class149])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class149] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class15] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class16])
-	(widget_class_name "edu.stanford.smi.protege.query.LuceneQueryPlugin"))
-
-([ontologia_ProjectKB_Class150] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class151])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class151] of  Property_List
-)
-
-([ontologia_ProjectKB_Class152] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class153])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class153] of  Property_List
-)
-
-([ontologia_ProjectKB_Class154] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class155])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class155] of  Property_List
-)
-
-([ontologia_ProjectKB_Class156] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class157])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class157] of  Property_List
-)
-
-([ontologia_ProjectKB_Class158] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class159])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class159] of  Property_List
-)
+	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
 
 ([ontologia_ProjectKB_Class16] of  Property_List
 )
-
-([ontologia_ProjectKB_Class160] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class161])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class161] of  Property_List
-)
-
-([ontologia_ProjectKB_Class162] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class163])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class163] of  Property_List
-)
-
-([ontologia_ProjectKB_Class164] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class165])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class165] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class166]
-		[ontologia_ProjectKB_Class167]))
-
-([ontologia_ProjectKB_Class166] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class167] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class168] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class169])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class169] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class170]
-		[ontologia_ProjectKB_Class171]))
 
 ([ontologia_ProjectKB_Class17] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class18])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
-
-([ontologia_ProjectKB_Class170] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class171] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class172] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class173])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class173] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class174]
-		[ontologia_ProjectKB_Class175]))
-
-([ontologia_ProjectKB_Class174] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class175] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class176] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class177])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class177] of  Property_List
-)
-
-([ontologia_ProjectKB_Class178] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class179])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class179] of  Property_List
-)
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
 
 ([ontologia_ProjectKB_Class18] of  Property_List
 )
-
-([ontologia_ProjectKB_Class180] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class181])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class181] of  Property_List
-)
-
-([ontologia_ProjectKB_Class182] of  Widget
-
-	(is_hidden FALSE)
-	(name "Nivel de dependencia")
-	(property_list [ontologia_ProjectKB_Class183])
-	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
-
-([ontologia_ProjectKB_Class183] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class184]
-		[ontologia_ProjectKB_Class185]))
-
-([ontologia_ProjectKB_Class184] of  Property_List
-
-	(name "layout properties"))
-
-([ontologia_ProjectKB_Class185] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "grado")
-	(property_list [ontologia_ProjectKB_Class186])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 0))
-
-([ontologia_ProjectKB_Class186] of  Property_List
-)
-
-([ontologia_ProjectKB_Class187] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "dependencia")
-	(property_list [ontologia_ProjectKB_Class188])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
-	(width 200)
-	(x 0)
-	(y 240))
-
-([ontologia_ProjectKB_Class188] of  Property_List
-)
-
-([ontologia_ProjectKB_Class189] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "dependencia")
-	(property_list [ontologia_ProjectKB_Class190])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 240))
 
 ([ontologia_ProjectKB_Class19] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class20])
-	(widget_class_name "edu.stanford.smi.protege.widget.KAToolTab"))
-
-([ontologia_ProjectKB_Class190] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class191]
-		[ontologia_ProjectKB_Class192]))
-
-([ontologia_ProjectKB_Class191] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class192] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class193] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class194])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class194] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class195]
-		[ontologia_ProjectKB_Class196]))
-
-([ontologia_ProjectKB_Class195] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class196] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class197] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class198])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class198] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class199]
-		[ontologia_ProjectKB_Class200]))
-
-([ontologia_ProjectKB_Class199] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
 
 ([ontologia_ProjectKB_Class2] of  Property_List
 )
@@ -792,303 +449,22 @@
 ([ontologia_ProjectKB_Class20] of  Property_List
 )
 
-([ontologia_ProjectKB_Class200] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class201] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max-dependencia")
-	(property_list [ontologia_ProjectKB_Class202])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class202] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class203]
-		[ontologia_ProjectKB_Class204]))
-
-([ontologia_ProjectKB_Class203] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class204] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class205] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class206])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class206] of  Property_List
-)
-
-([ontologia_ProjectKB_Class207] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class208])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class208] of  Property_List
-)
-
-([ontologia_ProjectKB_Class209] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class210])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
 ([ontologia_ProjectKB_Class21] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class22])
-	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
-
-([ontologia_ProjectKB_Class210] of  Property_List
-)
-
-([ontologia_ProjectKB_Class211] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class212])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class212] of  Property_List
-)
-
-([ontologia_ProjectKB_Class213] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class214])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class214] of  Property_List
-)
-
-([ontologia_ProjectKB_Class215] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class216])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class216] of  Property_List
-)
-
-([ontologia_ProjectKB_Class217] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class218])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class218] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class219]
-		[ontologia_ProjectKB_Class220]))
-
-([ontologia_ProjectKB_Class219] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
+	(widget_class_name "uk.ac.man.ac.mig.coode.individuals.ui.OWLDLIndividualsTab"))
 
 ([ontologia_ProjectKB_Class22] of  Property_List
 )
-
-([ontologia_ProjectKB_Class220] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class221] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class222])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class222] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class223]
-		[ontologia_ProjectKB_Class224]))
-
-([ontologia_ProjectKB_Class223] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class224] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class225] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class226])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class226] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class227]
-		[ontologia_ProjectKB_Class228]))
-
-([ontologia_ProjectKB_Class227] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class228] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class229] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class230])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
 
 ([ontologia_ProjectKB_Class23] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class24])
-	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
-
-([ontologia_ProjectKB_Class230] of  Property_List
-)
-
-([ontologia_ProjectKB_Class231] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class232])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class232] of  Property_List
-)
-
-([ontologia_ProjectKB_Class233] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class234])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class234] of  Property_List
-)
-
-([ontologia_ProjectKB_Class235] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class236])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class236] of  Property_List
-)
-
-([ontologia_ProjectKB_Class237] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class238])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class238] of  Property_List
-)
-
-([ontologia_ProjectKB_Class239] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class240])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
-	(width 200)
-	(x 0)
-	(y 180))
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
 
 ([ontologia_ProjectKB_Class24] of  Property_List
-)
-
-([ontologia_ProjectKB_Class240] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class241] of  Widget
@@ -1119,203 +495,22 @@
 ([ontologia_ProjectKB_Class246] of  Property_List
 )
 
-([ontologia_ProjectKB_Class247] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "dependencia")
-	(property_list [ontologia_ProjectKB_Class248])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 0)
-	(y 240))
-
-([ontologia_ProjectKB_Class248] of  Property_List
-)
-
-([ontologia_ProjectKB_Class249] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "dependencia")
-	(property_list [ontologia_ProjectKB_Class250])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
-	(width 200)
-	(x 0)
-	(y 240))
-
 ([ontologia_ProjectKB_Class25] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class26])
-	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
-
-([ontologia_ProjectKB_Class250] of  Property_List
-)
-
-([ontologia_ProjectKB_Class251] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "dependencia")
-	(property_list [ontologia_ProjectKB_Class252])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 0)
-	(y 240))
-
-([ontologia_ProjectKB_Class252] of  Property_List
-)
-
-([ontologia_ProjectKB_Class253] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "dependencia")
-	(property_list [ontologia_ProjectKB_Class254])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 240))
-
-([ontologia_ProjectKB_Class254] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class255]
-		[ontologia_ProjectKB_Class256]))
-
-([ontologia_ProjectKB_Class255] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class256] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class257] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "dependencia")
-	(property_list [ontologia_ProjectKB_Class258])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 240))
-
-([ontologia_ProjectKB_Class258] of  Property_List
-)
+	(widget_class_name "edu.stanford.smi.protegex.evaluation.MetaAnalysis"))
 
 ([ontologia_ProjectKB_Class26] of  Property_List
-)
-
-([ontologia_ProjectKB_Class261] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "edad")
-	(property_list [ontologia_ProjectKB_Class262])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 300))
-
-([ontologia_ProjectKB_Class262] of  Property_List
-)
-
-([ontologia_ProjectKB_Class263] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "edad")
-	(property_list [ontologia_ProjectKB_Class264])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 300))
-
-([ontologia_ProjectKB_Class264] of  Property_List
-)
-
-([ontologia_ProjectKB_Class265] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "peso")
-	(property_list [ontologia_ProjectKB_Class266])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 360))
-
-([ontologia_ProjectKB_Class266] of  Property_List
-)
-
-([ontologia_ProjectKB_Class267] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "peso")
-	(property_list [ontologia_ProjectKB_Class268])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 360))
-
-([ontologia_ProjectKB_Class268] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class27] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class28])
-	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
-
-([ontologia_ProjectKB_Class275] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "altura")
-	(property_list [ontologia_ProjectKB_Class276])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 480))
-
-([ontologia_ProjectKB_Class276] of  Property_List
-)
-
-([ontologia_ProjectKB_Class279] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "intensidad")
-	(property_list [ontologia_ProjectKB_Class280])
-	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
-	(width 100)
-	(x 0)
-	(y 120))
+	(widget_class_name "uk.ac.man.cs.mig.coode.owlviz.ui.OWLVizTab"))
 
 ([ontologia_ProjectKB_Class28] of  Property_List
-)
-
-([ontologia_ProjectKB_Class280] of  Property_List
-)
-
-([ontologia_ProjectKB_Class283] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "intensidad")
-	(property_list [ontologia_ProjectKB_Class284])
-	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
-	(width 100)
-	(x 0)
-	(y 240))
-
-([ontologia_ProjectKB_Class284] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class285] of  Property_List
@@ -1358,7 +553,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class30])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
+	(widget_class_name "edu.stanford.smi.protege.query.LuceneQueryPlugin"))
 
 ([ontologia_ProjectKB_Class290] of  Boolean
 
@@ -1420,27 +615,13 @@
 ([ontologia_ProjectKB_Class298] of  Property_List
 )
 
-([ontologia_ProjectKB_Class299] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "intensidad")
-	(property_list [ontologia_ProjectKB_Class300])
-	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
-	(width 100)
-	(x 0)
-	(y 120))
-
 ([ontologia_ProjectKB_Class3] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class4])
-	(widget_class_name "org.protege.owl.mm.portability.protege3.MappingMasterTab"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
 
 ([ontologia_ProjectKB_Class30] of  Property_List
-)
-
-([ontologia_ProjectKB_Class300] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class301] of  Widget
@@ -1489,7 +670,11 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class32])
+<<<<<<< Updated upstream
 	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
+=======
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
+>>>>>>> Stashed changes
 
 ([ontologia_ProjectKB_Class32] of  Property_List
 )
@@ -1507,7 +692,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class36])
-	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
+	(widget_class_name "org.protege.owl.mm.portability.protege3.MappingMasterTab"))
 
 ([ontologia_ProjectKB_Class36] of  Property_List
 )
@@ -1516,7 +701,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class38])
-	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changeanalysis.ChangeAnalysisTab"))
 
 ([ontologia_ProjectKB_Class38] of  Property_List
 )
@@ -1525,7 +710,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class40])
-	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
+	(widget_class_name "TGViztab.TGVizTab"))
 
 ([ontologia_ProjectKB_Class4] of  Property_List
 )
@@ -1537,7 +722,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class42])
-	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changes.changesKBViewTab.ChangesKBViewTab"))
 
 ([ontologia_ProjectKB_Class42] of  Property_List
 )
@@ -1546,7 +731,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class44])
-	(widget_class_name "TGViztab.TGVizTab"))
+	(widget_class_name "edu.stanford.smi.protege.widget.KAToolTab"))
 
 ([ontologia_ProjectKB_Class44] of  Property_List
 )
@@ -1555,7 +740,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class46])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
+	(widget_class_name "edu.stanford.smi.protegex.xml.tab.XMLTab"))
 
 ([ontologia_ProjectKB_Class451] of  String
 
@@ -1604,7 +789,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class48])
-	(widget_class_name "uk.ac.man.ac.mig.coode.individuals.ui.OWLDLIndividualsTab"))
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
 
 ([ontologia_ProjectKB_Class48] of  Property_List
 )
@@ -1613,13 +798,13 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class50])
-	(widget_class_name "edu.stanford.smi.protegex.evaluation.MetaAnalysis"))
+	(widget_class_name "edu.stanford.smi.protegex.chatPlugin.ChatTab"))
 
 ([ontologia_ProjectKB_Class5] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class6])
-	(widget_class_name "edu.stanford.smi.protege.widget.ProtegePropertiesTab"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
 
 ([ontologia_ProjectKB_Class50] of  Property_List
 )
@@ -1628,7 +813,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class52])
-	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
+	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
 
 ([ontologia_ProjectKB_Class52] of  Property_List
 )
@@ -1637,7 +822,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class54])
-	(widget_class_name "edu.stanford.smi.protegex.changes.changesKBViewTab.ChangesKBViewTab"))
+	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
 
 ([ontologia_ProjectKB_Class54] of  Property_List
 )
@@ -1646,7 +831,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class56])
-	(widget_class_name "se.liu.ida.JessTab.JessTab"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
 
 ([ontologia_ProjectKB_Class56] of  Property_List
 )
@@ -1655,7 +840,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class58])
-	(widget_class_name "edu.stanford.smi.protegex.changeanalysis.ChangeAnalysisTab"))
+	(widget_class_name "script.ProtegeScriptTab"))
 
 ([ontologia_ProjectKB_Class58] of  Property_List
 )
@@ -1664,7 +849,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class60])
-	(widget_class_name "uk.ac.man.cs.mig.coode.owlviz.ui.OWLVizTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
 
 ([ontologia_ProjectKB_Class6] of  Property_List
 )
@@ -1676,7 +861,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class62])
-	(widget_class_name "edu.stanford.smi.protegex.changes.stats.ChangeStatisticsTab"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
 
 ([ontologia_ProjectKB_Class62] of  Property_List
 )
@@ -1685,7 +870,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class64])
-	(widget_class_name "script.ProtegeScriptTab"))
+	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
 
 ([ontologia_ProjectKB_Class64] of  Property_List
 )
@@ -1694,7 +879,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class66])
-	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
 
 ([ontologia_ProjectKB_Class66] of  Property_List
 )
@@ -1703,7 +888,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class68])
-	(widget_class_name "edu.stanford.smi.protegex.chatPlugin.ChatTab"))
+	(widget_class_name "edu.stanford.smi.protegex.datamaster.DataMasterTab"))
 
 ([ontologia_ProjectKB_Class68] of  Property_List
 )
@@ -1712,13 +897,13 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class70])
-	(widget_class_name "edu.stanford.smi.protegex.xml.tab.XMLTab"))
+	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
 
 ([ontologia_ProjectKB_Class7] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class8])
-	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
+	(widget_class_name "edu.stanford.smi.protege.widget.ProtegePropertiesTab"))
 
 ([ontologia_ProjectKB_Class70] of  Property_List
 )
@@ -1727,7 +912,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class72])
-	(widget_class_name "edu.stanford.smi.protegex.datamaster.DataMasterTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changes.stats.ChangeStatisticsTab"))
 
 ([ontologia_ProjectKB_Class72] of  Property_List
 )
@@ -1736,7 +921,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class74])
-	(widget_class_name "ezpal.EZPalTab"))
+	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
 
 ([ontologia_ProjectKB_Class74] of  Property_List
 )
@@ -1769,7 +954,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class10])
-	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
+	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
 
 ([ontologia_ProjectKB_Class97] of  Widget
 
@@ -1856,13 +1041,13 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_CLASS_FORM_WIDGET]
-		[ontologia_ProjectKB_Class80]
-		[ontologia_ProjectKB_Class10115]
-		[STANDARD_SLOT_FORM_WIDGET]
+		[ontologia_ProjectKB_Class97]
 		[STANDARD_FACET_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
-		[ontologia_ProjectKB_Class97])
+		[ontologia_ProjectKB_Class80]
+		[STANDARD_CLASS_FORM_WIDGET]
+		[ontologia_ProjectKB_Class10115])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

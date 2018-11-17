@@ -29,5 +29,8 @@
   (export ?ALL))
 ; volvemos al modulo MAIN
 (focus MAIN)
+
 ; -- carga de archivos --
+(load "utils.clp")
 (load "identify-user.clp")
+

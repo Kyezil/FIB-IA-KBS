@@ -26,7 +26,7 @@
 
 ; -- pregunta general
 (deffunction pregunta-general (?pregunta)
-  (format t "¿%s?" ?pregunta)
+  (format t "¿%s? " ?pregunta)
   (bind ?respuesta (read))
   ?respuesta
 )

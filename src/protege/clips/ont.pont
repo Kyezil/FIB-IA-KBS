@@ -1,4 +1,4 @@
-; Sun Nov 18 12:36:41 CET 2018
+; Sun Nov 18 18:07:49 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -10,7 +10,6 @@
 	(single-slot edad
 ;+		(comment "edad del anciano")
 		(type INTEGER)
-		(range 60 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot nivel-actividad
@@ -109,7 +108,6 @@
 	(single-slot edad
 ;+		(comment "edad del anciano")
 		(type INTEGER)
-		(range 60 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot nombre

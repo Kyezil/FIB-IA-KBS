@@ -34,3 +34,18 @@
 (load "utils.clp")
 (load "identify-user.clp")
 
+
+(defrule MAIN::start "inicio del sistema"
+  (declare (salience 100))
+ =>
+  (printout t "================================================" crlf
+              "===  Sistema de recomendacion de ejercicios  ===" crlf
+              "================================================" crlf
+              crlf
+              "Bienvenido al sistema de generación de un programa de ejercicios para personas mayores!" crlf
+              "A continuación se le hará una serie de preguntas para poder recomendarle más adecuadamente." crlf
+  )
+  (focus identify-user)
+)
+; start program
+(run)

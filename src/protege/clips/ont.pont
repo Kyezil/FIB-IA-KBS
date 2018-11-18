@@ -1,4 +1,4 @@
-; Sat Nov 17 19:10:36 CET 2018
+; Sun Nov 18 12:36:41 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -10,6 +10,7 @@
 	(single-slot edad
 ;+		(comment "edad del anciano")
 		(type INTEGER)
+		(range 60 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot nivel-actividad
@@ -108,6 +109,7 @@
 	(single-slot edad
 ;+		(comment "edad del anciano")
 		(type INTEGER)
+		(range 60 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot nombre
@@ -120,14 +122,14 @@
 		(type INSTANCE)
 ;+		(allowed-classes Factor_de_Riesgo)
 		(create-accessor read-write))
-	(single-slot dependencia
-		(type SYMBOL)
-		(allowed-values independiente fragil dependiente)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot altura
 ;+		(comment "altura del anciano en cm")
 		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dependencia
+		(type SYMBOL)
+		(allowed-values independiente fragil dependiente)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot nivel-actividad
@@ -144,7 +146,7 @@
 
 (defclass Actividad "Accion fisica"
 	(is-a USER)
-	(role concrete)
+	(role abstract)
 	(single-slot solitaria
 ;+		(comment "indica si la actividad se realiza solo")
 		(type SYMBOL)

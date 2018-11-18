@@ -1,7 +1,14 @@
-; Sat Nov 17 19:10:36 CET 2018
+; Sun Nov 18 12:36:41 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([ontologia_Class0] of  Ejercicio
+
+	(actividad "levantarse y sentarse silla")
+	(intensidad leve)
+	(llena [ontologia_Class3])
+	(solitaria TRUE))
 
 ([ontologia_Class10] of  Ejercicio
 
@@ -9,6 +16,108 @@
 	(intensidad leve moderada intensa)
 	(llena [ontologia_Class3])
 	(solitaria FALSE))
+
+([ontologia_Class10003] of  Deporte
+
+	(actividad "bicicleta estatica")
+	(intensidad leve moderada intensa)
+	(llena [ontologia_Class7]))
+
+([ontologia_Class10004] of  Deporte
+
+	(actividad "golf")
+	(intensidad moderada)
+	(llena
+		[ontologia_Class6]
+		[ontologia_Class5]
+		[ontologia_Class3])
+	(solitaria TRUE))
+
+([ontologia_Class10005] of  Deporte
+
+	(actividad "yoga")
+	(intensidad leve moderada)
+	(llena
+		[ontologia_Class6]
+		[ontologia_Class5]
+		[ontologia_Class4]))
+
+([ontologia_Class10006] of  Deporte
+
+	(actividad "correr")
+	(intensidad intensa)
+	(llena [ontologia_Class7])
+	(solitaria TRUE))
+
+([ontologia_Class10007] of  Ejercicio
+
+	(actividad "abdominales")
+	(intensidad moderada intensa)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class7]))
+
+([ontologia_Class10008] of  Ejercicio
+
+	(actividad "andar de puntillas o talones")
+	(intensidad leve)
+	(llena [ontologia_Class5]))
+
+([ontologia_Class10009] of  Ejercicio
+
+	(actividad "levantar pesas")
+	(intensidad leve moderada intensa)
+	(llena [ontologia_Class3]))
+
+([ontologia_Class10010] of  Ejercicio
+
+	(actividad "rotacion de hombros")
+	(intensidad leve)
+	(llena
+		[ontologia_Class4]
+		[ontologia_Class6]))
+
+([ontologia_Class10011] of  Ejercicio
+
+	(actividad "mantenerse a la pata coja")
+	(intensidad moderada)
+	(llena
+		[ontologia_Class5]
+		[ontologia_Class4]))
+
+([ontologia_Class10012] of  Deporte
+
+	(actividad "petanca")
+	(intensidad moderada)
+	(llena
+		[ontologia_Class6]
+		[ontologia_Class3]
+		[ontologia_Class5]))
+
+([ontologia_Class10014] of  Deporte
+
+	(actividad "baile")
+	(intensidad leve)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class6]))
+
+([ontologia_Class10015] of  Ejercicio
+
+	(actividad "agachadillas")
+	(intensidad moderada intensa)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5]))
+
+([ontologia_Class2] of  Deporte
+
+	(actividad "caminar por cuestas")
+	(intensidad moderada)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class7])
+	(solitaria TRUE))
 
 ([ontologia_Class26] of  Deporte
 

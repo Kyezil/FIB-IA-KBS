@@ -1,4 +1,4 @@
-; Sun Nov 18 18:07:40 CET 2018
+; Mon Nov 19 15:42:24 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class75]
-		[ontologia_ProjectKB_Class76]
-		[ontologia_ProjectKB_Class77]
-		[ontologia_ProjectKB_Class78]
-		[ontologia_ProjectKB_Class79]
-		[ontologia_ProjectKB_Class10080]
-		[ontologia_ProjectKB_Class10081]
-		[ontologia_ProjectKB_Class10082]))
+		[ontologia_ProjectKB_Class10099]
+		[ontologia_ProjectKB_Class10100]
+		[ontologia_ProjectKB_Class10101]
+		[ontologia_ProjectKB_Class10102]
+		[ontologia_ProjectKB_Class10103]
+		[ontologia_ProjectKB_Class10104]
+		[ontologia_ProjectKB_Class10105]
+		[ontologia_ProjectKB_Class10106]))
 
 ([CLSES_TAB] of  Widget
 
@@ -68,7 +68,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_856172_Class0] of  Map
+([KB_553595_Class0] of  Map
 )
 
 ([KB_944513_Class0] of  String
@@ -195,24 +195,49 @@
 
 	(properties [ontologia_ProjectKB_Class10129]))
 
-([ontologia_ProjectKB_Class10080] of  String
+([ontologia_ProjectKB_Class10099] of  String
 
-	(name "Necesidad")
-	(string_value "necesidad"))
-
-([ontologia_ProjectKB_Class10081] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class10082] of  String
-
-	(name "Ejercicio")
-	(string_value "actividad"))
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
 
 ([ontologia_ProjectKB_Class101] of  Property_List
 
 	(name "layout properties"))
+
+([ontologia_ProjectKB_Class10100] of  String
+
+	(name "Deporte")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class10101] of  String
+
+	(name "Actividad")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class10102] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class10103] of  String
+
+	(name "Factor_de_Riesgo")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class10104] of  String
+
+	(name "Necesidad")
+	(string_value "necesidad"))
+
+([ontologia_ProjectKB_Class10105] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class10106] of  String
+
+	(name "Ejercicio")
+	(string_value "actividad"))
 
 ([ontologia_ProjectKB_Class10115] of  Widget
 
@@ -841,31 +866,6 @@
 
 ([ontologia_ProjectKB_Class74] of  Property_List
 )
-
-([ontologia_ProjectKB_Class75] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_ProjectKB_Class76] of  String
-
-	(name "Deporte")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class77] of  String
-
-	(name "Actividad")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class78] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([ontologia_ProjectKB_Class79] of  String
-
-	(name "Factor_de_Riesgo")
-	(string_value "%3ANAME"))
 
 ([ontologia_ProjectKB_Class8] of  Property_List
 )

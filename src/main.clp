@@ -15,12 +15,12 @@
 (defmodule identify-user
   (import MAIN ?ALL)
   (export ?ALL))
-; modulo de seleccion de actividades
-(defmodule search-filter
-  (import MAIN ?ALL)
-  (export ?ALL))
 ; modulo de generacion de la recomendacion
 (defmodule generate-recom
+  (import MAIN ?ALL)
+  (export ?ALL))
+; modulo de seleccion de actividades
+(defmodule specify-recom
   (import MAIN ?ALL)
   (export ?ALL))
 ; modulo de presentacion de la solucion
@@ -33,6 +33,9 @@
 ; -- carga de archivos --
 (load "utils.clp")
 (load "identify-user.clp")
+(load "generate-recom.clp")
+(load "specify-recom.clp")
+(load "present.clp")
 
 
 (defrule MAIN::start "inicio del sistema"

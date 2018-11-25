@@ -30,6 +30,24 @@
 ; volvemos al modulo MAIN
 (focus MAIN)
 
+; -- definicion de objetos
+; -- objetivo para el paciente
+(deftemplate objective
+  (slot need (type INSTANCE) (allowed-classes Necesidad))
+  (slot priority (type NUMBER) (default 0))
+  )
+; -- un dia de recomendacion
+(defclass ADay
+  (is-a USER)
+  (single-slot main-need (type INSTANCE) (allowed-classes Necesidad))
+;  (multislot activities)
+  )
+; -- una semana de recomendacion
+(defclass AWeek
+  (is-a USER)
+  (multislot days)
+)
+
 ; -- carga de archivos --
 (load "utils.clp")
 (load "identify-user.clp")
@@ -37,7 +55,7 @@
 (load "specify-recom.clp")
 (load "present.clp")
 
-
+; -- regla inicial
 (defrule MAIN::start "inicio del sistema"
   (declare (salience 100))
  =>
@@ -46,9 +64,9 @@
               "================================================" crlf
               crlf
               "Bienvenido al sistema de generación de un programa de ejercicios para personas mayores!" crlf
-              "A continuación se le hará una serie de preguntas para poder recomendarle más adecuadamente." crlf
+              "A continuación se le hará una serie de preguntas para poder recomendarle más adecuadamente." crlf crlf
   )
   (focus identify-user)
 )
 ; start program
-(run)
+; (run)

@@ -39,13 +39,3 @@
     else FALSE
   )
   )
-
-; -- elimina de multifield
-(deffunction remove-field (?field ?multifield)
-  (bind ?pos (member$ ?field ?multifield))
-  (while ?pos do
-         (bind ?multifield (delete$ ?multifield ?pos ?pos))
-         (bind ?pos (member$ ?field ?multifield))
-         )
-  ?multifield
-  )

@@ -13,7 +13,8 @@
   (object (name [Usuario]) (nivel-actividad undefined))
  =>
   (bind ?act (pregunta "Cúal es su nivel de actividad"
-                       (remove-field undefined (slot-allowed-values Anciano nivel-actividad))))
+                       (delete-member$ (slot-allowed-values Anciano nivel-actividad) undefined)
+                       ))
   (send [Usuario] put-nivel-actividad ?act)
 )
 
@@ -21,11 +22,12 @@
   (object (name [Usuario]) (dependencia undefined))
  =>
   (bind ?grade (pregunta "Cúal es su nivel de dependencia"
-                         (remove-field undefined (slot-allowed-values Anciano dependencia))))
+                         (delete-member$ (slot-allowed-values Anciano dependencia) undefined)
+                         ))
   (send [Usuario] put-dependencia ?grade)
 )
 
-(defrule identify-user:start-search "Finaliza la recopilación de info del usuario"
+(defrule identify-user:done "Finaliza la recopilación de info del usuario"
   (object (name [Usuario]) (dependencia ~undefined) (nivel-actividad ~undefined))
  =>
   (printout t "Procesando datos..." crlf)

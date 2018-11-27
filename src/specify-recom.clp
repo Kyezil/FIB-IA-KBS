@@ -2,5 +2,5 @@
 (defrule specify-recom:init "Ejemplo"
   (object (name [Usuario]))
   =>
-  (printout t "YEAH" crlf)
+  (printout t "Entra en specify-recom..." crlf)
 )

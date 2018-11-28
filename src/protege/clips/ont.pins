@@ -1,4 +1,4 @@
-; Wed Nov 28 12:43:52 CET 2018
+; Wed Nov 28 14:38:33 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -9,7 +9,8 @@
 	(duracion 15)
 	(intensidad leve)
 	(llena [ontologia_Class3])
-	(solitaria TRUE))
+	(solitaria TRUE)
+	(workfactor 30))
 
 ([ontologia_Class10] of  ejercicio+de+fuerza
 
@@ -17,14 +18,17 @@
 	(duracion 5)
 	(intensidad leve)
 	(llena [ontologia_Class3])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class10003] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica")
 	(duracion 30)
 	(intensidad leve)
-	(llena [ontologia_Class7]))
+	(llena [ontologia_Class7])
+	(solitaria FALSE)
+	(workfactor 10))
 
 ([ontologia_Class10004] of  golf
 
@@ -35,7 +39,8 @@
 		[ontologia_Class6]
 		[ontologia_Class5]
 		[ontologia_Class3])
-	(solitaria TRUE))
+	(solitaria TRUE)
+	(workfactor 12))
 
 ([ontologia_Class10005] of  yoga
 
@@ -45,7 +50,8 @@
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
-		[ontologia_Class4]))
+		[ontologia_Class4])
+	(workfactor 14))
 
 ([ontologia_Class10006] of  correr
 
@@ -53,7 +59,8 @@
 	(duracion 20)
 	(intensidad intensa)
 	(llena [ontologia_Class7])
-	(solitaria TRUE))
+	(solitaria TRUE)
+	(workfactor 50))
 
 ([ontologia_Class10007] of  abdominales
 
@@ -63,7 +70,8 @@
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class10008] of  andar+de+puntillas+o+talones
 
@@ -71,7 +79,8 @@
 	(duracion 15)
 	(intensidad leve)
 	(llena [ontologia_Class5])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 30))
 
 ([ontologia_Class10009] of  levantar+pesas
 
@@ -79,7 +88,8 @@
 	(duracion 5)
 	(intensidad leve)
 	(llena [ontologia_Class3])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class10010] of  rotacion+de+hombros
 
@@ -89,7 +99,8 @@
 	(llena
 		[ontologia_Class4]
 		[ontologia_Class6])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 20))
 
 ([ontologia_Class10011] of  mantenerse+a+la+pata+coja
 
@@ -99,17 +110,19 @@
 	(llena
 		[ontologia_Class5]
 		[ontologia_Class4])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 40))
 
 ([ontologia_Class10012] of  petanca
 
 	(actividad "petanca")
-	(descripcion "45")
+	(duracion 45)
 	(intensidad moderada)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class3]
-		[ontologia_Class5]))
+		[ontologia_Class5])
+	(workfactor 12))
 
 ([ontologia_Class10014] of  baile
 
@@ -119,7 +132,8 @@
 	(llena
 		[ontologia_Class7]
 		[ontologia_Class6])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 10))
 
 ([ontologia_Class10015] of  agachadillas
 
@@ -129,7 +143,8 @@
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class5])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class2] of  caminar
 
@@ -139,21 +154,26 @@
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
-	(solitaria TRUE))
+	(solitaria TRUE)
+	(workfactor 12))
 
 ([ontologia_Class20006] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica")
 	(duracion 45)
 	(intensidad moderada)
-	(llena [ontologia_Class7]))
+	(llena [ontologia_Class7])
+	(solitaria FALSE)
+	(workfactor 10))
 
 ([ontologia_Class20007] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica")
 	(duracion 60)
 	(intensidad intensa)
-	(llena [ontologia_Class7]))
+	(llena [ontologia_Class7])
+	(solitaria FALSE)
+	(workfactor 10))
 
 ([ontologia_Class20011] of  yoga
 
@@ -163,7 +183,8 @@
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
-		[ontologia_Class4]))
+		[ontologia_Class4])
+	(workfactor 14))
 
 ([ontologia_Class20024] of  abdominales
 
@@ -173,7 +194,8 @@
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class20025] of  agachadillas
 
@@ -183,7 +205,8 @@
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class5])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class20026] of  ejercicio+de+equilibrio
 
@@ -191,7 +214,8 @@
 	(duracion 10)
 	(intensidad leve)
 	(llena [ontologia_Class5])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 50))
 
 ([ontologia_Class20027] of  ejercicio+de+equilibrio
 
@@ -199,7 +223,8 @@
 	(duracion 15)
 	(intensidad moderada)
 	(llena [ontologia_Class5])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 50))
 
 ([ontologia_Class20028] of  ejercicio+de+fuerza
 
@@ -207,7 +232,8 @@
 	(duracion 10)
 	(intensidad moderada)
 	(llena [ontologia_Class3])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class20029] of  ejercicio+de+fuerza
 
@@ -215,7 +241,8 @@
 	(duracion 15)
 	(intensidad intensa)
 	(llena [ontologia_Class3])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class20030] of  ejercicio+de+resistencia
 
@@ -231,7 +258,8 @@
 	(duracion 20)
 	(intensidad moderada)
 	(llena [ontologia_Class7])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 25))
 
 ([ontologia_Class20032] of  levantar+pesas
 
@@ -239,7 +267,8 @@
 	(duracion 10)
 	(intensidad moderada)
 	(llena [ontologia_Class3])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class20033] of  levantar+pesas
 
@@ -247,7 +276,8 @@
 	(duracion 15)
 	(intensidad intensa)
 	(llena [ontologia_Class3])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 100))
 
 ([ontologia_Class26] of  caminar
 
@@ -255,7 +285,8 @@
 	(duracion 45)
 	(intensidad leve)
 	(llena [ontologia_Class7])
-	(solitaria TRUE))
+	(solitaria TRUE)
+	(workfactor 10))
 
 ([ontologia_Class27] of  natacion
 
@@ -263,7 +294,8 @@
 	(duracion 30)
 	(intensidad moderada)
 	(llena [ontologia_Class7])
-	(solitaria TRUE))
+	(solitaria TRUE)
+	(workfactor 10))
 
 ([ontologia_Class29] of  ejercicio+de+resistencia
 
@@ -271,7 +303,8 @@
 	(duracion 40)
 	(intensidad intensa)
 	(llena [ontologia_Class7])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 25))
 
 ([ontologia_Class3] of  Necesidad
 
@@ -283,7 +316,8 @@
 	(duracion 20)
 	(intensidad intensa)
 	(llena [ontologia_Class5])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 50))
 
 ([ontologia_Class4] of  Necesidad
 
@@ -307,4 +341,5 @@
 	(duracion 45)
 	(intensidad leve)
 	(llena [ontologia_Class7])
-	(solitaria FALSE))
+	(solitaria FALSE)
+	(workfactor 10))

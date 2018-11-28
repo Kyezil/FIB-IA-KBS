@@ -42,7 +42,7 @@
   (assert (days (+ ?d 1)))
 )
 
-;;; cambios de prioridades en los objetivos
+;;; Cambios de prioridades en los objetivos
 (defrule generate-recom:init-need "Crea objetos de necesidad"
   ?need <- (object (is-a Necesidad))
  =>
@@ -57,8 +57,7 @@
   (modify ?o (priority (+ ?p 2)))
 )
 
-
-; generacion de los dias en base a los objetivos
+;;; Generacion de dias en base a los objetivos
 (defrule generate-recom:generate-abstract-week "Crea un planning segun las prioridades"
   (declare (salience -10)) ; IMPORTANT, lower than day changing
   (days ?d)
@@ -72,7 +71,7 @@
   (foreach ?obj ?objs
     (bind ?total (+ ?total (fact-slot-value ?obj priority)))
     )
-  (printout t "total probability " ?total crlf)
+  ; (printout t "total probability " ?total crlf)
   ; create a recom-week with d days with random need
   (bind ?week (make-instance [AbstractWeek] of AWeek))
   (loop-for-count (?i 1 ?d) do
@@ -90,8 +89,10 @@
                   (slot-insert$ ?week days 1
                                 (make-instance (gensym) of ADay (main-need ?need)))
                   )
-  )
+)
 
+
+;; TEST ONLY
 (defrule generate-recom:display "Visualiza los dias del planning abstracto"
   ?week <- (object (name [AbstractWeek]))
  =>

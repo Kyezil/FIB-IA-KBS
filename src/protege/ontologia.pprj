@@ -1,4 +1,4 @@
-; Wed Nov 28 14:38:39 CET 2018
+; Wed Nov 28 23:13:17 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class32947]
-		[ontologia_ProjectKB_Class32948]
-		[ontologia_ProjectKB_Class32949]
-		[ontologia_ProjectKB_Class32950]
-		[ontologia_ProjectKB_Class32951]
-		[ontologia_ProjectKB_Class32952]
-		[ontologia_ProjectKB_Class32953]
-		[ontologia_ProjectKB_Class32954]))
+		[ontologia_ProjectKB_Class40401]
+		[ontologia_ProjectKB_Class40402]
+		[ontologia_ProjectKB_Class40403]
+		[ontologia_ProjectKB_Class40404]
+		[ontologia_ProjectKB_Class40405]
+		[ontologia_ProjectKB_Class40406]
+		[ontologia_ProjectKB_Class40407]
+		[ontologia_ProjectKB_Class40408]))
 
 ([CLSES_TAB] of  Widget
 
@@ -68,7 +68,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_763206_Class0] of  Map
+([KB_441245_Class0] of  Map
 )
 
 ([KB_944513_Class0] of  String
@@ -189,14 +189,29 @@
 		[ontologia_ProjectKB_Class106]
 		[ontologia_ProjectKB_Class110]
 		[ontologia_ProjectKB_Class245]
-		[ontologia_ProjectKB_Class305]
 		[ontologia_ProjectKB_Class26269]
-		[ontologia_ProjectKB_Class26271]
-		[ontologia_ProjectKB_Class30280]))
+		[ontologia_ProjectKB_Class30264]
+		[ontologia_ProjectKB_Class73282]
+		[ontologia_ProjectKB_Class92604]
+		[ontologia_ProjectKB_Class99988]))
 
 ([ontologia_ProjectKB_Class10075] of  Property_List
 
 	(properties [ontologia_ProjectKB_Class10129]))
+
+([ontologia_ProjectKB_Class10078] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class10079])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 540))
+
+([ontologia_ProjectKB_Class10079] of  Property_List
+)
 
 ([ontologia_ProjectKB_Class101] of  Property_List
 
@@ -217,7 +232,10 @@
 		[ontologia_ProjectKB_Class10122]
 		[ontologia_ProjectKB_Class83]
 		[ontologia_ProjectKB_Class241]
-		[ontologia_ProjectKB_Class301]))
+		[ontologia_ProjectKB_Class40393]
+		[ontologia_ProjectKB_Class40395]
+		[ontologia_ProjectKB_Class40397]
+		[ontologia_ProjectKB_Class40399]))
 
 ([ontologia_ProjectKB_Class10117] of  Property_List
 
@@ -420,20 +438,6 @@
 ([ontologia_ProjectKB_Class22] of  Property_List
 )
 
-([ontologia_ProjectKB_Class22856] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "duracion")
-	(property_list [ontologia_ProjectKB_Class22857])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 480))
-
-([ontologia_ProjectKB_Class22857] of  Property_List
-)
-
 ([ontologia_ProjectKB_Class23] of  Widget
 
 	(is_hidden TRUE)
@@ -494,20 +498,6 @@
 ([ontologia_ProjectKB_Class26270] of  Property_List
 )
 
-([ontologia_ProjectKB_Class26271] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "duracion")
-	(property_list [ontologia_ProjectKB_Class26272])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 420))
-
-([ontologia_ProjectKB_Class26272] of  Property_List
-)
-
 ([ontologia_ProjectKB_Class27] of  Widget
 
 	(is_hidden TRUE)
@@ -525,10 +515,10 @@
 		[ontologia_ProjectKB_Class291]
 		[ontologia_ProjectKB_Class295]
 		[ontologia_ProjectKB_Class297]
-		[ontologia_ProjectKB_Class303]
 		[ontologia_ProjectKB_Class20227]
-		[ontologia_ProjectKB_Class22856]
-		[ontologia_ProjectKB_Class78]))
+		[ontologia_ProjectKB_Class10078]
+		[ontologia_ProjectKB_Class72896]
+		[ontologia_ProjectKB_Class99602]))
 
 ([ontologia_ProjectKB_Class286] of  Property_List
 
@@ -645,46 +635,18 @@
 ([ontologia_ProjectKB_Class302] of  Property_List
 )
 
-([ontologia_ProjectKB_Class30280] of  Widget
+([ontologia_ProjectKB_Class30264] of  Widget
 
 	(height 60)
 	(is_hidden FALSE)
-	(name "workfactor")
-	(property_list [ontologia_ProjectKB_Class30281])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class30265])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
 	(width 100)
 	(x 0)
 	(y 480))
 
-([ontologia_ProjectKB_Class30281] of  Property_List
-)
-
-([ontologia_ProjectKB_Class303] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "intensidad")
-	(property_list [ontologia_ProjectKB_Class304])
-	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
-	(width 200)
-	(x 0)
-	(y 300))
-
-([ontologia_ProjectKB_Class304] of  Property_List
-)
-
-([ontologia_ProjectKB_Class305] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "intensidad")
-	(property_list [ontologia_ProjectKB_Class306])
-	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
-	(width 200)
-	(x 0)
-	(y 240))
-
-([ontologia_ProjectKB_Class306] of  Property_List
+([ontologia_ProjectKB_Class30265] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class31] of  Widget
@@ -693,102 +655,8 @@
 	(property_list [ontologia_ProjectKB_Class32])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
 
-([ontologia_ProjectKB_Class31329] of  Property_List
-)
-
-([ontologia_ProjectKB_Class31374] of  Property_List
-)
-
-([ontologia_ProjectKB_Class31859] of  Property_List
-)
-
-([ontologia_ProjectKB_Class31904] of  Property_List
-)
-
-([ontologia_ProjectKB_Class31949] of  Property_List
-)
-
-([ontologia_ProjectKB_Class31994] of  Property_List
-)
-
 ([ontologia_ProjectKB_Class32] of  Property_List
 )
-
-([ontologia_ProjectKB_Class32039] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32084] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32129] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32174] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32219] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32264] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32309] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32354] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32399] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32444] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32489] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32534] of  Property_List
-)
-
-([ontologia_ProjectKB_Class32947] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_ProjectKB_Class32948] of  String
-
-	(name "Necesidad")
-	(string_value "necesidad"))
-
-([ontologia_ProjectKB_Class32949] of  String
-
-	(name "Ejercicio")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class32950] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class32951] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([ontologia_ProjectKB_Class32952] of  String
-
-	(name "Factor de Riesgo")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class32953] of  String
-
-	(name "Deporte")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class32954] of  String
-
-	(name "Actividad")
-	(string_value "%3ANAME"))
 
 ([ontologia_ProjectKB_Class33] of  Widget
 
@@ -828,6 +696,102 @@
 
 ([ontologia_ProjectKB_Class40] of  Property_List
 )
+
+([ontologia_ProjectKB_Class40393] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "max duracion")
+	(property_list [ontologia_ProjectKB_Class40394])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 360))
+
+([ontologia_ProjectKB_Class40394] of  Property_List
+)
+
+([ontologia_ProjectKB_Class40395] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class40396])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([ontologia_ProjectKB_Class40396] of  Property_List
+)
+
+([ontologia_ProjectKB_Class40397] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "min duracion")
+	(property_list [ontologia_ProjectKB_Class40398])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 100)
+	(y 360))
+
+([ontologia_ProjectKB_Class40398] of  Property_List
+)
+
+([ontologia_ProjectKB_Class40399] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class40400])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 420))
+
+([ontologia_ProjectKB_Class40400] of  Property_List
+)
+
+([ontologia_ProjectKB_Class40401] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ontologia_ProjectKB_Class40402] of  String
+
+	(name "Necesidad")
+	(string_value "necesidad"))
+
+([ontologia_ProjectKB_Class40403] of  String
+
+	(name "Ejercicio")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class40404] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class40405] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class40406] of  String
+
+	(name "Factor de Riesgo")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class40407] of  String
+
+	(name "Deporte")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class40408] of  String
+
+	(name "Actividad")
+	(string_value "%3ANAME"))
 
 ([ontologia_ProjectKB_Class41] of  Widget
 
@@ -988,27 +952,41 @@
 ([ontologia_ProjectKB_Class72] of  Property_List
 )
 
+([ontologia_ProjectKB_Class72896] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "max duracion")
+	(property_list [ontologia_ProjectKB_Class72897])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 660))
+
+([ontologia_ProjectKB_Class72897] of  Property_List
+)
+
 ([ontologia_ProjectKB_Class73] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class74])
 	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
 
-([ontologia_ProjectKB_Class74] of  Property_List
-)
-
-([ontologia_ProjectKB_Class78] of  Widget
+([ontologia_ProjectKB_Class73282] of  Widget
 
 	(height 60)
 	(is_hidden FALSE)
-	(name "workfactor")
-	(property_list [ontologia_ProjectKB_Class79])
+	(name "max duracion")
+	(property_list [ontologia_ProjectKB_Class73283])
 	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
 	(width 100)
 	(x 0)
-	(y 540))
+	(y 600))
 
-([ontologia_ProjectKB_Class79] of  Property_List
+([ontologia_ProjectKB_Class73283] of  Property_List
+)
+
+([ontologia_ProjectKB_Class74] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class8] of  Property_List
@@ -1041,12 +1019,68 @@
 	(property_list [ontologia_ProjectKB_Class10])
 	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
 
+([ontologia_ProjectKB_Class92250] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion")
+	(property_list [ontologia_ProjectKB_Class92251])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 720))
+
+([ontologia_ProjectKB_Class92251] of  Property_List
+)
+
+([ontologia_ProjectKB_Class92604] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion")
+	(property_list [ontologia_ProjectKB_Class92605])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 660))
+
+([ontologia_ProjectKB_Class92605] of  Property_List
+)
+
 ([ontologia_ProjectKB_Class97] of  Widget
 
 	(is_hidden FALSE)
 	(name "Ejercicio")
 	(property_list [ontologia_ProjectKB_Class100])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class99602] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "min duracion")
+	(property_list [ontologia_ProjectKB_Class99603])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 780))
+
+([ontologia_ProjectKB_Class99603] of  Property_List
+)
+
+([ontologia_ProjectKB_Class99988] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "min duracion")
+	(property_list [ontologia_ProjectKB_Class99989])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 720))
+
+([ontologia_ProjectKB_Class99989] of  Property_List
+)
 
 ([option_instance] of  Options
 
@@ -1125,14 +1159,14 @@
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
-		[ontologia_ProjectKB_Class97]
-		[PAL_FORM_WIDGET]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET]
-		[ontologia_ProjectKB_Class10115]
+		[ontologia_ProjectKB_Class97]
 		[STANDARD_FACET_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
+		[PAL_FORM_WIDGET]
+		[ontologia_ProjectKB_Class80]
 		[STANDARD_CLASS_FORM_WIDGET]
-		[ontologia_ProjectKB_Class80])
+		[ontologia_ProjectKB_Class10115])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

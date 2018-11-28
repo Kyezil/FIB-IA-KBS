@@ -1,4 +1,4 @@
-; Wed Nov 28 14:38:39 CET 2018
+; Wed Nov 28 23:13:17 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -31,17 +31,13 @@
 		(type INSTANCE)
 ;+		(allowed-classes Factor+de+Riesgo)
 		(create-accessor read-write))
-	(single-slot workfactor
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(multislot padece
 ;+		(comment "Un anciano puede padecer factores de riesgo que pueden limitar sus capacidades a realizar actividades")
 		(type INSTANCE)
 ;+		(allowed-classes Factor+de+Riesgo)
 		(create-accessor read-write))
-	(single-slot duracion
-		(type INTEGER)
+	(single-slot MET
+		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot max-dependencia
@@ -76,6 +72,10 @@
 		(type INSTANCE)
 ;+		(allowed-classes Necesidad)
 		(create-accessor read-write))
+	(single-slot min+duracion
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot factor-de-riesgo
 ;+		(comment "nombre del factor de riesgo")
 		(type STRING)
@@ -92,6 +92,10 @@
 		(allowed-values sedentario-severo sedentario-moderado activo muy-activo undefined)
 		(default undefined)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot max+duracion
+		(type INTEGER)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot intensidad
 ;+		(comment "nivel de intensidad de la actividad")
@@ -176,23 +180,25 @@
 		(type INSTANCE)
 ;+		(allowed-classes Necesidad)
 		(create-accessor read-write))
+	(single-slot max+duracion
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot descripcion
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot intensidad
-;+		(comment "nivel de intensidad de la actividad")
-		(type SYMBOL)
-		(allowed-values leve moderada intensa)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot duracion
+	(single-slot min+duracion
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot actividad
 ;+		(comment "nombre de la actividad")
 		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot MET
+		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot contraindicado-en-caso-de
@@ -204,10 +210,6 @@
 ;+		(comment "indica si la actividad se realiza solo")
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot workfactor
-		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 

@@ -1,4 +1,4 @@
-; Wed Nov 28 14:38:33 CET 2018
+; Wed Nov 28 23:13:39 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,305 +6,305 @@
 ([ontologia_Class0] of  levantarse+y+sentarse+silla
 
 	(actividad "levantarse y sentarse silla")
-	(duracion 15)
-	(intensidad leve)
 	(llena [ontologia_Class3])
-	(solitaria TRUE)
-	(workfactor 30))
+	(max+duracion 15)
+	(MET 2.9)
+	(min+duracion 15)
+	(solitaria TRUE))
 
 ([ontologia_Class10] of  ejercicio+de+fuerza
 
 	(actividad "ejercicio de fuerza")
-	(duracion 5)
-	(intensidad leve)
 	(llena [ontologia_Class3])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 5)
+	(MET 8.0)
+	(min+duracion 5)
+	(solitaria FALSE))
+
+([ontologia_Class10000] of  caminar
+
+	(actividad "caminar solo")
+	(llena [ontologia_Class7])
+	(max+duracion 45)
+	(MET 3.5)
+	(min+duracion 45)
+	(solitaria TRUE))
 
 ([ontologia_Class10003] of  bicicleta+estatica
 
-	(actividad "bicicleta estatica")
-	(duracion 30)
-	(intensidad leve)
+	(actividad "bicicleta estatica suave")
 	(llena [ontologia_Class7])
-	(solitaria FALSE)
-	(workfactor 10))
+	(max+duracion 30)
+	(MET 3.0)
+	(min+duracion 30)
+	(solitaria FALSE))
 
 ([ontologia_Class10004] of  golf
 
 	(actividad "golf")
-	(duracion 50)
-	(intensidad moderada)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
 		[ontologia_Class3])
-	(solitaria TRUE)
-	(workfactor 12))
+	(max+duracion 50)
+	(MET 4.5)
+	(min+duracion 50)
+	(solitaria TRUE))
 
 ([ontologia_Class10005] of  yoga
 
 	(actividad "yoga")
-	(duracion 30)
-	(intensidad leve)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
 		[ontologia_Class4])
-	(workfactor 14))
+	(max+duracion 50)
+	(MET 2.5)
+	(min+duracion 30)
+	(solitaria FALSE))
 
 ([ontologia_Class10006] of  correr
 
 	(actividad "correr")
-	(duracion 20)
-	(intensidad intensa)
 	(llena [ontologia_Class7])
-	(solitaria TRUE)
-	(workfactor 50))
+	(max+duracion 40)
+	(MET 7.0)
+	(min+duracion 20)
+	(solitaria TRUE))
 
 ([ontologia_Class10007] of  abdominales
 
 	(actividad "abdominales")
-	(duracion 5)
-	(intensidad moderada)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 5)
+	(MET 8.0)
+	(min+duracion 5)
+	(solitaria FALSE))
 
 ([ontologia_Class10008] of  andar+de+puntillas+o+talones
 
 	(actividad "andar de puntillas o talones")
-	(duracion 15)
-	(intensidad leve)
 	(llena [ontologia_Class5])
-	(solitaria FALSE)
-	(workfactor 30))
+	(max+duracion 15)
+	(MET 5.5)
+	(min+duracion 15)
+	(solitaria FALSE))
 
 ([ontologia_Class10009] of  levantar+pesas
 
 	(actividad "levantar pesas")
-	(duracion 5)
-	(intensidad leve)
 	(llena [ontologia_Class3])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 5)
+	(MET 8.0)
+	(min+duracion 5)
+	(solitaria FALSE))
 
 ([ontologia_Class10010] of  rotacion+de+hombros
 
 	(actividad "rotacion de hombros")
-	(duracion 15)
-	(intensidad leve)
 	(llena
 		[ontologia_Class4]
 		[ontologia_Class6])
-	(solitaria FALSE)
-	(workfactor 20))
+	(max+duracion 15)
+	(MET 2.3)
+	(min+duracion 5)
+	(solitaria FALSE))
 
 ([ontologia_Class10011] of  mantenerse+a+la+pata+coja
 
 	(actividad "mantenerse a la pata coja")
-	(duracion 15)
-	(intensidad moderada)
 	(llena
 		[ontologia_Class5]
 		[ontologia_Class4])
-	(solitaria FALSE)
-	(workfactor 40))
+	(max+duracion 15)
+	(MET 2.3)
+	(min+duracion 5)
+	(solitaria FALSE))
 
 ([ontologia_Class10012] of  petanca
 
 	(actividad "petanca")
-	(duracion 45)
-	(intensidad moderada)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class3]
 		[ontologia_Class5])
-	(workfactor 12))
+	(max+duracion 45)
+	(MET 4.5)
+	(min+duracion 45))
 
 ([ontologia_Class10014] of  baile
 
 	(actividad "baile")
-	(duracion 30)
-	(intensidad leve)
 	(llena
 		[ontologia_Class7]
 		[ontologia_Class6])
-	(solitaria FALSE)
-	(workfactor 10))
+	(max+duracion 30)
+	(MET 4.8)
+	(min+duracion 30)
+	(solitaria FALSE))
 
 ([ontologia_Class10015] of  agachadillas
 
 	(actividad "agachadillas")
-	(duracion 5)
-	(intensidad moderada)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class5])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 5)
+	(MET 8.0)
+	(min+duracion 5)
+	(solitaria FALSE))
 
 ([ontologia_Class2] of  caminar
 
 	(actividad "caminar por cuestas")
-	(duracion 45)
-	(intensidad moderada)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
-	(solitaria TRUE)
-	(workfactor 12))
+	(max+duracion 45)
+	(MET 6.0)
+	(min+duracion 45)
+	(solitaria TRUE))
 
 ([ontologia_Class20006] of  bicicleta+estatica
 
-	(actividad "bicicleta estatica")
-	(duracion 45)
-	(intensidad moderada)
+	(actividad "bicicleta estatica moderada")
 	(llena [ontologia_Class7])
-	(solitaria FALSE)
-	(workfactor 10))
+	(max+duracion 35)
+	(MET 5.5)
+	(min+duracion 35)
+	(solitaria FALSE))
 
 ([ontologia_Class20007] of  bicicleta+estatica
 
-	(actividad "bicicleta estatica")
-	(duracion 60)
-	(intensidad intensa)
+	(actividad "bicicleta estatica intensa")
 	(llena [ontologia_Class7])
-	(solitaria FALSE)
-	(workfactor 10))
-
-([ontologia_Class20011] of  yoga
-
-	(actividad "yoga")
-	(duracion 50)
-	(intensidad moderada)
-	(llena
-		[ontologia_Class6]
-		[ontologia_Class5]
-		[ontologia_Class4])
-	(workfactor 14))
+	(max+duracion 40)
+	(MET 7.0)
+	(min+duracion 40)
+	(solitaria FALSE))
 
 ([ontologia_Class20024] of  abdominales
 
 	(actividad "abdominales")
-	(duracion 10)
-	(intensidad intensa)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 10)
+	(MET 8.0)
+	(min+duracion 10)
+	(solitaria FALSE))
 
 ([ontologia_Class20025] of  agachadillas
 
 	(actividad "agachadillas")
-	(duracion 10)
-	(intensidad intensa)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class5])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 10)
+	(MET 8.0)
+	(min+duracion 10)
+	(solitaria FALSE))
 
 ([ontologia_Class20026] of  ejercicio+de+equilibrio
 
 	(actividad "ejercicio de equilibrio")
-	(duracion 10)
-	(intensidad leve)
 	(llena [ontologia_Class5])
-	(solitaria FALSE)
-	(workfactor 50))
+	(max+duracion 10)
+	(MET 2.9)
+	(min+duracion 10)
+	(solitaria FALSE))
 
 ([ontologia_Class20027] of  ejercicio+de+equilibrio
 
 	(actividad "ejercicio de equilibrio")
-	(duracion 15)
-	(intensidad moderada)
 	(llena [ontologia_Class5])
-	(solitaria FALSE)
-	(workfactor 50))
+	(max+duracion 15)
+	(MET 2.9)
+	(min+duracion 15)
+	(solitaria FALSE))
 
 ([ontologia_Class20028] of  ejercicio+de+fuerza
 
 	(actividad "ejercicio de fuerza")
-	(duracion 10)
-	(intensidad moderada)
 	(llena [ontologia_Class3])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 10)
+	(MET 8.0)
+	(min+duracion 10)
+	(solitaria FALSE))
 
 ([ontologia_Class20029] of  ejercicio+de+fuerza
 
 	(actividad "ejercicio de fuerza")
-	(duracion 15)
-	(intensidad intensa)
 	(llena [ontologia_Class3])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 15)
+	(MET 8.0)
+	(min+duracion 15)
+	(solitaria FALSE))
 
 ([ontologia_Class20030] of  ejercicio+de+resistencia
 
 	(actividad "ejercicio de resistencia")
-	(duracion 20)
-	(intensidad leve)
 	(llena [ontologia_Class7])
+	(max+duracion 20)
+	(MET 4.0)
+	(min+duracion 20)
 	(solitaria FALSE))
 
 ([ontologia_Class20031] of  ejercicio+de+resistencia
 
 	(actividad "ejercicio de resistencia")
-	(duracion 20)
-	(intensidad moderada)
 	(llena [ontologia_Class7])
-	(solitaria FALSE)
-	(workfactor 25))
+	(max+duracion 30)
+	(MET 4.0)
+	(min+duracion 30)
+	(solitaria FALSE))
 
 ([ontologia_Class20032] of  levantar+pesas
 
 	(actividad "levantar pesas")
-	(duracion 10)
-	(intensidad moderada)
 	(llena [ontologia_Class3])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 10)
+	(MET 8.0)
+	(min+duracion 10)
+	(solitaria FALSE))
 
 ([ontologia_Class20033] of  levantar+pesas
 
 	(actividad "levantar pesas")
-	(duracion 15)
-	(intensidad intensa)
 	(llena [ontologia_Class3])
-	(solitaria FALSE)
-	(workfactor 100))
+	(max+duracion 15)
+	(MET 8.0)
+	(min+duracion 15)
+	(solitaria FALSE))
 
 ([ontologia_Class26] of  caminar
 
-	(actividad "caminar solo")
-	(duracion 45)
-	(intensidad leve)
+	(actividad "caminar despacio")
 	(llena [ontologia_Class7])
-	(solitaria TRUE)
-	(workfactor 10))
+	(max+duracion 45)
+	(MET 2.5)
+	(min+duracion 45)
+	(solitaria FALSE))
 
 ([ontologia_Class27] of  natacion
 
 	(actividad "natacion")
-	(duracion 30)
-	(intensidad moderada)
 	(llena [ontologia_Class7])
-	(solitaria TRUE)
-	(workfactor 10))
+	(max+duracion 50)
+	(MET 7.0)
+	(min+duracion 30)
+	(solitaria TRUE))
 
 ([ontologia_Class29] of  ejercicio+de+resistencia
 
 	(actividad "ejercicio de resistencia")
-	(duracion 40)
-	(intensidad intensa)
 	(llena [ontologia_Class7])
-	(solitaria FALSE)
-	(workfactor 25))
+	(max+duracion 40)
+	(MET 4.0)
+	(min+duracion 40)
+	(solitaria FALSE))
 
 ([ontologia_Class3] of  Necesidad
 
@@ -313,11 +313,11 @@
 ([ontologia_Class30] of  ejercicio+de+equilibrio
 
 	(actividad "ejercicio de equilibrio")
-	(duracion 20)
-	(intensidad intensa)
 	(llena [ontologia_Class5])
-	(solitaria FALSE)
-	(workfactor 50))
+	(max+duracion 20)
+	(MET 2.9)
+	(min+duracion 20)
+	(solitaria FALSE))
 
 ([ontologia_Class4] of  Necesidad
 
@@ -338,8 +338,8 @@
 ([ontologia_Class8] of  caminar
 
 	(actividad "caminar acompanado")
-	(duracion 45)
-	(intensidad leve)
 	(llena [ontologia_Class7])
-	(solitaria FALSE)
-	(workfactor 10))
+	(max+duracion 45)
+	(MET 3.5)
+	(min+duracion 45)
+	(solitaria FALSE))

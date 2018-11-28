@@ -34,7 +34,7 @@
 ; -- objetivo para el paciente
 (deftemplate objective
   (slot need (type INSTANCE) (allowed-classes Necesidad))
-  (slot priority (type NUMBER) (default 0))
+  (slot priority (type NUMBER) (default 1))
   )
 ; -- un dia de recomendacion
 (defclass ADay

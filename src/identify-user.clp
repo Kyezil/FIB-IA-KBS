@@ -10,6 +10,26 @@
   )
 )
 
+(defrule identify-user:get-height "Obtiene la altura del usuario"
+  (object (name [Usuario]) (altura 0))
+ =>
+  (bind ?h (pregunta-numerica "Cuál es su altura (en cm)" 1 300))
+  (send [Usuario] put-altura ?h)
+)
+
+(defrule identify-user:get-weight "Obtiene el peso del usuario"
+  (object (name [Usuario]) (peso 0))
+ =>
+  (bind ?w (pregunta-numerica "Cuál es su peso (en kg)" 1 600))
+  (send [Usuario] put-peso ?w)
+)
+
+(defrule identify-user:compute-BMI "Calcula el IMG del usuario"
+  (object (name [Usuario]) (peso ?w&~0) (altura ?h&~0) (IMC 0))
+ =>
+  (send [Usuario] put-IMC (round (/ ?w (** (/ ?h 100) 2))))
+)
+
 (defrule identify-user:activity-level "Obtiene el nivel de actividad del usuario"
   (object (name [Usuario]) (nivel-actividad undefined))
  =>
@@ -29,43 +49,11 @@
 )
 
 (defrule identify-user:borg "Obtiene el nivel de esfuerzo posible del usuario"
- (not (borg walk-1h))
+ (not (borg walk-1h ?))
  =>
   (bind ?borg (pregunta-numerica "En la escala de Borg, como se siente después de caminar tranquilamente durante una hora" 1 10))
   (assert (borg walk-1h ?borg))
 )
-
-(defrule identify-user:days1 "Define el #dias"
-  (not (days))
-  (borg walk-1h 1)
- =>
-  (assert (days 7))
-)
-(defrule identify-user:days2 "Define el #dias"
-  (not (days))
-  (borg walk-1h 2)
- =>
-  (assert (days 6))
-)
-(defrule identify-user:days3 "Define el #dias"
-  (not (days))
-  (borg walk-1h 3)
- =>
-  (assert (days 5))
-)
-(defrule identify-user:days4 "Define el #dias"
-  (not (days))
-  (borg walk-1h 4|5)
- =>
-  (assert (days 4))
-)
-(defrule identify-user:days5 "Define el #dias"
-  (not (days))
-  (borg walk-1h ?)
- =>
-  (assert (days 3))
-)
-
 
 (defrule identify-user:done "Finaliza la recopilación de info del usuario"
   (declare (salience -100))

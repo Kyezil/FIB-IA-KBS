@@ -1,18 +1,63 @@
-; modulo de generacion del planning abstracto
+;;;; modulo de generacion del planning abstracto
+
+;;; Define el numero de dias
+(defrule generate-recom:days1 "Define el #dias"
+  (not (days ?))
+  (borg walk-1h 1)
+ =>
+  (assert (days 7))
+)
+(defrule generate-recom:days2 "Define el #dias"
+  (not (days ?))
+  (borg walk-1h 2)
+ =>
+  (assert (days 6))
+)
+(defrule generate-recom:days3 "Define el #dias"
+  (not (days ?))
+  (borg walk-1h 3)
+ =>
+  (assert (days 5))
+)
+(defrule generate-recom:days4 "Define el #dias"
+  (not (days ?))
+  (borg walk-1h 4|5)
+ =>
+  (assert (days 4))
+)
+(defrule generate-recom:days5 "Define el #dias"
+  (not (days ?))
+  (borg walk-1h ?)
+ =>
+  (assert (days 3))
+)
+
+(defrule generate-recom:days-bmi "Aumenta el #dias si obesidad"
+  (object (name [Usuario]) (IMC ?bmi&:(> ?bmi 30)))
+  ?df <- (days ?d&:(< ?d 7))
+  (not (days-bmi)) ; HACK
+ =>
+  (retract ?df)
+  (assert (days-bmi)) ; HACK
+  (assert (days (+ ?d 1)))
+)
+
 (defrule generate-recom:init "Crea objetos de necesidad"
  =>
   (do-for-all-instances ((?need Necesidad)) TRUE
     ;(printout t "Necesidad " (send ?need get-necesidad) crlf)
-    (assert (objective (need ?need) (priority (random 0 3)))) ; TODO remove random
+    (assert (objective (need ?need) (priority (random 1 3)))) ; TODO remove random
     )
-  )
+)
 
 ; cambios de prioridades en los objetivos
 
 ; generacion de los dias en base a los objetivos
 (defrule generate-recom:generate-abstract-week "Crea un planning segun las prioridades"
+  (declare (salience -10)) ; IMPORTANT, lower than day changing
   (days ?d)
   (not (object (name [AbstractWeek])))
+  (objective (priority ?o&:(> ?o 0)))
  =>
   (bind ?objs (find-all-facts ((?o objective )) (> ?o:priority 0)))
   ; (printout t "possible objectives are " ?objs crlf)

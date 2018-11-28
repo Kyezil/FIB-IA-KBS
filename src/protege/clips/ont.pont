@@ -1,4 +1,4 @@
-; Mon Nov 19 15:42:44 CET 2018
+; Wed Nov 28 12:43:52 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -27,7 +27,7 @@
 	(multislot padece
 ;+		(comment "Un anciano puede padecer factores de riesgo que pueden limitar sus capacidades a realizar actividades")
 		(type INSTANCE)
-;+		(allowed-classes Factor_de_Riesgo)
+;+		(allowed-classes Factor+de+Riesgo)
 		(create-accessor read-write))
 	(multislot llena
 ;+		(comment "Una actividad puede llenar necesidades segun su modalidad")
@@ -45,11 +45,20 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot IMC
+;+		(comment "indice de masa corporal")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot solitaria
 ;+		(comment "indica si la actividad se realiza solo")
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot duracion
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot actividad
 ;+		(comment "nombre de la actividad")
@@ -96,7 +105,11 @@
 	(multislot contraindicado-en-caso-de
 ;+		(comment "Una actividad puede estar contraindicada para ciertos factores de riesgo.")
 		(type INSTANCE)
-;+		(allowed-classes Factor_de_Riesgo)
+;+		(allowed-classes Factor+de+Riesgo)
+		(create-accessor read-write))
+	(single-slot descripcion
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Anciano "Representa una persona mayor y sus caracteristicas"
@@ -117,10 +130,15 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot IMC
+;+		(comment "indice de masa corporal")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(multislot padece
 ;+		(comment "Un anciano puede padecer factores de riesgo que pueden limitar sus capacidades a realizar actividades")
 		(type INSTANCE)
-;+		(allowed-classes Factor_de_Riesgo)
+;+		(allowed-classes Factor+de+Riesgo)
 		(create-accessor read-write))
 	(single-slot altura
 ;+		(comment "altura del anciano en cm")
@@ -155,6 +173,10 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot duracion
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot actividad
 ;+		(comment "nombre de la actividad")
 		(type STRING)
@@ -168,7 +190,11 @@
 	(multislot contraindicado-en-caso-de
 ;+		(comment "Una actividad puede estar contraindicada para ciertos factores de riesgo.")
 		(type INSTANCE)
-;+		(allowed-classes Factor_de_Riesgo)
+;+		(allowed-classes Factor+de+Riesgo)
+		(create-accessor read-write))
+	(single-slot descripcion
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot intensidad
 ;+		(comment "nivel de intensidad de la actividad")
@@ -181,11 +207,83 @@
 	(is-a Actividad)
 	(role concrete))
 
+(defclass caminar
+	(is-a Deporte)
+	(role concrete))
+
+(defclass baile
+	(is-a Deporte)
+	(role concrete))
+
+(defclass bicicleta+estatica
+	(is-a Deporte)
+	(role concrete))
+
+(defclass golf
+	(is-a Deporte)
+	(role concrete))
+
+(defclass natacion
+	(is-a Deporte)
+	(role concrete))
+
+(defclass correr
+	(is-a Deporte)
+	(role concrete))
+
+(defclass petanca
+	(is-a Deporte)
+	(role concrete))
+
+(defclass yoga
+	(is-a Deporte)
+	(role concrete))
+
 (defclass Ejercicio
 	(is-a Actividad)
 	(role concrete))
 
-(defclass Factor_de_Riesgo
+(defclass abdominales
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass agachadillas
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass andar+de+puntillas+o+talones
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass ejercicio+de+equilibrio
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass ejercicio+de+fuerza
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass ejercicio+de+resistencia
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass levantar+pesas
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass levantarse+y+sentarse+silla
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass mantenerse+a+la+pata+coja
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass rotacion+de+hombros
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass Factor+de+Riesgo
 	(is-a USER)
 	(role concrete)
 	(single-slot factor-de-riesgo

@@ -42,15 +42,21 @@
   (assert (days (+ ?d 1)))
 )
 
-(defrule generate-recom:init "Crea objetos de necesidad"
+;;; cambios de prioridades en los objetivos
+(defrule generate-recom:init-need "Crea objetos de necesidad"
+  ?need <- (object (is-a Necesidad))
  =>
-  (do-for-all-instances ((?need Necesidad)) TRUE
-    ;(printout t "Necesidad " (send ?need get-necesidad) crlf)
-    (assert (objective (need ?need) (priority (random 1 3)))) ; TODO remove random
-    )
+  (assert (objective (need ?need)))
 )
 
-; cambios de prioridades en los objetivos
+(defrule generate-recom:need-priority "Cambia la prioridad de un objectivo"
+  ?n <- (need-extra ?need)
+  ?o <- (objective (need ?need) (priority ?p))
+ =>
+  (retract ?n)
+  (modify ?o (priority (+ ?p 2)))
+)
+
 
 ; generacion de los dias en base a los objetivos
 (defrule generate-recom:generate-abstract-week "Crea un planning segun las prioridades"

@@ -55,6 +55,14 @@
   (assert (borg walk-1h ?borg))
 )
 
+(defrule identify-user:need-priority "Pregunta por necesidades especiales"
+  (object (name [Usuario]))
+  ?o <- (object (is-a Necesidad) (necesidad ?need&"resistencia"|"fuerza"|"flexibilidad"))
+ =>
+  (if (si-o-no-p (str-cat "Necesitas mejorar tu " ?need))
+   then (assert (need-extra ?o)))
+)
+
 (defrule identify-user:done "Finaliza la recopilación de info del usuario"
   (declare (salience -100))
   (object (name [Usuario]) (dependencia ~undefined) (nivel-actividad ~undefined))

@@ -27,7 +27,7 @@
 )
 (defrule generate-recom:days5 "Define el #dias"
   (not (days ?))
-  (borg walk-1h ?)
+  (borg walk-1h 6|7|8|9|10)
  =>
   (assert (days 3))
 )
@@ -91,6 +91,11 @@
                   )
 )
 
+(defrule generate-recom:done "Pasa a la fase de concretizacion del planning"
+  (object (name [AbstractWeek]))
+ =>
+  (focus specify-recom)
+)
 
 ;; TEST ONLY
 (defrule generate-recom:display "Visualiza los dias del planning abstracto"
@@ -98,8 +103,9 @@
  =>
   (printout t "=== Planificacion de la semana ===" crlf)
   (foreach ?day (send ?week get-days)
-    (printout t "> Dia " ?day-index " de "
+    (printout t "> Dia " ?day-index " ["
               (send (send ?day get-main-need) get-necesidad)
+              "]"
               crlf)
     )
 )

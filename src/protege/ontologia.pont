@@ -1,4 +1,4 @@
-; Wed Nov 28 23:13:17 CET 2018
+; Thu Nov 29 11:28:19 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,18 +7,16 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
-	(single-slot grado
-;+		(comment "grado del nidel de dependencia")
-		(type STRING)
-;+		(cardinality 1 1)
+	(single-slot edad
+;+		(comment "edad del anciano")
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot tiene
-;+		(comment "Un anciano puede tener varias necesidades, es un objetivo cubrirlas para el anciano")
-		(type INSTANCE)
-;+		(allowed-classes Necesidad)
-		(create-accessor read-write))
-	(single-slot descripcion
-		(type STRING)
+	(single-slot nivel-actividad
+;+		(comment "nivel general de actividad del anciano")
+		(type SYMBOL)
+		(allowed-values sedentario-severo sedentario-moderado activo muy-activo undefined)
+		(default undefined)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot peso
@@ -26,18 +24,22 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot contraindicado-en-caso-de
-;+		(comment "Una actividad puede estar contraindicada para ciertos factores de riesgo.")
-		(type INSTANCE)
-;+		(allowed-classes Factor+de+Riesgo)
-		(create-accessor read-write))
 	(multislot padece
 ;+		(comment "Un anciano puede padecer factores de riesgo que pueden limitar sus capacidades a realizar actividades")
 		(type INSTANCE)
 ;+		(allowed-classes Factor+de+Riesgo)
 		(create-accessor read-write))
-	(single-slot MET
-		(type FLOAT)
+	(multislot llena
+;+		(comment "Una actividad puede llenar necesidades segun su modalidad")
+		(type INSTANCE)
+;+		(allowed-classes Necesidad)
+		(create-accessor read-write))
+	(single-slot max+duracion
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot min+duracion
+		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot max-dependencia
@@ -51,30 +53,52 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot dependencia
-		(type SYMBOL)
-		(allowed-values independiente fragil dependiente undefined)
-		(default undefined)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot IMC
 ;+		(comment "indice de masa corporal")
 		(type INTEGER)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot solitaria
+;+		(comment "indica si la actividad se realiza solo")
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot actividad
 ;+		(comment "nombre de la actividad")
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot llena
-;+		(comment "Una actividad puede llenar necesidades segun su modalidad")
+	(single-slot dependencia
+		(type SYMBOL)
+		(allowed-values independiente fragil dependiente undefined)
+		(default undefined)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot intensidad
+;+		(comment "nivel de intensidad de la actividad")
+		(type SYMBOL)
+		(allowed-values leve moderada intensa)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot tiene
+;+		(comment "Un anciano puede tener varias necesidades, es un objetivo cubrirlas para el anciano")
 		(type INSTANCE)
 ;+		(allowed-classes Necesidad)
 		(create-accessor read-write))
-	(single-slot min+duracion
-		(type INTEGER)
+	(single-slot MET
+		(type FLOAT)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot grado
+;+		(comment "grado del nidel de dependencia")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot altura
+;+		(comment "altura del anciano en cm")
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot factor-de-riesgo
 ;+		(comment "nombre del factor de riesgo")
@@ -86,52 +110,38 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot nivel-actividad
-;+		(comment "nivel general de actividad del anciano")
-		(type SYMBOL)
-		(allowed-values sedentario-severo sedentario-moderado activo muy-activo undefined)
-		(default undefined)
-;+		(cardinality 0 1)
+	(multislot contraindicado-en-caso-de
+;+		(comment "Una actividad puede estar contraindicada para ciertos factores de riesgo.")
+		(type INSTANCE)
+;+		(allowed-classes Factor+de+Riesgo)
 		(create-accessor read-write))
-	(single-slot max+duracion
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot intensidad
-;+		(comment "nivel de intensidad de la actividad")
-		(type SYMBOL)
-		(allowed-values leve moderada intensa)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot altura
-;+		(comment "altura del anciano en cm")
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot solitaria
-;+		(comment "indica si la actividad se realiza solo")
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot edad
-;+		(comment "edad del anciano")
-		(type INTEGER)
+	(single-slot descripcion
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Anciano "Representa una persona mayor y sus caracteristicas"
 	(is-a USER)
 	(role concrete)
-	(single-slot IMC
-;+		(comment "indice de masa corporal")
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot tiene
 ;+		(comment "Un anciano puede tener varias necesidades, es un objetivo cubrirlas para el anciano")
 		(type INSTANCE)
 ;+		(allowed-classes Necesidad)
+		(create-accessor read-write))
+	(single-slot edad
+;+		(comment "edad del anciano")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre
+;+		(comment "Nombre de la persona")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot IMC
+;+		(comment "indice de masa corporal")
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot padece
 ;+		(comment "Un anciano puede padecer factores de riesgo que pueden limitar sus capacidades a realizar actividades")
@@ -143,9 +153,10 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot peso
-;+		(comment "peso en kg del anciano")
-		(type INTEGER)
+	(single-slot dependencia
+		(type SYMBOL)
+		(allowed-values independiente fragil dependiente undefined)
+		(default undefined)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot nivel-actividad
@@ -155,38 +166,20 @@
 		(default undefined)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot nombre
-;+		(comment "Nombre de la persona")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot edad
-;+		(comment "edad del anciano")
+	(single-slot peso
+;+		(comment "peso en kg del anciano")
 		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot dependencia
-		(type SYMBOL)
-		(allowed-values independiente fragil dependiente undefined)
-		(default undefined)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Actividad "Accion fisica"
 	(is-a USER)
-	(role abstract)
-	(multislot llena
-;+		(comment "Una actividad puede llenar necesidades segun su modalidad")
-		(type INSTANCE)
-;+		(allowed-classes Necesidad)
-		(create-accessor read-write))
-	(single-slot max+duracion
-		(type INTEGER)
+	(role concrete)
+	(single-slot solitaria
+;+		(comment "indica si la actividad se realiza solo")
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot descripcion
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot min+duracion
 		(type INTEGER)
@@ -197,6 +190,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(multislot llena
+;+		(comment "Una actividad puede llenar necesidades segun su modalidad")
+		(type INSTANCE)
+;+		(allowed-classes Necesidad)
+		(create-accessor read-write))
 	(single-slot MET
 		(type FLOAT)
 ;+		(cardinality 1 1)
@@ -206,11 +204,13 @@
 		(type INSTANCE)
 ;+		(allowed-classes Factor+de+Riesgo)
 		(create-accessor read-write))
-	(single-slot solitaria
-;+		(comment "indica si la actividad se realiza solo")
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
+	(single-slot max+duracion
+		(type INTEGER)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descripcion
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Deporte

@@ -99,6 +99,7 @@
 
 ;; TEST ONLY
 (defrule generate-recom:display "Visualiza los dias del planning abstracto"
+  (testing)
   ?week <- (object (name [AbstractWeek]))
  =>
   (printout t "=== Planificacion de la semana ===" crlf)

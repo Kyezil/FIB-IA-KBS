@@ -1,4 +1,4 @@
-; Thu Nov 29 11:28:19 CET 2018
+; Thu Nov 29 12:02:09 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class75]
-		[ontologia_ProjectKB_Class76]
-		[ontologia_ProjectKB_Class77]
-		[ontologia_ProjectKB_Class78]
-		[ontologia_ProjectKB_Class79]
-		[ontologia_ProjectKB_Class10080]
-		[ontologia_ProjectKB_Class10081]
-		[ontologia_ProjectKB_Class10082]))
+		[ontologia_ProjectKB_Class20998]
+		[ontologia_ProjectKB_Class20999]
+		[ontologia_ProjectKB_Class21000]
+		[ontologia_ProjectKB_Class21001]
+		[ontologia_ProjectKB_Class21002]
+		[ontologia_ProjectKB_Class21003]
+		[ontologia_ProjectKB_Class21004]
+		[ontologia_ProjectKB_Class21005]))
 
 ([CLSES_TAB] of  Widget
 
@@ -181,56 +181,50 @@
 ([ontologia_ProjectKB_Class10] of  Property_List
 )
 
-([ontologia_ProjectKB_Class100] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class101]
-		[ontologia_ProjectKB_Class102]
-		[ontologia_ProjectKB_Class106]
-		[ontologia_ProjectKB_Class110]
-		[ontologia_ProjectKB_Class245]
-		[ontologia_ProjectKB_Class26269]
-		[ontologia_ProjectKB_Class30264]
-		[ontologia_ProjectKB_Class73282]
-		[ontologia_ProjectKB_Class92604]
-		[ontologia_ProjectKB_Class99988]))
-
 ([ontologia_ProjectKB_Class10075] of  Property_List
 
 	(properties [ontologia_ProjectKB_Class10129]))
 
-([ontologia_ProjectKB_Class10078] of  Widget
+([ontologia_ProjectKB_Class10083] of  Widget
 
-	(height 60)
 	(is_hidden FALSE)
-	(name "MET")
-	(property_list [ontologia_ProjectKB_Class10079])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 0)
-	(y 540))
+	(name "bicicleta estatica")
+	(property_list [ontologia_ProjectKB_Class20976])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
 
-([ontologia_ProjectKB_Class10079] of  Property_List
-)
+([ontologia_ProjectKB_Class10111] of  Property_List
 
-([ontologia_ProjectKB_Class10080] of  String
+	(properties
+		[ontologia_ProjectKB_Class10112]
+		[ontologia_ProjectKB_Class10113]
+		[ontologia_ProjectKB_Class20117]
+		[ontologia_ProjectKB_Class20121]
+		[ontologia_ProjectKB_Class20123]
+		[ontologia_ProjectKB_Class20125]
+		[ontologia_ProjectKB_Class20127]
+		[ontologia_ProjectKB_Class20129]
+		[ontologia_ProjectKB_Class20131]))
 
-	(name "Necesidad")
-	(string_value "necesidad"))
-
-([ontologia_ProjectKB_Class10081] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class10082] of  String
-
-	(name "Ejercicio")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class101] of  Property_List
+([ontologia_ProjectKB_Class10112] of  Property_List
 
 	(name "layout properties"))
+
+([ontologia_ProjectKB_Class10113] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class10114])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class10114] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20115]
+		[ontologia_ProjectKB_Class20116]))
 
 ([ontologia_ProjectKB_Class10115] of  Widget
 
@@ -264,8 +258,8 @@
 	(property_list [ontologia_ProjectKB_Class10119])
 	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
 	(width 200)
-	(x 200)
-	(y 0))
+	(x 0)
+	(y 170))
 
 ([ontologia_ProjectKB_Class10119] of  Property_List
 
@@ -291,8 +285,8 @@
 	(property_list [ontologia_ProjectKB_Class10123])
 	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
 	(width 200)
-	(x 0)
-	(y 180))
+	(x 200)
+	(y 170))
 
 ([ontologia_ProjectKB_Class10123] of  Property_List
 
@@ -314,79 +308,11 @@
 
 	(name "SearchTab_Query"))
 
-([ontologia_ProjectKB_Class102] of  Widget
-
-	(height 180)
-	(is_hidden FALSE)
-	(name "llena")
-	(property_list [ontologia_ProjectKB_Class103])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 200)
-	(y 0))
-
-([ontologia_ProjectKB_Class103] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class104]
-		[ontologia_ProjectKB_Class105]))
-
-([ontologia_ProjectKB_Class104] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class105] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class106] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "contraindicado-en-caso-de")
-	(property_list [ontologia_ProjectKB_Class107])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 0)
-	(y 60))
-
-([ontologia_ProjectKB_Class107] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class108]
-		[ontologia_ProjectKB_Class109]))
-
-([ontologia_ProjectKB_Class108] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class109] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
 ([ontologia_ProjectKB_Class11] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class12])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
-
-([ontologia_ProjectKB_Class110] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "actividad")
-	(property_list [ontologia_ProjectKB_Class111])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 0))
-
-([ontologia_ProjectKB_Class111] of  Property_List
-)
 
 ([ontologia_ProjectKB_Class12] of  Property_List
 )
@@ -430,25 +356,3236 @@
 ([ontologia_ProjectKB_Class20] of  Property_List
 )
 
-([ontologia_ProjectKB_Class20227] of  Widget
+([ontologia_ProjectKB_Class20115] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20116] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20117] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20118])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20118] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20119]
+		[ontologia_ProjectKB_Class20120]))
+
+([ontologia_ProjectKB_Class20119] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20120] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20121] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20122])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20122] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20123] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20124])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20124] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20125] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20126])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20126] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20127] of  Widget
 
 	(height 60)
 	(is_hidden FALSE)
 	(name "descripcion")
-	(property_list [ontologia_ProjectKB_Class20228])
+	(property_list [ontologia_ProjectKB_Class20128])
 	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
 	(width 200)
 	(x 0)
-	(y 420))
+	(y 60))
+
+([ontologia_ProjectKB_Class20128] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20129] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20130])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20130] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20131] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20132])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20132] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20133] of  Widget
+
+	(is_hidden FALSE)
+	(name "baile")
+	(property_list [ontologia_ProjectKB_Class20183])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20158] of  Widget
+
+	(is_hidden FALSE)
+	(name "caminar")
+	(property_list [ontologia_ProjectKB_Class20227])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20183] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20184]
+		[ontologia_ProjectKB_Class20185]
+		[ontologia_ProjectKB_Class20189]
+		[ontologia_ProjectKB_Class20193]
+		[ontologia_ProjectKB_Class20195]
+		[ontologia_ProjectKB_Class20197]
+		[ontologia_ProjectKB_Class20199]
+		[ontologia_ProjectKB_Class20201]
+		[ontologia_ProjectKB_Class20203]))
+
+([ontologia_ProjectKB_Class20184] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20185] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20186])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20186] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20187]
+		[ontologia_ProjectKB_Class20188]))
+
+([ontologia_ProjectKB_Class20187] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20188] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20189] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20190])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20190] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20191]
+		[ontologia_ProjectKB_Class20192]))
+
+([ontologia_ProjectKB_Class20191] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20192] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20193] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20194])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20194] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20195] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20196])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20196] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20197] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20198])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20198] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20199] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20200])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20200] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20201] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20202])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20202] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20203] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20204])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20204] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20227] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20228]
+		[ontologia_ProjectKB_Class20229]
+		[ontologia_ProjectKB_Class20233]
+		[ontologia_ProjectKB_Class20237]
+		[ontologia_ProjectKB_Class20239]
+		[ontologia_ProjectKB_Class20241]
+		[ontologia_ProjectKB_Class20243]
+		[ontologia_ProjectKB_Class20245]
+		[ontologia_ProjectKB_Class20247]))
 
 ([ontologia_ProjectKB_Class20228] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20229] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20230])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20230] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20231]
+		[ontologia_ProjectKB_Class20232]))
+
+([ontologia_ProjectKB_Class20231] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20232] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20233] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20234])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20234] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20235]
+		[ontologia_ProjectKB_Class20236]))
+
+([ontologia_ProjectKB_Class20235] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20236] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20237] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20238])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20238] of  Property_List
 )
+
+([ontologia_ProjectKB_Class20239] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20240])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20240] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20241] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20242])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20242] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20243] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20244])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20244] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20245] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20246])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20246] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20247] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20248])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20248] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20249] of  Widget
+
+	(is_hidden FALSE)
+	(name "correr")
+	(property_list [ontologia_ProjectKB_Class20274])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20274] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20275]
+		[ontologia_ProjectKB_Class20276]
+		[ontologia_ProjectKB_Class20280]
+		[ontologia_ProjectKB_Class20284]
+		[ontologia_ProjectKB_Class20286]
+		[ontologia_ProjectKB_Class20288]
+		[ontologia_ProjectKB_Class20290]
+		[ontologia_ProjectKB_Class20292]
+		[ontologia_ProjectKB_Class20294]))
+
+([ontologia_ProjectKB_Class20275] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20276] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20277])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20277] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20278]
+		[ontologia_ProjectKB_Class20279]))
+
+([ontologia_ProjectKB_Class20278] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20279] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20280] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20281])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20281] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20282]
+		[ontologia_ProjectKB_Class20283]))
+
+([ontologia_ProjectKB_Class20282] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20283] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20284] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20285])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20285] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20286] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20287])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20287] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20288] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20289])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20289] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20290] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20291])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20291] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20292] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20293])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20293] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20294] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20295])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20295] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20296] of  Widget
+
+	(is_hidden FALSE)
+	(name "golf")
+	(property_list [ontologia_ProjectKB_Class20321])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20321] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20322]
+		[ontologia_ProjectKB_Class20323]
+		[ontologia_ProjectKB_Class20327]
+		[ontologia_ProjectKB_Class20331]
+		[ontologia_ProjectKB_Class20333]
+		[ontologia_ProjectKB_Class20335]
+		[ontologia_ProjectKB_Class20337]
+		[ontologia_ProjectKB_Class20339]
+		[ontologia_ProjectKB_Class20341]))
+
+([ontologia_ProjectKB_Class20322] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20323] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20324])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20324] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20325]
+		[ontologia_ProjectKB_Class20326]))
+
+([ontologia_ProjectKB_Class20325] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20326] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20327] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20328])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20328] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20329]
+		[ontologia_ProjectKB_Class20330]))
+
+([ontologia_ProjectKB_Class20329] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20330] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20331] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20332])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20332] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20333] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20334])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20334] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20335] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20336])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20336] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20337] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20338])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20338] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20339] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20340])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20340] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20341] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20342])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20342] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20343] of  Widget
+
+	(is_hidden FALSE)
+	(name "natacion")
+	(property_list [ontologia_ProjectKB_Class20368])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20368] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20369]
+		[ontologia_ProjectKB_Class20370]
+		[ontologia_ProjectKB_Class20374]
+		[ontologia_ProjectKB_Class20378]
+		[ontologia_ProjectKB_Class20380]
+		[ontologia_ProjectKB_Class20382]
+		[ontologia_ProjectKB_Class20384]
+		[ontologia_ProjectKB_Class20386]
+		[ontologia_ProjectKB_Class20388]))
+
+([ontologia_ProjectKB_Class20369] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20370] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20371])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20371] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20372]
+		[ontologia_ProjectKB_Class20373]))
+
+([ontologia_ProjectKB_Class20372] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20373] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20374] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20375])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20375] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20376]
+		[ontologia_ProjectKB_Class20377]))
+
+([ontologia_ProjectKB_Class20376] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20377] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20378] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20379])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20379] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20380] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20381])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20381] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20382] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20383])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20383] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20384] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20385])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20385] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20386] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20387])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20387] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20388] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20389])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20389] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20390] of  Widget
+
+	(is_hidden FALSE)
+	(name "petanca")
+	(property_list [ontologia_ProjectKB_Class20415])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20415] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20416]
+		[ontologia_ProjectKB_Class20417]
+		[ontologia_ProjectKB_Class20421]
+		[ontologia_ProjectKB_Class20425]
+		[ontologia_ProjectKB_Class20427]
+		[ontologia_ProjectKB_Class20429]
+		[ontologia_ProjectKB_Class20431]
+		[ontologia_ProjectKB_Class20433]
+		[ontologia_ProjectKB_Class20435]))
+
+([ontologia_ProjectKB_Class20416] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20417] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20418])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20418] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20419]
+		[ontologia_ProjectKB_Class20420]))
+
+([ontologia_ProjectKB_Class20419] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20420] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20421] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20422])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20422] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20423]
+		[ontologia_ProjectKB_Class20424]))
+
+([ontologia_ProjectKB_Class20423] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20424] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20425] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20426])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20426] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20427] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20428])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20428] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20429] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20430])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20430] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20431] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20432])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20432] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20433] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20434])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20434] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20435] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20436])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20436] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20437] of  Widget
+
+	(is_hidden FALSE)
+	(name "yoga")
+	(property_list [ontologia_ProjectKB_Class20462])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20462] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20463]
+		[ontologia_ProjectKB_Class20464]
+		[ontologia_ProjectKB_Class20468]
+		[ontologia_ProjectKB_Class20472]
+		[ontologia_ProjectKB_Class20474]
+		[ontologia_ProjectKB_Class20476]
+		[ontologia_ProjectKB_Class20478]
+		[ontologia_ProjectKB_Class20480]
+		[ontologia_ProjectKB_Class20482]))
+
+([ontologia_ProjectKB_Class20463] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20464] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20465])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20465] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20466]
+		[ontologia_ProjectKB_Class20467]))
+
+([ontologia_ProjectKB_Class20466] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20467] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20468] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20469])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20469] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20470]
+		[ontologia_ProjectKB_Class20471]))
+
+([ontologia_ProjectKB_Class20470] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20471] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20472] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20473])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20473] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20474] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20475])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20475] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20476] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20477])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20477] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20478] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20479])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20479] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20480] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20481])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20481] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20482] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20483])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20483] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20484] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20485]
+		[ontologia_ProjectKB_Class20486]
+		[ontologia_ProjectKB_Class20490]
+		[ontologia_ProjectKB_Class20494]
+		[ontologia_ProjectKB_Class20496]
+		[ontologia_ProjectKB_Class20498]
+		[ontologia_ProjectKB_Class20500]
+		[ontologia_ProjectKB_Class20502]
+		[ontologia_ProjectKB_Class20504]))
+
+([ontologia_ProjectKB_Class20485] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20486] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20487])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20487] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20488]
+		[ontologia_ProjectKB_Class20489]))
+
+([ontologia_ProjectKB_Class20488] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20489] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20490] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20491])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20491] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20492]
+		[ontologia_ProjectKB_Class20493]))
+
+([ontologia_ProjectKB_Class20492] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20493] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20494] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20495])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20495] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20496] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20497])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20497] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20498] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20499])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20499] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20500] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20501])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20501] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20502] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20503])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20503] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20504] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20505])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20505] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20506] of  Widget
+
+	(is_hidden FALSE)
+	(name "abdominales")
+	(property_list [ontologia_ProjectKB_Class20531])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20531] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20532]
+		[ontologia_ProjectKB_Class20533]
+		[ontologia_ProjectKB_Class20537]
+		[ontologia_ProjectKB_Class20541]
+		[ontologia_ProjectKB_Class20543]
+		[ontologia_ProjectKB_Class20545]
+		[ontologia_ProjectKB_Class20547]
+		[ontologia_ProjectKB_Class20549]
+		[ontologia_ProjectKB_Class20551]))
+
+([ontologia_ProjectKB_Class20532] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20533] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20534])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20534] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20535]
+		[ontologia_ProjectKB_Class20536]))
+
+([ontologia_ProjectKB_Class20535] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20536] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20537] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20538])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20538] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20539]
+		[ontologia_ProjectKB_Class20540]))
+
+([ontologia_ProjectKB_Class20539] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20540] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20541] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20542])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20542] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20543] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20544])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20544] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20545] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20546])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20546] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20547] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20548])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20548] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20549] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20550])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20550] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20551] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20552])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20552] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20553] of  Widget
+
+	(is_hidden FALSE)
+	(name "agachadillas")
+	(property_list [ontologia_ProjectKB_Class20578])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20578] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20579]
+		[ontologia_ProjectKB_Class20580]
+		[ontologia_ProjectKB_Class20584]
+		[ontologia_ProjectKB_Class20588]
+		[ontologia_ProjectKB_Class20590]
+		[ontologia_ProjectKB_Class20592]
+		[ontologia_ProjectKB_Class20594]
+		[ontologia_ProjectKB_Class20596]
+		[ontologia_ProjectKB_Class20598]))
+
+([ontologia_ProjectKB_Class20579] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20580] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20581])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20581] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20582]
+		[ontologia_ProjectKB_Class20583]))
+
+([ontologia_ProjectKB_Class20582] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20583] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20584] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20585])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20585] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20586]
+		[ontologia_ProjectKB_Class20587]))
+
+([ontologia_ProjectKB_Class20586] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20587] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20588] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20589])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20589] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20590] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20591])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20591] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20592] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20593])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20593] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20594] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20595])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20595] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20596] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20597])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20597] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20598] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20599])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20599] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20600] of  Widget
+
+	(is_hidden FALSE)
+	(name "andar de puntillas o talones")
+	(property_list [ontologia_ProjectKB_Class20625])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20625] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20626]
+		[ontologia_ProjectKB_Class20627]
+		[ontologia_ProjectKB_Class20631]
+		[ontologia_ProjectKB_Class20635]
+		[ontologia_ProjectKB_Class20637]
+		[ontologia_ProjectKB_Class20639]
+		[ontologia_ProjectKB_Class20641]
+		[ontologia_ProjectKB_Class20643]
+		[ontologia_ProjectKB_Class20645]))
+
+([ontologia_ProjectKB_Class20626] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20627] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20628])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20628] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20629]
+		[ontologia_ProjectKB_Class20630]))
+
+([ontologia_ProjectKB_Class20629] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20630] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20631] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20632])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20632] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20633]
+		[ontologia_ProjectKB_Class20634]))
+
+([ontologia_ProjectKB_Class20633] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20634] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20635] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20636])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20636] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20637] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20638])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20638] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20639] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20640])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20640] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20641] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20642])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20642] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20643] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20644])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20644] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20645] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20646])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20646] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20647] of  Widget
+
+	(is_hidden FALSE)
+	(name "ejercicio de equilibrio")
+	(property_list [ontologia_ProjectKB_Class20672])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20672] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20673]
+		[ontologia_ProjectKB_Class20674]
+		[ontologia_ProjectKB_Class20678]
+		[ontologia_ProjectKB_Class20682]
+		[ontologia_ProjectKB_Class20684]
+		[ontologia_ProjectKB_Class20686]
+		[ontologia_ProjectKB_Class20688]
+		[ontologia_ProjectKB_Class20690]
+		[ontologia_ProjectKB_Class20692]))
+
+([ontologia_ProjectKB_Class20673] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20674] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20675])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20675] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20676]
+		[ontologia_ProjectKB_Class20677]))
+
+([ontologia_ProjectKB_Class20676] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20677] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20678] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20679])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20679] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20680]
+		[ontologia_ProjectKB_Class20681]))
+
+([ontologia_ProjectKB_Class20680] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20681] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20682] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20683])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20683] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20684] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20685])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20685] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20686] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20687])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20687] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20688] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20689])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20689] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20690] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20691])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20691] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20692] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20693])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20693] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20694] of  Widget
+
+	(is_hidden FALSE)
+	(name "ejercicio de fuerza")
+	(property_list [ontologia_ProjectKB_Class20719])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20719] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20720]
+		[ontologia_ProjectKB_Class20721]
+		[ontologia_ProjectKB_Class20725]
+		[ontologia_ProjectKB_Class20729]
+		[ontologia_ProjectKB_Class20731]
+		[ontologia_ProjectKB_Class20733]
+		[ontologia_ProjectKB_Class20735]
+		[ontologia_ProjectKB_Class20737]
+		[ontologia_ProjectKB_Class20739]))
+
+([ontologia_ProjectKB_Class20720] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20721] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20722])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20722] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20723]
+		[ontologia_ProjectKB_Class20724]))
+
+([ontologia_ProjectKB_Class20723] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20724] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20725] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20726])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20726] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20727]
+		[ontologia_ProjectKB_Class20728]))
+
+([ontologia_ProjectKB_Class20727] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20728] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20729] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20730])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20730] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20731] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20732])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20732] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20733] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20734])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20734] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20735] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20736])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20736] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20737] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20738])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20738] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20739] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20740])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20740] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20741] of  Widget
+
+	(is_hidden FALSE)
+	(name "ejercicio de resistencia")
+	(property_list [ontologia_ProjectKB_Class20766])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20766] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20767]
+		[ontologia_ProjectKB_Class20768]
+		[ontologia_ProjectKB_Class20772]
+		[ontologia_ProjectKB_Class20776]
+		[ontologia_ProjectKB_Class20778]
+		[ontologia_ProjectKB_Class20780]
+		[ontologia_ProjectKB_Class20782]
+		[ontologia_ProjectKB_Class20784]
+		[ontologia_ProjectKB_Class20786]))
+
+([ontologia_ProjectKB_Class20767] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20768] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20769])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20769] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20770]
+		[ontologia_ProjectKB_Class20771]))
+
+([ontologia_ProjectKB_Class20770] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20771] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20772] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20773])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20773] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20774]
+		[ontologia_ProjectKB_Class20775]))
+
+([ontologia_ProjectKB_Class20774] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20775] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20776] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20777])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20777] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20778] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20779])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20779] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20780] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20781])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20781] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20782] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20783])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20783] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20784] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20785])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20785] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20786] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20787])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20787] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20788] of  Widget
+
+	(is_hidden FALSE)
+	(name "levantar pesas")
+	(property_list [ontologia_ProjectKB_Class20813])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20813] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20814]
+		[ontologia_ProjectKB_Class20815]
+		[ontologia_ProjectKB_Class20819]
+		[ontologia_ProjectKB_Class20823]
+		[ontologia_ProjectKB_Class20825]
+		[ontologia_ProjectKB_Class20827]
+		[ontologia_ProjectKB_Class20829]
+		[ontologia_ProjectKB_Class20831]
+		[ontologia_ProjectKB_Class20833]))
+
+([ontologia_ProjectKB_Class20814] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20815] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20816])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20816] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20817]
+		[ontologia_ProjectKB_Class20818]))
+
+([ontologia_ProjectKB_Class20817] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20818] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20819] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20820])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20820] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20821]
+		[ontologia_ProjectKB_Class20822]))
+
+([ontologia_ProjectKB_Class20821] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20822] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20823] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20824])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20824] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20825] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20826])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20826] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20827] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20828])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20828] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20829] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20830])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20830] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20831] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20832])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20832] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20833] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20834])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20834] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20835] of  Widget
+
+	(is_hidden FALSE)
+	(name "levantarse y sentarse silla")
+	(property_list [ontologia_ProjectKB_Class20860])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20860] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20861]
+		[ontologia_ProjectKB_Class20862]
+		[ontologia_ProjectKB_Class20866]
+		[ontologia_ProjectKB_Class20870]
+		[ontologia_ProjectKB_Class20872]
+		[ontologia_ProjectKB_Class20874]
+		[ontologia_ProjectKB_Class20876]
+		[ontologia_ProjectKB_Class20878]
+		[ontologia_ProjectKB_Class20880]))
+
+([ontologia_ProjectKB_Class20861] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20862] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20863])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20863] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20864]
+		[ontologia_ProjectKB_Class20865]))
+
+([ontologia_ProjectKB_Class20864] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20865] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20866] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20867])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20867] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20868]
+		[ontologia_ProjectKB_Class20869]))
+
+([ontologia_ProjectKB_Class20868] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20869] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20870] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20871])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20871] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20872] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20873])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20873] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20874] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20875])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20875] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20876] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20877])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20877] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20878] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20879])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20879] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20880] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20881])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20881] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20882] of  Widget
+
+	(is_hidden FALSE)
+	(name "mantenerse a la pata coja")
+	(property_list [ontologia_ProjectKB_Class20907])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20907] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20908]
+		[ontologia_ProjectKB_Class20909]
+		[ontologia_ProjectKB_Class20913]
+		[ontologia_ProjectKB_Class20917]
+		[ontologia_ProjectKB_Class20919]
+		[ontologia_ProjectKB_Class20921]
+		[ontologia_ProjectKB_Class20923]
+		[ontologia_ProjectKB_Class20925]
+		[ontologia_ProjectKB_Class20927]))
+
+([ontologia_ProjectKB_Class20908] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20909] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20910])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20910] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20911]
+		[ontologia_ProjectKB_Class20912]))
+
+([ontologia_ProjectKB_Class20911] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20912] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20913] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20914])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20914] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20915]
+		[ontologia_ProjectKB_Class20916]))
+
+([ontologia_ProjectKB_Class20915] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20916] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20917] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20918])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20918] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20919] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20920])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20920] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20921] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20922])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20922] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20923] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20924])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20924] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20925] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20926])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20926] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20927] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20928])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20928] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20929] of  Widget
+
+	(is_hidden FALSE)
+	(name "rotacion de hombros")
+	(property_list [ontologia_ProjectKB_Class20954])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class20954] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20955]
+		[ontologia_ProjectKB_Class20956]
+		[ontologia_ProjectKB_Class20960]
+		[ontologia_ProjectKB_Class20964]
+		[ontologia_ProjectKB_Class20966]
+		[ontologia_ProjectKB_Class20968]
+		[ontologia_ProjectKB_Class20970]
+		[ontologia_ProjectKB_Class20972]
+		[ontologia_ProjectKB_Class20974]))
+
+([ontologia_ProjectKB_Class20955] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20956] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20957])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20957] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20958]
+		[ontologia_ProjectKB_Class20959]))
+
+([ontologia_ProjectKB_Class20958] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20959] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20960] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20961])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20961] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20962]
+		[ontologia_ProjectKB_Class20963]))
+
+([ontologia_ProjectKB_Class20962] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20963] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20964] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20965])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20965] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20966] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20967])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20967] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20968] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20969])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20969] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20970] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20971])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20971] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20972] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20973])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20973] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20974] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20975])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20975] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20976] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20977]
+		[ontologia_ProjectKB_Class20978]
+		[ontologia_ProjectKB_Class20982]
+		[ontologia_ProjectKB_Class20986]
+		[ontologia_ProjectKB_Class20988]
+		[ontologia_ProjectKB_Class20990]
+		[ontologia_ProjectKB_Class20992]
+		[ontologia_ProjectKB_Class20994]
+		[ontologia_ProjectKB_Class20996]))
+
+([ontologia_ProjectKB_Class20977] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class20978] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class20979])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 170))
+
+([ontologia_ProjectKB_Class20979] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20980]
+		[ontologia_ProjectKB_Class20981]))
+
+([ontologia_ProjectKB_Class20980] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20981] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20982] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "contraindicado-en-caso-de")
+	(property_list [ontologia_ProjectKB_Class20983])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 170))
+
+([ontologia_ProjectKB_Class20983] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class20984]
+		[ontologia_ProjectKB_Class20985]))
+
+([ontologia_ProjectKB_Class20984] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class20985] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class20986] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class20987])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class20987] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20988] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class20989])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([ontologia_ProjectKB_Class20989] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20990] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-max")
+	(property_list [ontologia_ProjectKB_Class20991])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 320)
+	(y 0))
+
+([ontologia_ProjectKB_Class20991] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20992] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class20993])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([ontologia_ProjectKB_Class20993] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20994] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "duracion-min")
+	(property_list [ontologia_ProjectKB_Class20995])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 210)
+	(y 0))
+
+([ontologia_ProjectKB_Class20995] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20996] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class20997])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 210)
+	(y 60))
+
+([ontologia_ProjectKB_Class20997] of  Property_List
+)
+
+([ontologia_ProjectKB_Class20998] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ontologia_ProjectKB_Class20999] of  String
+
+	(name "Factor de Riesgo")
+	(string_value "%3ANAME"))
 
 ([ontologia_ProjectKB_Class21] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class22])
 	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
+
+([ontologia_ProjectKB_Class21000] of  String
+
+	(name "Deporte")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class21001] of  String
+
+	(name "Actividad")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class21002] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class21003] of  String
+
+	(name "Necesidad")
+	(string_value "necesidad"))
+
+([ontologia_ProjectKB_Class21004] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class21005] of  String
+
+	(name "Ejercicio")
+	(string_value "actividad"))
 
 ([ontologia_ProjectKB_Class22] of  Property_List
 )
@@ -471,23 +3608,9 @@
 	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
 	(width 200)
 	(x 0)
-	(y 60))
+	(y 120))
 
 ([ontologia_ProjectKB_Class242] of  Property_List
-)
-
-([ontologia_ProjectKB_Class245] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class246])
-	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([ontologia_ProjectKB_Class246] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class25] of  Widget
@@ -499,20 +3622,6 @@
 ([ontologia_ProjectKB_Class26] of  Property_List
 )
 
-([ontologia_ProjectKB_Class26269] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "descripcion")
-	(property_list [ontologia_ProjectKB_Class26270])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 360))
-
-([ontologia_ProjectKB_Class26270] of  Property_List
-)
-
 ([ontologia_ProjectKB_Class27] of  Widget
 
 	(is_hidden TRUE)
@@ -522,110 +3631,11 @@
 ([ontologia_ProjectKB_Class28] of  Property_List
 )
 
-([ontologia_ProjectKB_Class285] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class286]
-		[ontologia_ProjectKB_Class287]
-		[ontologia_ProjectKB_Class291]
-		[ontologia_ProjectKB_Class295]
-		[ontologia_ProjectKB_Class297]
-		[ontologia_ProjectKB_Class20227]
-		[ontologia_ProjectKB_Class10078]
-		[ontologia_ProjectKB_Class72896]
-		[ontologia_ProjectKB_Class99602]))
-
-([ontologia_ProjectKB_Class286] of  Property_List
-
-	(name "layout properties"))
-
-([ontologia_ProjectKB_Class287] of  Widget
-
-	(height 300)
-	(is_hidden FALSE)
-	(name "llena")
-	(property_list [ontologia_ProjectKB_Class288])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 200)
-	(y 0))
-
-([ontologia_ProjectKB_Class288] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class289]
-		[ontologia_ProjectKB_Class290]))
-
-([ontologia_ProjectKB_Class289] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
 ([ontologia_ProjectKB_Class29] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class30])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
-
-([ontologia_ProjectKB_Class290] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class291] of  Widget
-
-	(height 300)
-	(is_hidden FALSE)
-	(name "contraindicado-en-caso-de")
-	(property_list [ontologia_ProjectKB_Class292])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 400)
-	(y 0))
-
-([ontologia_ProjectKB_Class292] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class293]
-		[ontologia_ProjectKB_Class294]))
-
-([ontologia_ProjectKB_Class293] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class294] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class295] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "actividad")
-	(property_list [ontologia_ProjectKB_Class296])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 0))
-
-([ontologia_ProjectKB_Class296] of  Property_List
-)
-
-([ontologia_ProjectKB_Class297] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "solitaria")
-	(property_list [ontologia_ProjectKB_Class298])
-	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
-	(width 200)
-	(x 0)
-	(y 60))
-
-([ontologia_ProjectKB_Class298] of  Property_List
-)
 
 ([ontologia_ProjectKB_Class3] of  Widget
 
@@ -634,20 +3644,6 @@
 	(widget_class_name "org.protege.owl.mm.portability.protege3.MappingMasterTab"))
 
 ([ontologia_ProjectKB_Class30] of  Property_List
-)
-
-([ontologia_ProjectKB_Class30264] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "MET")
-	(property_list [ontologia_ProjectKB_Class30265])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 0)
-	(y 480))
-
-([ontologia_ProjectKB_Class30265] of  Property_List
 )
 
 ([ontologia_ProjectKB_Class31] of  Widget
@@ -702,12 +3698,12 @@
 
 	(height 60)
 	(is_hidden FALSE)
-	(name "max duracion")
+	(name "duracion-max")
 	(property_list [ontologia_ProjectKB_Class40394])
 	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
 	(width 100)
-	(x 0)
-	(y 360))
+	(x 320)
+	(y 0))
 
 ([ontologia_ProjectKB_Class40394] of  Property_List
 )
@@ -721,7 +3717,7 @@
 	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
 	(width 200)
 	(x 0)
-	(y 300))
+	(y 60))
 
 ([ontologia_ProjectKB_Class40396] of  Property_List
 )
@@ -730,12 +3726,12 @@
 
 	(height 60)
 	(is_hidden FALSE)
-	(name "min duracion")
+	(name "duracion-min")
 	(property_list [ontologia_ProjectKB_Class40398])
 	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
 	(width 100)
-	(x 100)
-	(y 360))
+	(x 210)
+	(y 0))
 
 ([ontologia_ProjectKB_Class40398] of  Property_List
 )
@@ -748,8 +3744,8 @@
 	(property_list [ontologia_ProjectKB_Class40400])
 	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
 	(width 100)
-	(x 0)
-	(y 420))
+	(x 210)
+	(y 60))
 
 ([ontologia_ProjectKB_Class40400] of  Property_List
 )
@@ -913,67 +3909,14 @@
 ([ontologia_ProjectKB_Class72] of  Property_List
 )
 
-([ontologia_ProjectKB_Class72896] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max duracion")
-	(property_list [ontologia_ProjectKB_Class72897])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 660))
-
-([ontologia_ProjectKB_Class72897] of  Property_List
-)
-
 ([ontologia_ProjectKB_Class73] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class74])
 	(widget_class_name "ezpal.EZPalTab"))
 
-([ontologia_ProjectKB_Class73282] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max duracion")
-	(property_list [ontologia_ProjectKB_Class73283])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 600))
-
-([ontologia_ProjectKB_Class73283] of  Property_List
-)
-
 ([ontologia_ProjectKB_Class74] of  Property_List
 )
-
-([ontologia_ProjectKB_Class75] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_ProjectKB_Class76] of  String
-
-	(name "Factor de Riesgo")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class77] of  String
-
-	(name "Deporte")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class78] of  String
-
-	(name "Actividad")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class79] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
 
 ([ontologia_ProjectKB_Class8] of  Property_List
 )
@@ -982,7 +3925,7 @@
 
 	(is_hidden FALSE)
 	(name "Deporte")
-	(property_list [ontologia_ProjectKB_Class285])
+	(property_list [ontologia_ProjectKB_Class10111])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
 
 ([ontologia_ProjectKB_Class83] of  Widget
@@ -1023,36 +3966,8 @@
 
 	(is_hidden FALSE)
 	(name "Ejercicio")
-	(property_list [ontologia_ProjectKB_Class100])
+	(property_list [ontologia_ProjectKB_Class20484])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
-
-([ontologia_ProjectKB_Class99602] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "min duracion")
-	(property_list [ontologia_ProjectKB_Class99603])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 780))
-
-([ontologia_ProjectKB_Class99603] of  Property_List
-)
-
-([ontologia_ProjectKB_Class99988] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "min duracion")
-	(property_list [ontologia_ProjectKB_Class99989])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 720))
-
-([ontologia_ProjectKB_Class99989] of  Property_List
-)
 
 ([option_instance] of  Options
 
@@ -1131,14 +4046,32 @@
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
-		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[ontologia_ProjectKB_Class80]
 		[STANDARD_CLASS_FORM_WIDGET]
-		[ontologia_ProjectKB_Class10115]
+		[ontologia_ProjectKB_Class20249]
 		[STANDARD_SLOT_FORM_WIDGET]
-		[STANDARD_FACET_FORM_WIDGET]
+		[ontologia_ProjectKB_Class20882]
+		[ontologia_ProjectKB_Class20158]
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
+		[ontologia_ProjectKB_Class20741]
+		[ontologia_ProjectKB_Class20647]
+		[ontologia_ProjectKB_Class20553]
 		[PAL_FORM_WIDGET]
-		[ontologia_ProjectKB_Class97])
+		[ontologia_ProjectKB_Class20788]
+		[ontologia_ProjectKB_Class20437]
+		[ontologia_ProjectKB_Class10115]
+		[ontologia_ProjectKB_Class97]
+		[ontologia_ProjectKB_Class20835]
+		[ontologia_ProjectKB_Class20694]
+		[ontologia_ProjectKB_Class10083]
+		[ontologia_ProjectKB_Class20600]
+		[ontologia_ProjectKB_Class80]
+		[ontologia_ProjectKB_Class20390]
+		[ontologia_ProjectKB_Class20929]
+		[STANDARD_FACET_FORM_WIDGET]
+		[ontologia_ProjectKB_Class20343]
+		[ontologia_ProjectKB_Class20506]
+		[ontologia_ProjectKB_Class20296]
+		[ontologia_ProjectKB_Class20133])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

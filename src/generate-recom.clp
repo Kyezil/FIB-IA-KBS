@@ -44,7 +44,7 @@
 
 ;;; Cambios de prioridades en los objetivos
 (defrule generate-recom:init-need "Crea objetos de necesidad"
-  ?need <- (object (is-a Necesidad))
+  (object (is-a Necesidad) (name ?need))
  =>
   (assert (objective (need ?need)))
 )

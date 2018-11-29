@@ -40,8 +40,8 @@
 (defclass ADay
   (is-a USER)
   (single-slot main-need (type INSTANCE) (allowed-classes Necesidad))
-;  (multislot activities)
-  )
+  (multislot activities (type INSTANCE) (allowed-classes Actividad))
+)
 ; -- una semana de recomendacion
 (defclass AWeek
   (is-a USER)

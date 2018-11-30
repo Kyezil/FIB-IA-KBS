@@ -1,4 +1,4 @@
-; Thu Nov 29 12:02:05 CET 2018
+; Fri Nov 30 22:17:23 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,6 +6,7 @@
 ([ontologia_Class0] of  levantarse+y+sentarse+silla
 
 	(actividad "levantarse y sentarse silla")
+	(duracion 10 15)
 	(duracion-max 15)
 	(duracion-min 15)
 	(llena [ontologia_Class3])
@@ -15,6 +16,7 @@
 ([ontologia_Class10] of  ejercicio+de+fuerza
 
 	(actividad "ejercicio de fuerza")
+	(duracion 5)
 	(duracion-max 5)
 	(duracion-min 5)
 	(llena [ontologia_Class3])
@@ -24,6 +26,7 @@
 ([ontologia_Class10000] of  caminar
 
 	(actividad "caminar solo")
+	(duracion 45)
 	(duracion-max 45)
 	(duracion-min 45)
 	(llena [ontologia_Class7])
@@ -33,6 +36,7 @@
 ([ontologia_Class10003] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica suave")
+	(duracion 30)
 	(duracion-max 30)
 	(duracion-min 30)
 	(llena [ontologia_Class7])
@@ -42,6 +46,7 @@
 ([ontologia_Class10004] of  golf
 
 	(actividad "golf")
+	(duracion 50)
 	(duracion-max 50)
 	(duracion-min 50)
 	(llena
@@ -54,6 +59,7 @@
 ([ontologia_Class10005] of  yoga
 
 	(actividad "yoga")
+	(duracion 30 40 50)
 	(duracion-max 50)
 	(duracion-min 30)
 	(llena
@@ -66,6 +72,7 @@
 ([ontologia_Class10006] of  correr
 
 	(actividad "correr")
+	(duracion 20 30 40)
 	(duracion-max 40)
 	(duracion-min 20)
 	(llena [ontologia_Class7])
@@ -75,6 +82,7 @@
 ([ontologia_Class10007] of  abdominales
 
 	(actividad "abdominales")
+	(duracion 5)
 	(duracion-max 5)
 	(duracion-min 5)
 	(llena
@@ -86,6 +94,7 @@
 ([ontologia_Class10008] of  andar+de+puntillas+o+talones
 
 	(actividad "andar de puntillas o talones")
+	(duracion 10 15)
 	(duracion-max 15)
 	(duracion-min 15)
 	(llena [ontologia_Class5])
@@ -95,6 +104,7 @@
 ([ontologia_Class10009] of  levantar+pesas
 
 	(actividad "levantar pesas")
+	(duracion 5)
 	(duracion-max 5)
 	(duracion-min 5)
 	(llena [ontologia_Class3])
@@ -104,6 +114,7 @@
 ([ontologia_Class10010] of  rotacion+de+hombros
 
 	(actividad "rotacion de hombros")
+	(duracion 5 10 15)
 	(duracion-max 15)
 	(duracion-min 5)
 	(llena
@@ -115,6 +126,7 @@
 ([ontologia_Class10011] of  mantenerse+a+la+pata+coja
 
 	(actividad "mantenerse a la pata coja")
+	(duracion 5 10 15)
 	(duracion-max 15)
 	(duracion-min 5)
 	(llena
@@ -126,6 +138,7 @@
 ([ontologia_Class10012] of  petanca
 
 	(actividad "petanca")
+	(duracion 45)
 	(duracion-max 45)
 	(duracion-min 45)
 	(llena
@@ -137,6 +150,7 @@
 ([ontologia_Class10014] of  baile
 
 	(actividad "baile")
+	(duracion 30)
 	(duracion-max 30)
 	(duracion-min 30)
 	(llena
@@ -148,6 +162,7 @@
 ([ontologia_Class10015] of  agachadillas
 
 	(actividad "agachadillas")
+	(duracion 5)
 	(duracion-max 5)
 	(duracion-min 5)
 	(llena
@@ -159,6 +174,7 @@
 ([ontologia_Class2] of  caminar
 
 	(actividad "caminar por cuestas")
+	(duracion 45)
 	(duracion-max 45)
 	(duracion-min 45)
 	(llena
@@ -170,6 +186,7 @@
 ([ontologia_Class20006] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica moderada")
+	(duracion 35)
 	(duracion-max 35)
 	(duracion-min 35)
 	(llena [ontologia_Class7])
@@ -179,6 +196,7 @@
 ([ontologia_Class20007] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica intensa")
+	(duracion 40)
 	(duracion-max 40)
 	(duracion-min 40)
 	(llena [ontologia_Class7])
@@ -188,6 +206,7 @@
 ([ontologia_Class20024] of  abdominales
 
 	(actividad "abdominales")
+	(duracion 10)
 	(duracion-max 10)
 	(duracion-min 10)
 	(llena
@@ -199,6 +218,7 @@
 ([ontologia_Class20025] of  agachadillas
 
 	(actividad "agachadillas")
+	(duracion 10)
 	(duracion-max 10)
 	(duracion-min 10)
 	(llena
@@ -210,17 +230,9 @@
 ([ontologia_Class20026] of  ejercicio+de+equilibrio
 
 	(actividad "ejercicio de equilibrio")
+	(duracion 10 15 20)
 	(duracion-max 10)
 	(duracion-min 10)
-	(llena [ontologia_Class5])
-	(MET 2.9)
-	(solitaria FALSE))
-
-([ontologia_Class20027] of  ejercicio+de+equilibrio
-
-	(actividad "ejercicio de equilibrio")
-	(duracion-max 15)
-	(duracion-min 15)
 	(llena [ontologia_Class5])
 	(MET 2.9)
 	(solitaria FALSE))
@@ -228,6 +240,7 @@
 ([ontologia_Class20028] of  ejercicio+de+fuerza
 
 	(actividad "ejercicio de fuerza")
+	(duracion 10)
 	(duracion-max 10)
 	(duracion-min 10)
 	(llena [ontologia_Class3])
@@ -237,6 +250,7 @@
 ([ontologia_Class20029] of  ejercicio+de+fuerza
 
 	(actividad "ejercicio de fuerza")
+	(duracion 15)
 	(duracion-max 15)
 	(duracion-min 15)
 	(llena [ontologia_Class3])
@@ -246,17 +260,9 @@
 ([ontologia_Class20030] of  ejercicio+de+resistencia
 
 	(actividad "ejercicio de resistencia")
+	(duracion 20 30 40)
 	(duracion-max 20)
 	(duracion-min 20)
-	(llena [ontologia_Class7])
-	(MET 4.0)
-	(solitaria FALSE))
-
-([ontologia_Class20031] of  ejercicio+de+resistencia
-
-	(actividad "ejercicio de resistencia")
-	(duracion-max 30)
-	(duracion-min 30)
 	(llena [ontologia_Class7])
 	(MET 4.0)
 	(solitaria FALSE))
@@ -264,6 +270,7 @@
 ([ontologia_Class20032] of  levantar+pesas
 
 	(actividad "levantar pesas")
+	(duracion 10)
 	(duracion-max 10)
 	(duracion-min 10)
 	(llena [ontologia_Class3])
@@ -273,6 +280,7 @@
 ([ontologia_Class20033] of  levantar+pesas
 
 	(actividad "levantar pesas")
+	(duracion 15)
 	(duracion-max 15)
 	(duracion-min 15)
 	(llena [ontologia_Class3])
@@ -282,6 +290,7 @@
 ([ontologia_Class26] of  caminar
 
 	(actividad "caminar despacio")
+	(duracion 45)
 	(duracion-max 45)
 	(duracion-min 45)
 	(llena [ontologia_Class7])
@@ -291,33 +300,16 @@
 ([ontologia_Class27] of  natacion
 
 	(actividad "natacion")
+	(duracion 30 40 50)
 	(duracion-max 50)
 	(duracion-min 30)
 	(llena [ontologia_Class7])
 	(MET 7.0)
 	(solitaria TRUE))
 
-([ontologia_Class29] of  ejercicio+de+resistencia
-
-	(actividad "ejercicio de resistencia")
-	(duracion-max 40)
-	(duracion-min 40)
-	(llena [ontologia_Class7])
-	(MET 4.0)
-	(solitaria FALSE))
-
 ([ontologia_Class3] of  Necesidad
 
 	(necesidad "fuerza"))
-
-([ontologia_Class30] of  ejercicio+de+equilibrio
-
-	(actividad "ejercicio de equilibrio")
-	(duracion-max 20)
-	(duracion-min 20)
-	(llena [ontologia_Class5])
-	(MET 2.9)
-	(solitaria FALSE))
 
 ([ontologia_Class4] of  Necesidad
 
@@ -338,6 +330,7 @@
 ([ontologia_Class8] of  caminar
 
 	(actividad "caminar acompanado")
+	(duracion 45)
 	(duracion-max 45)
 	(duracion-min 45)
 	(llena [ontologia_Class7])

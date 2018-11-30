@@ -7,24 +7,29 @@
 )
 
 (defrule specify-recom:add-activities "Assigna actividades en orden a los dias"
-  ?d-f <- (day (aday ?aday))
-  (object (is-a ADay) (name ?aday) (main-need ?need)
-          (activities $?acts&:(< (length$ ?acts) 4)))
+  ?d-f <- (day (aday ?aday) (total-time ?tt&:(< ?tt 90))) ; max 1h30
+  (object (is-a ADay) (name ?aday) (main-need ?need) (activities $?acts))
  =>
   ; (printout t "day is " ?aday " with need " ?need crlf)
   ;; find available activities
-  (bind ?available-acts (find-all-instances ((?ins Actividad))
-                                            (and (member$ ?need ?ins:llena)
-                                                 (not (member$ ?ins ?acts)))))
+  (bind ?rem-time (- 90 ?tt))
+  (bind ?available-acts
+    (find-all-instances ((?ins Actividad))
+                        (and (member$ ?need ?ins:llena)
+                             (not (member$ ?ins ?acts))
+                             (<= ?ins:duracion-min ?rem-time))))
   ;; (printout t ?available-acts)
   ;; pick one at random
   (bind ?n (length$ ?available-acts))
-  (if (> ?n 0) then ; necessary if there is not enough activities
-                 (bind ?i (random 1 ?n))
-                 (bind ?act (nth ?i ?available-acts))
+  (if (> ?n 0)
+   then ; necessary if there is not enough activities
+     (bind ?i (random 1 ?n))
+     (bind ?act (nth ?i ?available-acts))
 ;  (printout t "selected activity is ")
 ;  (send ?act print)
-                 (slot-insert$ ?aday activities 1 ?act))
+     (slot-insert$ ?aday activities 1 ?act)
+     (modify ?d-f (total-time (+ ?tt (send ?act get-duracion-min))))
+  )
 )
 
 (defrule specify-recom:test-print "Ver la planificación"

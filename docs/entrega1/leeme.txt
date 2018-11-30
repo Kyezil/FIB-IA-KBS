@@ -1,0 +1,38 @@
+#### Prototipo SBC ####
+Aleix Lascorz
+Iris Balcázar
+Louis Clergue
+
+### Funcionalidades ###
+- Hace preguntas directas al usuario para determinar su estado (versión simplificada).
+- En base a las respuestas determina el número de días en el planning.
+- Asigna a cada día una necesidad de forma probabilística.
+- Llena cada día con ejercicios que esten relacionados con la necesidad del día.
+- Pone el máximo número de ejercicios disponibles sin sobrepasar 1h30.
+
+### Ontologia ###
+Clases:
+ - Anciano
+ - Necesidad
+ - Actividad
+   - Deporte
+      - <subclases de deportes>
+   - Ejercicio
+      - <subclases de ejercicios>
+
+  Un Anciano tiene varias Necesidades
+  Una Actividad llena una necesidad
+
+Instancias:
+  Se crea una clase en la categoria de Actividad correspondiente y se añaden instancias
+  para las diferentes modalidades de la actividad. Una modalidad tiene un rango de
+  duración y una intensidad (mesurada en MET) propia.
+
+  p.ej para tener dos modalidades de caminar: caminar despacio, caminar por cuestas
+    - Deporte
+      - Caminar
+        - [caminar despacio]
+        - [caminar por cuestas]
+
+### Ejecución ###
+En el directorio `src` hacer `clips -f2 main.clp` y ejecutar `(run)`.

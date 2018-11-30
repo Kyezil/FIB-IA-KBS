@@ -47,6 +47,12 @@
   (is-a USER)
   (multislot days)
 )
+;; -- un dia para crear la recomendacion
+(deftemplate day
+  (slot aday (type INSTANCE) (allowed-classes ADay))
+  (slot total-time (type INTEGER) (default 0))
+  (slot total-work (type FLOAT) (default 0.0))
+)
 
 ; -- carga de archivos --
 (load "utils.clp")

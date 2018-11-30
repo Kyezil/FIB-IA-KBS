@@ -1,8 +1,17 @@
 ; modulo de concretizacion de los ejercicios en base a un planning abstracto
-(defrule specify-recom:add-activities "Assigna actividades en orden a los dias"
-  ?o-day <- (object (is-a ADay) (main-need ?need)
-                   (activities $?acts&:(< (length$ ?acts) 4)))
+
+(defrule specify-recom:init-days "Crear facts para la creacion de dias"
+  (object (is-a ADay) (name ?aday))
  =>
+  (assert (day (aday ?aday)))
+)
+
+(defrule specify-recom:add-activities "Assigna actividades en orden a los dias"
+  ?d-f <- (day (aday ?aday))
+  (object (is-a ADay) (name ?aday) (main-need ?need)
+          (activities $?acts&:(< (length$ ?acts) 4)))
+ =>
+  ; (printout t "day is " ?aday " with need " ?need crlf)
   ;; find available activities
   (bind ?available-acts (find-all-instances ((?ins Actividad))
                                             (and (member$ ?need ?ins:llena)
@@ -10,12 +19,12 @@
   ;; (printout t ?available-acts)
   ;; pick one at random
   (bind ?n (length$ ?available-acts))
-  (if (> ?n 0) then
+  (if (> ?n 0) then ; necessary if there is not enough activities
                  (bind ?i (random 1 ?n))
                  (bind ?act (nth ?i ?available-acts))
 ;  (printout t "selected activity is ")
 ;  (send ?act print)
-                 (slot-insert$ ?o-day activities 1 ?act))
+                 (slot-insert$ ?aday activities 1 ?act))
 )
 
 (defrule specify-recom:test-print "Ver la planificación"

@@ -1,4 +1,4 @@
-; Fri Nov 30 22:17:09 CET 2018
+; Sat Dec 01 11:39:31 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class20158]
-		[ontologia_ProjectKB_Class20159]
-		[ontologia_ProjectKB_Class20160]
-		[ontologia_ProjectKB_Class20161]
-		[ontologia_ProjectKB_Class20162]
-		[ontologia_ProjectKB_Class20163]
-		[ontologia_ProjectKB_Class20164]
-		[ontologia_ProjectKB_Class20165]))
+		[ontologia_ProjectKB_Class20110]
+		[ontologia_ProjectKB_Class20111]
+		[ontologia_ProjectKB_Class20112]
+		[ontologia_ProjectKB_Class20113]
+		[ontologia_ProjectKB_Class20114]
+		[ontologia_ProjectKB_Class20115]
+		[ontologia_ProjectKB_Class20116]
+		[ontologia_ProjectKB_Class20117]))
 
 ([CLSES_TAB] of  Widget
 
@@ -68,7 +68,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_691696_Class0] of  Map
+([KB_162729_Class0] of  Map
 )
 
 ([KB_944513_Class0] of  String
@@ -415,42 +415,42 @@
 ([ontologia_ProjectKB_Class20] of  Property_List
 )
 
-([ontologia_ProjectKB_Class20158] of  String
+([ontologia_ProjectKB_Class20110] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([ontologia_ProjectKB_Class20159] of  String
+([ontologia_ProjectKB_Class20111] of  String
 
 	(name "Necesidad")
 	(string_value "necesidad"))
 
-([ontologia_ProjectKB_Class20160] of  String
+([ontologia_ProjectKB_Class20112] of  String
 
 	(name "Ejercicio")
 	(string_value "actividad"))
 
-([ontologia_ProjectKB_Class20161] of  String
-
-	(name "Factor de Riesgo")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class20162] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([ontologia_ProjectKB_Class20163] of  String
+([ontologia_ProjectKB_Class20113] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([ontologia_ProjectKB_Class20164] of  String
+([ontologia_ProjectKB_Class20114] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class20115] of  String
+
+	(name "Factor de Riesgo")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class20116] of  String
 
 	(name "Deporte")
 	(string_value "actividad"))
 
-([ontologia_ProjectKB_Class20165] of  String
+([ontologia_ProjectKB_Class20117] of  String
 
 	(name "Actividad")
 	(string_value "%3ANAME"))
@@ -1148,11 +1148,11 @@
 	(customized_instance_widgets
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[ontologia_ProjectKB_Class97]
-		[STANDARD_FACET_FORM_WIDGET]
 		[STANDARD_SLOT_FORM_WIDGET]
+		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
-		[STANDARD_CLASS_FORM_WIDGET]
 		[ontologia_ProjectKB_Class80]
+		[STANDARD_CLASS_FORM_WIDGET]
 		[ontologia_ProjectKB_Class10115])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")

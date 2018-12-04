@@ -1,4 +1,4 @@
-; Sat Dec 01 11:39:31 CET 2018
+; Tue Dec 04 22:07:52 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -44,6 +44,10 @@
 		(type INTEGER)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
+	(single-slot parte+del+cuerpo
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot MET
 		(type FLOAT)
 ;+		(cardinality 1 1)
@@ -85,17 +89,17 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot nombre
-;+		(comment "Nombre de la persona")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot nivel-actividad
 ;+		(comment "nivel general de actividad del anciano")
 		(type SYMBOL)
 		(allowed-values sedentario-severo sedentario-moderado activo muy-activo undefined)
 		(default undefined)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre
+;+		(comment "Nombre de la persona")
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot intensidad
 ;+		(comment "nivel de intensidad de la actividad")
@@ -108,34 +112,38 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot edad
+;+		(comment "edad del anciano")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot solitaria
 ;+		(comment "indica si la actividad se realiza solo")
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot edad
-;+		(comment "edad del anciano")
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot duracion-max
 		(type INTEGER)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot afecta+parte+del+cuerpo
+		(type INSTANCE)
+;+		(allowed-classes Parte+del+cuerpo)
 		(create-accessor read-write)))
 
 (defclass Anciano "Representa una persona mayor y sus caracteristicas"
 	(is-a USER)
 	(role concrete)
-	(single-slot IMC
-;+		(comment "indice de masa corporal")
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot tiene
 ;+		(comment "Un anciano puede tener varias necesidades, es un objetivo cubrirlas para el anciano")
 		(type INSTANCE)
 ;+		(allowed-classes Necesidad)
+		(create-accessor read-write))
+	(single-slot IMC
+;+		(comment "indice de masa corporal")
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot padece
 ;+		(comment "Un anciano puede padecer factores de riesgo que pueden limitar sus capacidades a realizar actividades")
@@ -152,17 +160,17 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot nombre
+;+		(comment "Nombre de la persona")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot nivel-actividad
 ;+		(comment "nivel general de actividad del anciano")
 		(type SYMBOL)
 		(allowed-values sedentario-severo sedentario-moderado activo muy-activo undefined)
 		(default undefined)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot nombre
-;+		(comment "Nombre de la persona")
-		(type STRING)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot edad
 ;+		(comment "edad del anciano")
@@ -184,10 +192,6 @@
 		(type INSTANCE)
 ;+		(allowed-classes Necesidad)
 		(create-accessor read-write))
-	(single-slot duracion-min
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot descripcion
 		(type STRING)
 ;+		(cardinality 0 1)
@@ -196,19 +200,14 @@
 		(type INTEGER)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot actividad
-;+		(comment "nombre de la actividad")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot MET
 		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot contraindicado-en-caso-de
-;+		(comment "Una actividad puede estar contraindicada para ciertos factores de riesgo.")
-		(type INSTANCE)
-;+		(allowed-classes Factor+de+Riesgo)
+	(single-slot actividad
+;+		(comment "nombre de la actividad")
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot solitaria
 ;+		(comment "indica si la actividad se realiza solo")
@@ -216,9 +215,9 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot duracion-max
-		(type INTEGER)
-;+		(cardinality 1 1)
+	(multislot afecta+parte+del+cuerpo
+		(type INSTANCE)
+;+		(allowed-classes Parte+del+cuerpo)
 		(create-accessor read-write)))
 
 (defclass Deporte
@@ -253,7 +252,23 @@
 	(is-a Deporte)
 	(role concrete))
 
-(defclass yoga
+(defclass relajacion
+	(is-a Deporte)
+	(role concrete))
+
+(defclass gimnasia
+	(is-a Deporte)
+	(role concrete))
+
+(defclass jardineria
+	(is-a Deporte)
+	(role concrete))
+
+(defclass tennis
+	(is-a Deporte)
+	(role concrete))
+
+(defclass baloncesto
 	(is-a Deporte)
 	(role concrete))
 
@@ -269,7 +284,7 @@
 	(is-a Ejercicio)
 	(role concrete))
 
-(defclass andar+de+puntillas+o+talones
+(defclass andar+con+talones
 	(is-a Ejercicio)
 	(role concrete))
 
@@ -297,7 +312,31 @@
 	(is-a Ejercicio)
 	(role concrete))
 
-(defclass rotacion+de+hombros
+(defclass rotacion
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass maquina+de+musculacion
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass remo
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass flexiones
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass extension
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass elevacion
+	(is-a Ejercicio)
+	(role concrete))
+
+(defclass estiramientos
 	(is-a Ejercicio)
 	(role concrete))
 
@@ -315,6 +354,14 @@
 	(role concrete)
 	(single-slot necesidad
 ;+		(comment "nombre de la necesidad")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Parte+del+cuerpo
+	(is-a USER)
+	(role concrete)
+	(single-slot parte+del+cuerpo
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))

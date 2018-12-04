@@ -1,4 +1,4 @@
-; Sat Dec 01 11:39:29 CET 2018
+; Tue Dec 04 22:10:54 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,9 +6,11 @@
 ([ontologia_Class0] of  levantarse+y+sentarse+silla
 
 	(actividad "levantarse y sentarse silla")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30007]
+		[ontologia_Class30009]
+		[ontologia_Class30008])
 	(duracion 10 15)
-	(duracion-max 15)
-	(duracion-min 15)
 	(llena [ontologia_Class3])
 	(MET 2.9)
 	(solitaria TRUE))
@@ -17,8 +19,6 @@
 
 	(actividad "ejercicio de fuerza")
 	(duracion 5)
-	(duracion-max 5)
-	(duracion-min 5)
 	(llena [ontologia_Class3])
 	(MET 8.0)
 	(solitaria FALSE))
@@ -26,9 +26,8 @@
 ([ontologia_Class10000] of  caminar
 
 	(actividad "caminar solo")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 45 10 20 30 40 60 80)
-	(duracion-max 45)
-	(duracion-min 45)
 	(llena [ontologia_Class7])
 	(MET 3.5)
 	(solitaria TRUE))
@@ -36,9 +35,8 @@
 ([ontologia_Class10003] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica suave")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 30)
-	(duracion-max 30)
-	(duracion-min 30)
 	(llena [ontologia_Class7])
 	(MET 3.0)
 	(solitaria FALSE))
@@ -46,9 +44,11 @@
 ([ontologia_Class10004] of  golf
 
 	(actividad "golf")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
 	(duracion 50)
-	(duracion-max 50)
-	(duracion-min 50)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
@@ -56,12 +56,14 @@
 	(MET 4.5)
 	(solitaria TRUE))
 
-([ontologia_Class10005] of  yoga
+([ontologia_Class10005] of  relajacion
 
 	(actividad "yoga")
-	(duracion 30 40 50)
-	(duracion-max 50)
-	(duracion-min 30)
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 30 40 50 60 70)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
@@ -72,9 +74,8 @@
 ([ontologia_Class10006] of  correr
 
 	(actividad "correr")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 20 30 40)
-	(duracion-max 40)
-	(duracion-min 20)
 	(llena [ontologia_Class7])
 	(MET 7.0)
 	(solitaria TRUE))
@@ -82,53 +83,48 @@
 ([ontologia_Class10007] of  abdominales
 
 	(actividad "abdominales")
+	(afecta+parte+del+cuerpo [ontologia_Class30008])
 	(duracion 5)
-	(duracion-max 5)
-	(duracion-min 5)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
 	(MET 8.0)
 	(solitaria FALSE))
 
-([ontologia_Class10008] of  andar+de+puntillas+o+talones
+([ontologia_Class10008] of  andar+con+talones
 
 	(actividad "andar de puntillas o talones")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 10 15)
-	(duracion-max 15)
-	(duracion-min 15)
 	(llena [ontologia_Class5])
 	(MET 5.5)
 	(solitaria FALSE))
 
 ([ontologia_Class10009] of  levantar+pesas
 
-	(actividad "levantar pesas")
-	(duracion 5)
-	(duracion-max 5)
-	(duracion-min 5)
+	(actividad "levantar pesas biceps")
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 10)
 	(llena [ontologia_Class3])
 	(MET 8.0)
 	(solitaria FALSE))
 
-([ontologia_Class10010] of  rotacion+de+hombros
+([ontologia_Class10010] of  rotacion
 
 	(actividad "rotacion de hombros")
-	(duracion 5 10 15)
-	(duracion-max 15)
-	(duracion-min 5)
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 5)
 	(llena
 		[ontologia_Class4]
-		[ontologia_Class6])
-	(MET 2.3)
+		[ontologia_Class7])
+	(MET 2.5)
 	(solitaria FALSE))
 
 ([ontologia_Class10011] of  mantenerse+a+la+pata+coja
 
 	(actividad "mantenerse a la pata coja")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 5 10 15)
-	(duracion-max 15)
-	(duracion-min 5)
 	(llena
 		[ontologia_Class5]
 		[ontologia_Class4])
@@ -138,9 +134,11 @@
 ([ontologia_Class10012] of  petanca
 
 	(actividad "petanca")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30008]
+		[ontologia_Class30007])
 	(duracion 45)
-	(duracion-max 45)
-	(duracion-min 45)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class3]
@@ -150,9 +148,10 @@
 ([ontologia_Class10014] of  baile
 
 	(actividad "baile")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30008])
 	(duracion 30)
-	(duracion-max 30)
-	(duracion-min 30)
 	(llena
 		[ontologia_Class7]
 		[ontologia_Class6])
@@ -162,9 +161,8 @@
 ([ontologia_Class10015] of  agachadillas
 
 	(actividad "agachadillas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 5)
-	(duracion-max 5)
-	(duracion-min 5)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class5])
@@ -174,9 +172,10 @@
 ([ontologia_Class2] of  caminar
 
 	(actividad "caminar por cuestas")
-	(duracion 45)
-	(duracion-max 45)
-	(duracion-min 45)
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30008])
+	(duracion 45 20 30 60 70 80 90)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
@@ -186,9 +185,8 @@
 ([ontologia_Class20006] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica moderada")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 35)
-	(duracion-max 35)
-	(duracion-min 35)
 	(llena [ontologia_Class7])
 	(MET 5.5)
 	(solitaria FALSE))
@@ -196,9 +194,8 @@
 ([ontologia_Class20007] of  bicicleta+estatica
 
 	(actividad "bicicleta estatica intensa")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 40)
-	(duracion-max 40)
-	(duracion-min 40)
 	(llena [ontologia_Class7])
 	(MET 7.0)
 	(solitaria FALSE))
@@ -206,9 +203,8 @@
 ([ontologia_Class20024] of  abdominales
 
 	(actividad "abdominales")
+	(afecta+parte+del+cuerpo [ontologia_Class30008])
 	(duracion 10)
-	(duracion-max 10)
-	(duracion-min 10)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
@@ -218,9 +214,8 @@
 ([ontologia_Class20025] of  agachadillas
 
 	(actividad "agachadillas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 10)
-	(duracion-max 10)
-	(duracion-min 10)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class5])
@@ -230,9 +225,11 @@
 ([ontologia_Class20026] of  ejercicio+de+equilibrio
 
 	(actividad "ejercicio de equilibrio")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
 	(duracion 10 15 20)
-	(duracion-max 10)
-	(duracion-min 10)
 	(llena [ontologia_Class5])
 	(MET 2.9)
 	(solitaria FALSE))
@@ -241,8 +238,6 @@
 
 	(actividad "ejercicio de fuerza")
 	(duracion 10)
-	(duracion-max 10)
-	(duracion-min 10)
 	(llena [ontologia_Class3])
 	(MET 8.0)
 	(solitaria FALSE))
@@ -251,8 +246,6 @@
 
 	(actividad "ejercicio de fuerza")
 	(duracion 15)
-	(duracion-max 15)
-	(duracion-min 15)
 	(llena [ontologia_Class3])
 	(MET 8.0)
 	(solitaria FALSE))
@@ -261,38 +254,15 @@
 
 	(actividad "ejercicio de resistencia")
 	(duracion 20 30 40)
-	(duracion-max 20)
-	(duracion-min 20)
 	(llena [ontologia_Class7])
 	(MET 4.0)
-	(solitaria FALSE))
-
-([ontologia_Class20032] of  levantar+pesas
-
-	(actividad "levantar pesas")
-	(duracion 10)
-	(duracion-max 10)
-	(duracion-min 10)
-	(llena [ontologia_Class3])
-	(MET 8.0)
-	(solitaria FALSE))
-
-([ontologia_Class20033] of  levantar+pesas
-
-	(actividad "levantar pesas")
-	(duracion 15)
-	(duracion-max 15)
-	(duracion-min 15)
-	(llena [ontologia_Class3])
-	(MET 8.0)
 	(solitaria FALSE))
 
 ([ontologia_Class26] of  caminar
 
 	(actividad "caminar despacio")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
 	(duracion 45)
-	(duracion-max 45)
-	(duracion-min 45)
 	(llena [ontologia_Class7])
 	(MET 2.5)
 	(solitaria FALSE))
@@ -300,9 +270,11 @@
 ([ontologia_Class27] of  natacion
 
 	(actividad "natacion")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
 	(duracion 30 40 50)
-	(duracion-max 50)
-	(duracion-min 30)
 	(llena [ontologia_Class7])
 	(MET 7.0)
 	(solitaria TRUE))
@@ -310,6 +282,527 @@
 ([ontologia_Class3] of  Necesidad
 
 	(necesidad "fuerza"))
+
+([ontologia_Class30007] of  Parte+del+cuerpo
+
+	(parte+del+cuerpo "extremidades superiores"))
+
+([ontologia_Class30008] of  Parte+del+cuerpo
+
+	(parte+del+cuerpo "tronco"))
+
+([ontologia_Class30009] of  Parte+del+cuerpo
+
+	(parte+del+cuerpo "extremidades inferiores"))
+
+([ontologia_Class30011] of  caminar
+
+	(actividad "caminar acompanado")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 45 10 20 30 40 50 60 80)
+	(llena [ontologia_Class7])
+	(MET 3.5)
+	(solitaria FALSE))
+
+([ontologia_Class30012] of  natacion
+
+	(actividad "aquagym")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 30 40 50)
+	(llena [ontologia_Class7])
+	(MET 6.0)
+	(solitaria FALSE))
+
+([ontologia_Class30014] of  gimnasia
+
+	(actividad "gimnasia")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 15 25 35)
+	(llena
+		[ontologia_Class5]
+		[ontologia_Class4])
+	(MET 3.0)
+	(solitaria FALSE))
+
+([ontologia_Class30016] of  maquina+de+musculacion
+
+	(actividad "maquina de musculacion")
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 5)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30017] of  maquina+de+musculacion
+
+	(actividad "maquina de musculacion")
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 10)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30018] of  maquina+de+musculacion
+
+	(actividad "maquina de musculacion")
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 15)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30019] of  levantarse+y+sentarse+silla
+
+	(actividad "levantarse y sentarse silla sin usar brazos")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30008]
+		[ontologia_Class30009])
+	(duracion 10 15)
+	(llena [ontologia_Class5])
+	(MET 2.9)
+	(solitaria TRUE))
+
+([ontologia_Class30020] of  andar+con+talones
+
+	(actividad "andar afianzando los talones")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 10 15)
+	(llena [ontologia_Class5])
+	(MET 5.5)
+	(solitaria FALSE))
+
+([ontologia_Class30022] of  jardineria
+
+	(actividad "jardineria")
+	(afecta+parte+del+cuerpo [ontologia_Class30008])
+	(duracion 15 30 45 60)
+	(llena [ontologia_Class7])
+	(MET 1.5)
+	(solitaria TRUE))
+
+([ontologia_Class30024] of  relajacion
+
+	(actividad "tai chi")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 30 40 50 60 70)
+	(llena
+		[ontologia_Class6]
+		[ontologia_Class5]
+		[ontologia_Class4])
+	(MET 2.5)
+	(solitaria FALSE))
+
+([ontologia_Class30025] of  caminar
+
+	(actividad "senderismo")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30008])
+	(duracion 45 20 30 60 70 80 90)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class7])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30027] of  tennis
+
+	(actividad "tennis")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30007]
+		[ontologia_Class30009]
+		[ontologia_Class30008])
+	(duracion 45 60 75 90)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class7]
+		[ontologia_Class6])
+	(MET 7.0)
+	(solitaria FALSE))
+
+([ontologia_Class30028] of  tennis
+
+	(actividad "tennis por parejas")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30007]
+		[ontologia_Class30009]
+		[ontologia_Class30008])
+	(duracion 45 60 75 90)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class7]
+		[ontologia_Class6])
+	(MET 6.0)
+	(solitaria FALSE))
+
+([ontologia_Class30029] of  ejercicio+de+fuerza
+
+	(actividad "hacer el puente")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 10)
+	(llena [ontologia_Class3])
+	(MET 10.0)
+	(solitaria TRUE))
+
+([ontologia_Class30031] of  remo
+
+	(actividad "remo suave")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 20 40 50 60)
+	(llena [ontologia_Class7])
+	(MET 3.5)
+	(solitaria TRUE))
+
+([ontologia_Class30032] of  remo
+
+	(actividad "remo intenso")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 20 40 50 60)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class3])
+	(MET 7.0)
+	(solitaria TRUE))
+
+([ontologia_Class30035] of  flexiones
+
+	(actividad "flexion de hombros")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 10)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30036] of  levantar+pesas
+
+	(actividad "levantar pesas triceps")
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 10)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria FALSE))
+
+([ontologia_Class30037] of  levantar+pesas
+
+	(actividad "levantar pesas biceps")
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 5)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria FALSE))
+
+([ontologia_Class30038] of  levantar+pesas
+
+	(actividad "levantar pesas triceps")
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 5)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria FALSE))
+
+([ontologia_Class30039] of  ejercicio+de+fuerza
+
+	(actividad "hacer el puente")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 5)
+	(llena [ontologia_Class3])
+	(MET 10.0)
+	(solitaria TRUE))
+
+([ontologia_Class30040] of  flexiones
+
+	(actividad "flexion de hombros")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 5)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30041] of  flexiones
+
+	(actividad "flexion plantar")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 10)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30042] of  flexiones
+
+	(actividad "flexion plantar")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30043] of  flexiones
+
+	(actividad "flexion de rodilla")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 10)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30044] of  flexiones
+
+	(actividad "flexion de cadera")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30008])
+	(duracion 10)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30045] of  flexiones
+
+	(actividad "flexion de rodilla")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30046] of  flexiones
+
+	(actividad "flexion de cadera")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30008])
+	(duracion 5)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30048] of  extension
+
+	(actividad "extension de rodillas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30049] of  extension
+
+	(actividad "extension de rodillas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 10)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30050] of  extension
+
+	(actividad "extension de cadera")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30008])
+	(duracion 5)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30051] of  extension
+
+	(actividad "extension de cadera")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30008])
+	(duracion 10)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30054] of  elevacion
+
+	(actividad "elevacion de piernas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30055] of  elevacion
+
+	(actividad "elevacion de piernas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 10)
+	(llena [ontologia_Class3])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30056] of  elevacion
+
+	(actividad "elevacion lateral de piernas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30057] of  elevacion
+
+	(actividad "elevacion lateral de piernas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 10)
+	(llena
+		[ontologia_Class3]
+		[ontologia_Class5])
+	(MET 8.0)
+	(solitaria TRUE))
+
+([ontologia_Class30059] of  baloncesto
+
+	(actividad "baloncesto")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 30 40 50 60)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class3]
+		[ontologia_Class5]
+		[ontologia_Class6])
+	(MET 6.0)
+	(solitaria FALSE))
+
+([ontologia_Class30060] of  baloncesto
+
+	(actividad "tiros libres")
+	(afecta+parte+del+cuerpo
+		[ontologia_Class30009]
+		[ontologia_Class30007]
+		[ontologia_Class30008])
+	(duracion 30 40 50 60)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class3]
+		[ontologia_Class5]
+		[ontologia_Class6])
+	(MET 4.5)
+	(solitaria FALSE))
+
+([ontologia_Class30063] of  estiramientos
+
+	(actividad "estiramiento de tendones del muslo")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class4])
+	(MET 2.5)
+	(solitaria FALSE))
+
+([ontologia_Class30064] of  estiramientos
+
+	(actividad "estiramiento de pantorrillas")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class4])
+	(MET 2.5)
+	(solitaria FALSE))
+
+([ontologia_Class30065] of  estiramientos
+
+	(actividad "estiramiento de tobillos")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class4])
+	(MET 2.5)
+	(solitaria FALSE))
+
+([ontologia_Class30066] of  estiramientos
+
+	(actividad "estiramiento de muñeca")
+	(afecta+parte+del+cuerpo [ontologia_Class30007])
+	(duracion 5)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class4])
+	(MET 2.5)
+	(solitaria FALSE))
+
+([ontologia_Class30067] of  estiramientos
+
+	(actividad "estiramiento de cuadriceps")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 5)
+	(llena
+		[ontologia_Class7]
+		[ontologia_Class4])
+	(MET 2.5)
+	(solitaria FALSE))
+
+([ontologia_Class30070] of  rotacion
+
+	(actividad "rotacion doble de cadera")
+	(afecta+parte+del+cuerpo [ontologia_Class30008])
+	(duracion 5)
+	(llena
+		[ontologia_Class4]
+		[ontologia_Class7])
+	(MET 2.5)
+	(solitaria FALSE))
+
+([ontologia_Class30071] of  rotacion
+
+	(actividad "rotacion simple")
+	(afecta+parte+del+cuerpo [ontologia_Class30008])
+	(duracion 5)
+	(llena
+		[ontologia_Class4]
+		[ontologia_Class7])
+	(MET 2.5)
+	(solitaria FALSE))
 
 ([ontologia_Class4] of  Necesidad
 
@@ -329,10 +822,9 @@
 
 ([ontologia_Class8] of  caminar
 
-	(actividad "caminar acompanado")
-	(duracion 45)
-	(duracion-max 45)
-	(duracion-min 45)
+	(actividad "caminar rapido")
+	(afecta+parte+del+cuerpo [ontologia_Class30009])
+	(duracion 45 10 20 30 40 50 60 80)
 	(llena [ontologia_Class7])
-	(MET 3.5)
-	(solitaria FALSE))
+	(MET 4.0)
+	(solitaria TRUE))

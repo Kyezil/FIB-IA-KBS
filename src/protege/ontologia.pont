@@ -1,4 +1,4 @@
-; Tue Dec 04 22:07:52 CET 2018
+; Fri Dec 07 20:11:26 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -65,9 +65,13 @@
 		(create-accessor read-write))
 	(single-slot dependencia
 		(type SYMBOL)
-		(allowed-values independiente fragil dependiente undefined)
+		(allowed-values independiente dependiente_moderado undefined dependiente_severo gran_dependencia)
 		(default undefined)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot no+puede+usar
+		(type INSTANCE)
+;+		(allowed-classes Parte+del+cuerpo)
 		(create-accessor read-write))
 	(single-slot IMC
 ;+		(comment "indice de masa corporal")
@@ -89,17 +93,17 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot nombre
+;+		(comment "Nombre de la persona")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot nivel-actividad
 ;+		(comment "nivel general de actividad del anciano")
 		(type SYMBOL)
 		(allowed-values sedentario-severo sedentario-moderado activo muy-activo undefined)
 		(default undefined)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot nombre
-;+		(comment "Nombre de la persona")
-		(type STRING)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot intensidad
 ;+		(comment "nivel de intensidad de la actividad")
@@ -112,16 +116,16 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot edad
-;+		(comment "edad del anciano")
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot solitaria
 ;+		(comment "indica si la actividad se realiza solo")
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot edad
+;+		(comment "edad del anciano")
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot duracion-max
 		(type INTEGER)
@@ -135,10 +139,9 @@
 (defclass Anciano "Representa una persona mayor y sus caracteristicas"
 	(is-a USER)
 	(role concrete)
-	(multislot tiene
-;+		(comment "Un anciano puede tener varias necesidades, es un objetivo cubrirlas para el anciano")
+	(multislot no+puede+usar
 		(type INSTANCE)
-;+		(allowed-classes Necesidad)
+;+		(allowed-classes Parte+del+cuerpo)
 		(create-accessor read-write))
 	(single-slot IMC
 ;+		(comment "indice de masa corporal")
@@ -160,17 +163,17 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot nombre
-;+		(comment "Nombre de la persona")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot nivel-actividad
 ;+		(comment "nivel general de actividad del anciano")
 		(type SYMBOL)
 		(allowed-values sedentario-severo sedentario-moderado activo muy-activo undefined)
 		(default undefined)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre
+;+		(comment "Nombre de la persona")
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot edad
 ;+		(comment "edad del anciano")
@@ -179,7 +182,7 @@
 		(create-accessor read-write))
 	(single-slot dependencia
 		(type SYMBOL)
-		(allowed-values independiente fragil dependiente undefined)
+		(allowed-values independiente dependiente_moderado undefined dependiente_severo gran_dependencia)
 		(default undefined)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
@@ -200,13 +203,13 @@
 		(type INTEGER)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot MET
-		(type FLOAT)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot actividad
 ;+		(comment "nombre de la actividad")
 		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot MET
+		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot solitaria

@@ -39,30 +39,39 @@
   (assert (days 3))
 )
 
-(defrule generate-recom::obesidad "Trata la obesidad"
+(defrule generate-recom::obesity "Trata la obesidad"
   ?oo <- (obesity)
-  ?do <- (days ?d&:(< ?d 7))
  =>
   (retract ?oo)
-  (retract ?do)
-  (assert (days (+ ?d 1)))
+  (assert (add-day 1))
+  (assert (change-priority "resistencia" 10))
+)
+
+(defrule generate-recom::add-day "Cambia el numero de dias"
+  ?add-o <- (add-day ?inc)
+  ?days-o <- (days ?d&:(and (<= (+ ?d ?inc) 7) (>= (+ ?d ?inc) 0)))
+ =>
+  (retract ?days-o)
+  (retract ?add-o)
+  (assert (days (+ ?d ?inc)))
 )
 
 ;;; Cambios de prioridades en los objetivos
 (defrule generate-recom::init-need "Crea objetos de necesidad"
   (object (is-a Necesidad) (name ?need) (necesidad ?need-name))
-  ?ino <- (init-need ?need-name ?val)
+  ?in-o <- (init-need ?need-name ?val)
  =>
   (assert (objective (need ?need) (priority ?val)))
-  (retract ?ino)
+  (retract ?in-o)
 )
 
-(defrule generate-recom::need-priority "Cambia la prioridad de un objectivo"
-  ?n <- (need-extra ?need)
+(defrule generate-recom::change-priority "Cambia la prioridad de un objectivo"
+  ?n <- (change-priority ?need-name ?val)
+  (object (is-a Necesidad) (name ?need) (necesidad ?need-name))
   ?o <- (objective (need ?need) (priority ?p))
  =>
+  (modify ?o (priority (+ ?p ?val)))
   (retract ?n)
-  (modify ?o (priority (+ ?p 2)))
 )
 
 ;;; Generacion de dias en base a los objetivos

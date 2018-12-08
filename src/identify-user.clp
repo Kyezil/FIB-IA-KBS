@@ -28,15 +28,6 @@
   (send [MAIN::Usuario] put-IMC (round (/ ?w (** (/ ?h 100) 2))))
 )
 
-(defrule identify-user::activity-level "Obtiene el nivel de actividad del usuario"
-  (object (name [Usuario]) (nivel-actividad undefined))
- =>
-  (bind ?act (pregunta "Cúal es su nivel de actividad"
-                       (delete-member$ (slot-allowed-values Anciano nivel-actividad) undefined)
-                       ))
-  (send [MAIN::Usuario] put-nivel-actividad ?act)
-)
-
 (defrule identify-user::dependency "Obtiene el grado de dependencia del usuario"
   (object (name [Usuario]) (dependencia undefined))
  =>
@@ -53,15 +44,7 @@
   (assert (borg walk-1h ?borg))
 )
 
-; (defrule identify-user::need-priority "Pregunta por necesidades especiales"
-;   (object (name [Usuario]))
-;   ?o <- (object (is-a Necesidad) (necesidad ?need&"resistencia"|"fuerza"|"flexibilidad"))
-;  =>
-;   (if (si-o-no-p (str-cat "Necesitas mejorar tu " ?need))
-;    then (assert (need-extra ?o)))
-; )
-
-(defrule identify-user::obesidad "Detecta obesidad"
+(defrule identify-user::obesity "Detecta obesidad"
   (object (name [Usuario]) (IMC ?bmi&:(> ?bmi 30)))
  =>
   (assert (obesity)))

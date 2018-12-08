@@ -39,6 +39,24 @@
   (assert (days 3))
 )
 
+;; Trata condiciones del anciano
+(defrule generate-recom::dependency1 "Trata la dependencia elevada"
+  (object (name [Usuario]) (dependencia dependiente_moderado))
+ =>
+  (assert (add-day -1))
+)
+(defrule generate-recom::dependency2 "Trata la dependencia elevada"
+  (object (name [Usuario]) (dependencia dependiente_severo))
+ =>
+  (assert (add-day -2))
+)
+(defrule generate-recom::dependency3 "Trata la dependencia elevada"
+  (object (name [Usuario]) (dependencia gran_dependencia))
+ =>
+  (assert (add-day -3))
+)
+
+
 (defrule generate-recom::obesity "Trata la obesidad"
   ?oo <- (obesity)
  =>
@@ -49,7 +67,7 @@
 
 (defrule generate-recom::add-day "Cambia el numero de dias"
   ?add-o <- (add-day ?inc)
-  ?days-o <- (days ?d&:(and (<= (+ ?d ?inc) 7) (>= (+ ?d ?inc) 0)))
+  ?days-o <- (days ?d)
  =>
   (retract ?days-o)
   (retract ?add-o)

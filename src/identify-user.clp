@@ -44,6 +44,26 @@
   (assert (borg walk-1h ?borg))
 )
 
+
+;; Pregunta por el estado de salut del paciente
+(defrule identify-user::health-state "Detecta problemas de salud"
+ =>
+  (if (si-o-no-p (str-cat "Tiene problemas cardiacos"))
+   then (assert (change-priority "resistencia" 10))
+        (assert (change-priority "fuerza" 10)))
+  (if (si-o-no-p (str-cat "Sufre de incontinencia urinaria"))
+   then (assert (change-priority "equilibrio" 35)))
+  (if (si-o-no-p (str-cat "Tiene osteoroposis o artrosis"))
+   then (assert (change-priority "equilibrio" 25))
+        (assert (change-priority "flexibilidad" 25)))
+  (if (si-o-no-p (str-cat "Tiene miedo por caerse"))
+   then (assert (change-priority "equilibrio" 35))
+        (assert (change-priority "coordinacion" 20)))
+  (if (si-o-no-p (str-cat "Se ha caído en alguna ocasión"))
+   then (assert (change-priority "equilibrio" 25))
+        (assert (change-priority "resitencia" 5)))
+)
+
 (defrule identify-user::obesity "Detecta obesidad"
   (object (name [Usuario]) (IMC ?bmi&:(> ?bmi 30)))
  =>

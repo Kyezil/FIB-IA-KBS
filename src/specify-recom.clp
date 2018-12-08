@@ -1,12 +1,12 @@
 ; modulo de concretizacion de los ejercicios en base a un planning abstracto
 
-(defrule specify-recom:init-days "Crear facts para la creacion de dias"
+(defrule specify-recom::init-days "Crear facts para la creacion de dias"
   (object (is-a ADay) (name ?aday))
  =>
   (assert (day (aday ?aday)))
 )
 
-(defrule specify-recom:add-activities "Assigna actividades en orden a los dias"
+(defrule specify-recom::add-activities "Assigna actividades en orden a los dias"
   ?d-f <- (day (aday ?aday) (total-time ?tt&:(< ?tt 90))) ; max 1h30
   (object (is-a ADay) (name ?aday) (main-need ?need) (activities $?acts))
  =>
@@ -32,7 +32,7 @@
   )
 )
 
-(defrule specify-recom:test-print "Ver la planificación"
+(defrule specify-recom::test-print "Ver la planificación"
   (declare (salience -100))
   ?week <- (object (name [AbstractWeek]))
  =>

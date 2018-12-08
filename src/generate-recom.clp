@@ -1,38 +1,38 @@
 ;;;; modulo de generacion del planning abstracto
 
 ;;; Define el numero de dias
-(defrule generate-recom:days1 "Define el #dias"
+(defrule generate-recom::days1 "Define el #dias"
   (not (days ?))
   (borg walk-1h 1)
  =>
   (assert (days 7))
 )
-(defrule generate-recom:days2 "Define el #dias"
+(defrule generate-recom::days2 "Define el #dias"
   (not (days ?))
   (borg walk-1h 2)
  =>
   (assert (days 6))
 )
-(defrule generate-recom:days3 "Define el #dias"
+(defrule generate-recom::days3 "Define el #dias"
   (not (days ?))
   (borg walk-1h 3)
  =>
   (assert (days 5))
 )
-(defrule generate-recom:days4 "Define el #dias"
+(defrule generate-recom::days4 "Define el #dias"
   (not (days ?))
   (borg walk-1h 4|5)
  =>
   (assert (days 4))
 )
-(defrule generate-recom:days5 "Define el #dias"
+(defrule generate-recom::days5 "Define el #dias"
   (not (days ?))
   (borg walk-1h 6|7|8|9|10)
  =>
   (assert (days 3))
 )
 
-(defrule generate-recom:obesidad "Trata la obesidad"
+(defrule generate-recom::obesidad "Trata la obesidad"
   ?oo <- (obesity)
   ?do <- (days ?d&:(< ?d 7))
  =>
@@ -42,13 +42,13 @@
 )
 
 ;;; Cambios de prioridades en los objetivos
-(defrule generate-recom:init-need "Crea objetos de necesidad"
+(defrule generate-recom::init-need "Crea objetos de necesidad"
   (object (is-a Necesidad) (name ?need))
  =>
   (assert (objective (need ?need)))
 )
 
-(defrule generate-recom:need-priority "Cambia la prioridad de un objectivo"
+(defrule generate-recom::need-priority "Cambia la prioridad de un objectivo"
   ?n <- (need-extra ?need)
   ?o <- (objective (need ?need) (priority ?p))
  =>
@@ -57,7 +57,7 @@
 )
 
 ;;; Generacion de dias en base a los objetivos
-(defrule generate-recom:generate-abstract-week "Crea un planning segun las prioridades"
+(defrule generate-recom::generate-abstract-week "Crea un planning segun las prioridades"
   (declare (salience -10)) ; IMPORTANT, lower than day changing
   (days ?d)
   (not (object (name [AbstractWeek])))
@@ -90,14 +90,14 @@
                   )
 )
 
-(defrule generate-recom:done "Pasa a la fase de concretizacion del planning"
+(defrule generate-recom::done "Pasa a la fase de concretizacion del planning"
   (object (name [AbstractWeek]))
  =>
   (focus specify-recom)
 )
 
 ;; TEST ONLY
-(defrule generate-recom:display "Visualiza los dias del planning abstracto"
+(defrule generate-recom::display "Visualiza los dias del planning abstracto"
   (testing)
   ?week <- (object (name [AbstractWeek]))
  =>

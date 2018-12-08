@@ -39,3 +39,6 @@
     else FALSE
   )
   )
+
+(deffunction IA (?name)
+  (instance-address * ?name))

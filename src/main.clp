@@ -5,8 +5,6 @@
 ; -- carga de la ontologia --
 ; classes
 (load "protege/clips/ont.pont")
-; instancias
-(load-instances "protege/clips/ont.pins")
 
 ; -- declaracion de modulos --
 ; modulo principal
@@ -18,6 +16,7 @@
 ; modulo de generacion de la recomendacion
 (defmodule generate-recom
   (import MAIN ?ALL)
+  (import identify-user ?ALL)
   (export ?ALL))
 ; modulo de seleccion de actividades
 (defmodule specify-recom
@@ -75,4 +74,7 @@
   (focus identify-user)
 )
 ; start program
+(reset)
+; instancias
+(load-instances "protege/clips/ont.pins")
 ; (run)

@@ -1,9 +1,9 @@
 ; modulo de concretizacion de los ejercicios en base a un planning abstracto
 
 (defrule specify-recom::init-days "Crear facts para la creacion de dias"
-  (object (is-a ADay) (name ?aday))
+  (object (is-a ADay) (name ?day))
  =>
-  (assert (day (aday ?aday)))
+  (assert (day (aday ?day)))
 )
 
 (defrule specify-recom::add-activities "Assigna actividades en orden a los dias"
@@ -27,7 +27,7 @@
      (bind ?act (nth ?i ?available-acts))
 ;  (printout t "selected activity is ")
 ;  (send ?act print)
-     (slot-insert$ ?aday activities 1 ?act)
+     (slot-insert$ (IA ?aday) activities 1 ?act)
      (modify ?d-f (total-time (+ ?tt (nth 1 (send ?act get-duracion)))))
   )
 )
@@ -39,7 +39,7 @@
   (printout t "=== Planificacion de la semana ===" crlf)
   (foreach ?day (send ?week get-days)
     (printout t "-- Dia " ?day-index " ["
-              (send (send ?day get-main-need) get-necesidad)
+              (send (IA (send ?day get-main-need)) get-necesidad)
               "] --" crlf)
       ; (printout t "actividades " (send ?day get-activities) crlf)
       (bind ?acts (send ?day get-activities))

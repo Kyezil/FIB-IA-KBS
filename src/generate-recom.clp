@@ -1,4 +1,11 @@
 ;;;; modulo de generacion del planning abstracto
+(deffacts generate-recom::INIT-NEED "Prioridades iniciales de las necesidades"
+  (init-need "resistencia" 40)
+  (init-need "fuerza" 10)
+  (init-need "equilibrio" 5)
+  (init-need "coordinacion" 2)
+  (init-need "flexibilidad" 2))
+
 
 ;;; Define el numero de dias
 (defrule generate-recom::days1 "Define el #dias"
@@ -43,9 +50,11 @@
 
 ;;; Cambios de prioridades en los objetivos
 (defrule generate-recom::init-need "Crea objetos de necesidad"
-  (object (is-a Necesidad) (name ?need))
+  (object (is-a Necesidad) (name ?need) (necesidad ?need-name))
+  ?ino <- (init-need ?need-name ?val)
  =>
-  (assert (objective (need ?need)))
+  (assert (objective (need ?need) (priority ?val)))
+  (retract ?ino)
 )
 
 (defrule generate-recom::need-priority "Cambia la prioridad de un objectivo"
@@ -72,7 +81,7 @@
     )
   ; (printout t "total probability " ?total crlf)
   ; create a recom-week with d days with random need
-  (bind ?week (make-instance [AbstractWeek] of AWeek))
+  (bind ?week (make-instance AbstractWeek of AWeek))
   (loop-for-count (?i 1 ?d) do
                   ; random objective
                   (bind ?r (random 1 ?total))
@@ -91,7 +100,7 @@
 )
 
 (defrule generate-recom::done "Pasa a la fase de concretizacion del planning"
-  (object (name [AbstractWeek]))
+  (declare (salience -100))
  =>
   (focus specify-recom)
 )

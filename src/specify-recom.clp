@@ -17,7 +17,7 @@
     (find-all-instances ((?ins Actividad))
                         (and (member$ ?need ?ins:llena)
                              (not (member$ ?ins ?acts))
-                             (<= ?ins:duracion-min ?rem-time))))
+                             (<= (nth 1 ?ins:duracion) ?rem-time))))
   ;; (printout t ?available-acts)
   ;; pick one at random
   (bind ?n (length$ ?available-acts))
@@ -28,7 +28,7 @@
 ;  (printout t "selected activity is ")
 ;  (send ?act print)
      (slot-insert$ ?aday activities 1 ?act)
-     (modify ?d-f (total-time (+ ?tt (send ?act get-duracion-min))))
+     (modify ?d-f (total-time (+ ?tt (nth 1 (send ?act get-duracion)))))
   )
 )
 
@@ -45,7 +45,7 @@
       (bind ?acts (send ?day get-activities))
       (foreach ?act ?acts
         (format t " > %s [%dmin]%n"
-                (send ?act get-actividad) (send ?act get-duracion-min))
+                (send ?act get-actividad) (nth 1 (send ?act get-duracion)))
         )
       (printout t crlf)
     )

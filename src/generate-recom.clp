@@ -32,13 +32,12 @@
   (assert (days 3))
 )
 
-(defrule generate-recom:days-bmi "Aumenta el #dias si obesidad"
-  (object (name [Usuario]) (IMC ?bmi&:(> ?bmi 30)))
-  ?df <- (days ?d&:(< ?d 7))
-  (not (days-bmi)) ; HACK
+(defrule generate-recom:obesidad "Trata la obesidad"
+  ?oo <- (obesity)
+  ?do <- (days ?d&:(< ?d 7))
  =>
-  (retract ?df)
-  (assert (days-bmi)) ; HACK
+  (retract ?oo)
+  (retract ?do)
   (assert (days (+ ?d 1)))
 )
 

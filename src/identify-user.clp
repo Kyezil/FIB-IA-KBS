@@ -62,3 +62,8 @@
   (if (si-o-no-p (str-cat "Necesitas mejorar tu " ?need))
    then (assert (need-extra ?o)))
 )
+
+(defrule identify-user:obesidad "Detecta obesidad"
+  (object (name [Usuario]) (IMC ?bmi&:(> ?bmi 30)))
+ =>
+  (assert (obesity)))

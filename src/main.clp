@@ -79,6 +79,16 @@
   )
   (focus identify-user)
 )
+
+(defrule MAIN::sort-duracion "Ordena la duracion de los ejercicios"
+  (declare (salience 1000))
+  (exists (object (is-a Actividad)))
+ =>
+  (do-for-all-instances ((?x Actividad)) TRUE
+    (send ?x put-duracion (sort > ?x:duracion))
+  )
+)
+
 ; start program
 (reset)
 ; instancias

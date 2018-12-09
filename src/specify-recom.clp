@@ -1,4 +1,7 @@
 ; modulo de concretizacion de los ejercicios en base a un planning abstracto
+(deffacts specify-recom::INIT-VALUE
+  (change-value class caminar 10))
+
 (defrule specify-recom::clamp-day-range "Asegura generar entre 3 y 7 dias"
   (declare (salience 10))
   ?o <- (days ?d&:(or (> ?d 7) (< ?d 0)))
@@ -22,6 +25,7 @@
 )
 
 (defrule specify-recom::change-value-class "Cambia la puntuacion de una clase de Actividad"
+  (declare (salience -10))
   ?o <- (change-value class ?class ?val)
  =>
   (do-for-all-instances ((?ex ?class)) TRUE
@@ -38,6 +42,7 @@
 )
 
 (defrule specify-recom::change-value-need "Cambia la puntuacion de actividades para una necesidad"
+  (declare (salience -10))
   ?o <- (change-value need ?need-name ?val)
   (object (is-a Necesidad) (name ?need) (necesidad ?need-name))
  =>

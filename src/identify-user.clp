@@ -67,6 +67,10 @@
    then (assert (has-fallen)))
      ; (assert (change-priority "equilibrio" 25))
      ;    (assert (change-priority "resitencia" 5)))
+  (if (si-o-no-p (str-cat "Tiene hipertensión"))
+   then (assert (hypertension)))
+  (if (si-o-no-p (str-cat "Se siente estresado"))
+   then (assert (stress)))
 )
 
 (defrule identify-user::obesity "Detecta obesidad"

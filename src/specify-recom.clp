@@ -13,12 +13,73 @@
   (assert (day (aday ?day)))
 )
 
+;; Valoracion de actividades segun el usuario
 (defrule specify-recom::init-activities "Crear facts para la valorar actividades"
+  (declare (salience 10))
   (object (is-a Actividad) (name ?act))
  =>
   (assert (activity (act ?act)))
 )
 
+(defrule specify-recom::change-value-class "Cambia la puntuacion de una clase de Actividad"
+  ?o <- (change-value class ?class ?val)
+ =>
+  (do-for-all-instances ((?ex ?class)) TRUE
+    ; (printout t "found instance of " ?class crlf)
+    ; (send ?ex print)
+    ; (printout t crlf)
+    (do-for-fact ((?act activity)) (eq ?act:act (instance-name ?ex))
+      ; (printout t  "found activity fact" ?act crlf)
+      (assert (activity (act ?act:act) (value (+ ?act:value ?val))))
+      (retract ?act)
+    )
+  )
+  (retract ?o)
+)
+
+(defrule specify-recom::change-value-need "Cambia la puntuacion de actividades para una necesidad"
+  ?o <- (change-value need ?need-name ?val)
+  (object (is-a Necesidad) (name ?need) (necesidad ?need-name))
+ =>
+  (do-for-all-instances ((?ex Actividad)) (member$ ?need ?ex:llena)
+    ; (printout t "found activity with need " ?need "> " ?ex crlf)
+    (do-for-fact ((?act activity)) (eq ?act:act (instance-name ?ex))
+      ; (printout t  "found activity fact" ?act crlf)
+      (assert (activity (act ?act:act) (value (+ ?act:value ?val))))
+      (retract ?act)
+    )
+   )
+  (retract ?o)
+)
+;; Valoracion de ejercicios segun el usuario
+(defrule specify-recom::health-heart
+  (heart-problems)
+ =>
+  (assert (change-value class bicicleta+estatica 10))
+  (assert (change-value class abdominales 10))
+)
+(defrule specify-recom::health-osteoroposis
+  (osteoroposis)
+ =>
+  (assert (change-value class caminar 10))
+  (assert (change-value class levantarse+y+sentarse+silla 10))
+)
+(defrule specify-recom::health-hypertension
+  (hypertension)
+ =>
+  (assert (change-value class natacion 10))
+  (assert (change-value class bicicleta+estatica 10))
+  (assert (change-value need "resistencia" 10))
+  (assert (change-value need "fuerza" 20))
+  (assert (change-value need "flexibilidad" 20))
+)
+(defrule specify-recom::health-stress
+  (stress)
+ =>
+  (assert (change-value class relajacion))
+)
+
+;;; Creacion del planning concreto
 (defrule specify-recom::add-activities "Assigna actividades en orden a los dias"
   ?d-f <- (day (aday ?aday) (total-time ?tt&:(< ?tt 90))) ; max 1h30
   (object (is-a ADay) (name ?aday) (main-need ?need) (activities $?acts))

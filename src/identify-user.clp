@@ -71,6 +71,8 @@
    then (assert (hypertension)))
   (if (si-o-no-p (str-cat "Se siente estresado"))
    then (assert (stress)))
+  (if (si-o-no-p (str-cat "Sufre de depresión"))
+   then (assert (depression)))
 )
 
 (defrule identify-user::obesity "Detecta obesidad"

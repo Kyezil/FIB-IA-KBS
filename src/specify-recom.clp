@@ -76,7 +76,34 @@
 (defrule specify-recom::health-stress
   (stress)
  =>
-  (assert (change-value class relajacion))
+  (assert (change-value class relajacion 20))
+)
+;; Depresion =>
+;;      -20 a los solitarios
+;;      -10 a los con MET > 6.5
+(defrule specify-recom::health-depression1
+  (depression)
+ =>
+  (do-for-all-instances ((?ex Actividad)) (eq ?ex:solitaria TRUE)
+    ; (printout t "found activity with need " ?need "> " ?ex crlf)
+    (do-for-fact ((?act activity)) (eq ?act:act (instance-name ?ex))
+      ; (printout t  "found activity fact" ?act crlf)
+      (assert (activity (act ?act:act) (value (- ?act:value 20))))
+      (retract ?act)
+    )
+   )
+)
+(defrule specify-recom::health-depression2
+  (depression)
+ =>
+  (do-for-all-instances ((?ex Actividad)) (> ?ex:MET 6.5)
+    ; (printout t "found activity with need " ?need "> " ?ex crlf)
+    (do-for-fact ((?act activity)) (eq ?act:act (instance-name ?ex))
+      ; (printout t  "found activity fact" ?act crlf)
+      (assert (activity (act ?act:act) (value (- ?act:value 10))))
+      (retract ?act)
+    )
+   )
 )
 
 (defrule specify-recom::high-dependence "Elimina ejercicios solitarios si dependencia"

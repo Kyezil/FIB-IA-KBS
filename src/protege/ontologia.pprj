@@ -1,4 +1,4 @@
-; Sun Dec 09 23:12:41 CET 2018
+; Sun Dec 09 23:29:07 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class75]
-		[ontologia_ProjectKB_Class76]
-		[ontologia_ProjectKB_Class77]
-		[ontologia_ProjectKB_Class30078]
-		[ontologia_ProjectKB_Class30079]
-		[ontologia_ProjectKB_Class30080]
-		[ontologia_ProjectKB_Class30081]
-		[ontologia_ProjectKB_Class30082]))
+		[ontologia_ProjectKB_Class30083]
+		[ontologia_ProjectKB_Class30084]
+		[ontologia_ProjectKB_Class30085]
+		[ontologia_ProjectKB_Class30086]
+		[ontologia_ProjectKB_Class30087]
+		[ontologia_ProjectKB_Class30088]
+		[ontologia_ProjectKB_Class30089]
+		[ontologia_ProjectKB_Class30090]))
 
 ([CLSES_TAB] of  Widget
 
@@ -67,9 +67,6 @@
 ([INSTANCES_TAB] of  Widget
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
-
-([KB_755532_Class0] of  Map
-)
 
 ([KB_944513_Class0] of  String
 
@@ -166,6 +163,9 @@
 	(properties
 		[KB_944513_Class10]
 		[KB_944513_Class11]))
+
+([KB_960922_Class0] of  Map
+)
 
 ([LAYOUT_PROPERTIES] of  Property_List
 
@@ -591,30 +591,45 @@
 ([ontologia_ProjectKB_Class30] of  Property_List
 )
 
-([ontologia_ProjectKB_Class30078] of  String
+([ontologia_ProjectKB_Class30083] of  String
 
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
 
-([ontologia_ProjectKB_Class30079] of  String
+([ontologia_ProjectKB_Class30084] of  String
+
+	(name "Necesidad")
+	(string_value "necesidad"))
+
+([ontologia_ProjectKB_Class30085] of  String
+
+	(name "Ejercicio")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class30086] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([ontologia_ProjectKB_Class30080] of  String
+([ontologia_ProjectKB_Class30087] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class30088] of  String
 
 	(name "Deporte")
 	(string_value "actividad"))
 
-([ontologia_ProjectKB_Class30081] of  String
-
-	(name "Actividad")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class30082] of  String
+([ontologia_ProjectKB_Class30089] of  String
 
 	(name "Parte del cuerpo")
 	(string_value "parte-del-cuerpo"))
+
+([ontologia_ProjectKB_Class30090] of  String
+
+	(name "Actividad")
+	(string_value "%3ANAME"))
 
 ([ontologia_ProjectKB_Class30264] of  Widget
 
@@ -943,21 +958,6 @@
 ([ontologia_ProjectKB_Class74] of  Property_List
 )
 
-([ontologia_ProjectKB_Class75] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_ProjectKB_Class76] of  String
-
-	(name "Necesidad")
-	(string_value "necesidad"))
-
-([ontologia_ProjectKB_Class77] of  String
-
-	(name "Ejercicio")
-	(string_value "actividad"))
-
 ([ontologia_ProjectKB_Class78] of  Widget
 
 	(height 120)
@@ -1088,11 +1088,11 @@
 	(customized_instance_widgets
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[ontologia_ProjectKB_Class97]
-		[STANDARD_FACET_FORM_WIDGET]
 		[STANDARD_SLOT_FORM_WIDGET]
+		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
-		[ontologia_ProjectKB_Class80]
 		[STANDARD_CLASS_FORM_WIDGET]
+		[ontologia_ProjectKB_Class80]
 		[ontologia_ProjectKB_Class10115])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")

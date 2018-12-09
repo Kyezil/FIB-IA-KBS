@@ -1,4 +1,4 @@
-; Sun Dec 09 16:40:00 CET 2018
+; Sun Dec 09 23:12:41 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,15 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class50667]
-		[ontologia_ProjectKB_Class50668]
-		[ontologia_ProjectKB_Class50669]
-		[ontologia_ProjectKB_Class50670]
-		[ontologia_ProjectKB_Class50671]
-		[ontologia_ProjectKB_Class50672]
-		[ontologia_ProjectKB_Class50673]
-		[ontologia_ProjectKB_Class50674]
-		[ontologia_ProjectKB_Class50675]))
+		[ontologia_ProjectKB_Class75]
+		[ontologia_ProjectKB_Class76]
+		[ontologia_ProjectKB_Class77]
+		[ontologia_ProjectKB_Class30078]
+		[ontologia_ProjectKB_Class30079]
+		[ontologia_ProjectKB_Class30080]
+		[ontologia_ProjectKB_Class30081]
+		[ontologia_ProjectKB_Class30082]))
 
 ([CLSES_TAB] of  Widget
 
@@ -69,7 +68,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_752266_Class0] of  Map
+([KB_755532_Class0] of  Map
 )
 
 ([KB_944513_Class0] of  String
@@ -592,6 +591,31 @@
 ([ontologia_ProjectKB_Class30] of  Property_List
 )
 
+([ontologia_ProjectKB_Class30078] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class30079] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class30080] of  String
+
+	(name "Deporte")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class30081] of  String
+
+	(name "Actividad")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class30082] of  String
+
+	(name "Parte del cuerpo")
+	(string_value "parte-del-cuerpo"))
+
 ([ontologia_ProjectKB_Class30264] of  Widget
 
 	(height 60)
@@ -802,110 +826,11 @@
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Delete Instance"))
 
-([ontologia_ProjectKB_Class50667] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_ProjectKB_Class50668] of  String
-
-	(name "Necesidad")
-	(string_value "necesidad"))
-
-([ontologia_ProjectKB_Class50669] of  String
-
-	(name "Ejercicio")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class50670] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class50671] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([ontologia_ProjectKB_Class50672] of  String
-
-	(name "Factor de Riesgo")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class50673] of  String
-
-	(name "Deporte")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class50674] of  String
-
-	(name "Parte del cuerpo")
-	(string_value "parte-del-cuerpo"))
-
-([ontologia_ProjectKB_Class50675] of  String
-
-	(name "Actividad")
-	(string_value "%3ANAME"))
-
 ([ontologia_ProjectKB_Class51] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_ProjectKB_Class52])
 	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
-
-([ontologia_ProjectKB_Class51106] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "afecta parte del cuerpo")
-	(property_list [ontologia_ProjectKB_Class51107])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 0)
-	(y 960))
-
-([ontologia_ProjectKB_Class51107] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class51108]
-		[ontologia_ProjectKB_Class51109]))
-
-([ontologia_ProjectKB_Class51108] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class51109] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class51539] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "afecta parte del cuerpo")
-	(property_list [ontologia_ProjectKB_Class51540])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 0)
-	(y 900))
-
-([ontologia_ProjectKB_Class51540] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class51541]
-		[ontologia_ProjectKB_Class51542]))
-
-([ontologia_ProjectKB_Class51541] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class51542] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
 
 ([ontologia_ProjectKB_Class52] of  Property_List
 )
@@ -1017,6 +942,21 @@
 
 ([ontologia_ProjectKB_Class74] of  Property_List
 )
+
+([ontologia_ProjectKB_Class75] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ontologia_ProjectKB_Class76] of  String
+
+	(name "Necesidad")
+	(string_value "necesidad"))
+
+([ontologia_ProjectKB_Class77] of  String
+
+	(name "Ejercicio")
+	(string_value "actividad"))
 
 ([ontologia_ProjectKB_Class78] of  Widget
 
@@ -1146,14 +1086,14 @@
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
-		[ontologia_ProjectKB_Class97]
-		[PAL_FORM_WIDGET]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET]
-		[ontologia_ProjectKB_Class10115]
+		[ontologia_ProjectKB_Class97]
 		[STANDARD_FACET_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
+		[PAL_FORM_WIDGET]
+		[ontologia_ProjectKB_Class80]
 		[STANDARD_CLASS_FORM_WIDGET]
-		[ontologia_ProjectKB_Class80])
+		[ontologia_ProjectKB_Class10115])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

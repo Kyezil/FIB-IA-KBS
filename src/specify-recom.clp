@@ -120,36 +120,68 @@
   (retract ?a-o)
 )
 
-
+(deffunction intensity-up (?a ?b)
+  (> (send (IA (fact-slot-value ?a act)) get-MET)
+     (send (IA (fact-slot-value ?b act)) get-MET)))
+(deffunction intensity-down (?a ?b)
+  (not (intensity-up ?a ?b)))
 ;;; Creacion del planning concreto
-(defrule specify-recom::add-activities "Assigna actividades en orden a los dias"
-  ?d-f <- (day (aday ?aday) (total-time ?tt&:(< ?tt 90))) ; max 1h30
-  (object (is-a ADay) (name ?aday) (main-need ?need) (activities $?acts))
+(defrule specify-recom::add-all-activities "Pone todas las actividades en los días"
+  (declare (salience -100))
+  ?d-f <- (day (aday ?aday)) ; max 1h30
+  (object (is-a ADay) (name ?aday) (main-need ?need) (activities))
  =>
-  ; (printout t "day is " ?aday " with need " ?need crlf)
-  ;; find available activities
-  (bind ?rem-time (- 90 ?tt))
-  (bind ?available-acts
-    (find-all-instances ((?ins Actividad))
-                        (and (member$ ?need ?ins:llena)
-                             (not (member$ ?ins ?acts))
-                             (<= (nth 1 ?ins:duracion) ?rem-time))))
-  ;; (printout t ?available-acts)
-  ;; pick one at random
-  (bind ?n (length$ ?available-acts))
-  (if (> ?n 0)
-   then ; necessary if there is not enough activities
-     (bind ?i (random 1 ?n))
-     (bind ?act (nth ?i ?available-acts))
-;  (printout t "selected activity is ")
-;  (send ?act print)
-     (slot-insert$ (IA ?aday) activities 1 ?act)
-     (modify ?d-f (total-time (+ ?tt (nth 1 (send ?act get-duracion)))))
-  )
+  ;; split all activities in two sets
+  (bind ?set1 (create$))
+  (bind ?set2 (create$))
+  (do-for-all-facts ((?f activity))
+      (member$ ?need (send (IA ?f:act) get-llena))
+    (if (= 1 (random 1 2))
+     then (bind ?set1 (insert$ ?set1 1 ?f))
+     else (bind ?set2 (insert$ ?set2 1 ?f)))
+    )
+  ; (printout t "TWO SETS" crlf ?set1 crlf ?set2 crlf crlf)
+  ;; sort one < the other > by intensity
+  (bind ?set1 (sort intensity-up ?set1))
+  (bind ?set2 (sort intensity-down ?set2))
+  ; (printout t "SORTED SETS" crlf)
+  ; (foreach ?a ?set1
+  ;   (printout t (send (IA (fact-slot-value ?a act)) get-MET) ","))
+  ; (printout t crlf "SET 2" crlf)
+  ; (foreach ?a ?set2
+  ;   (printout t (send (IA (fact-slot-value ?a act)) get-MET) ","))
+  ; (printout t crlf)
+  ;; merge them to day activities
+  (slot-insert$ (IA ?aday) activities 1 (insert$ ?set2 1 ?set1))
 )
+; (defrule specify-recom::add-activities "Assigna actividades en orden a los dias"
+;   ?d-f <- (day (aday ?aday) (total-time ?tt&:(< ?tt 90))) ; max 1h30
+;   (object (is-a ADay) (name ?aday) (main-need ?need) (activities $?acts))
+;  =>
+;   ; (printout t "day is " ?aday " with need " ?need crlf)
+;   ;; find available activities
+;   (bind ?rem-time (- 90 ?tt))
+;   (bind ?available-acts
+;     (find-all-instances ((?ins Actividad))
+;                         (and (member$ ?need ?ins:llena)
+;                              (not (member$ ?ins ?acts))
+;                               (<= (nth 1 ?ins:duracion) ?rem-time))))
+;   ;; (printout t ?available-acts)
+;   ;; pick one at random
+;   (bind ?n (length$ ?available-acts))
+;   (if (> ?n 0)
+;    then ; necessary if there is not enough activities
+;      (bind ?i (random 1 ?n))
+;      (bind ?act (nth ?i ?available-acts))
+; ;  (printout t "selected activity is ")
+; ;  (send ?act print)
+;      (slot-insert$ (IA ?aday) activities 1 ?act)
+;      (modify ?d-f (total-time (+ ?tt (nth 1 (send ?act get-duracion)))))
+;   )
+; )
 
 (defrule specify-recom::test-print "Ver la planificación"
-  (declare (salience -100))
+  (declare (salience -1000))
   ?week <- (object (name [AbstractWeek]))
  =>
   (printout t "=== Planificacion de la semana ===" crlf)
@@ -160,8 +192,12 @@
       ; (printout t "actividades " (send ?day get-activities) crlf)
       (bind ?acts (send ?day get-activities))
       (foreach ?act ?acts
-        (format t " > %s [%dmin]%n"
-                (send ?act get-actividad) (nth 1 (send ?act get-duracion)))
+        ; (format t " > %s [%dmin]%n"
+        ;         (send ?act get-actividad) (nth 1 (send ?act get-duracion)))
+        (format t " > activity %s,%d value %d%n"
+                (send (IA (fact-slot-value ?act act)) get-actividad)
+                (send (IA (fact-slot-value ?act act)) get-MET)
+                (fact-slot-value ?act value))
         )
       (printout t crlf)
     )

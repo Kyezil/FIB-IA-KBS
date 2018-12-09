@@ -51,7 +51,7 @@
    )
   (retract ?o)
 )
-;; Valoracion de ejercicios segun el usuario
+;;; Valoracion de ejercicios segun el usuario
 (defrule specify-recom::health-heart
   (heart-problems)
  =>
@@ -78,6 +78,16 @@
  =>
   (assert (change-value class relajacion))
 )
+
+(defrule specify-recom::high-dependence "Elimina ejercicios solitarios si dependencia"
+  (object (name [Usuario]) (dependencia ~independiente&~undefined))
+  (object (is-a Actividad) (name ?ex) (solitaria TRUE))
+  ?a-o <- (activity (act ?ex))
+ =>
+  ; (printout t "Found solitary activity" ?ex crlf)
+  (retract ?a-o)
+)
+
 
 ;;; Creacion del planning concreto
 (defrule specify-recom::add-activities "Assigna actividades en orden a los dias"

@@ -1,5 +1,4 @@
 ; modulo de concretizacion de los ejercicios en base a un planning abstracto
-
 (defrule specify-recom::clamp-day-range "Asegura generar entre 3 y 7 dias"
   (declare (salience 10))
   ?o <- (days ?d&:(or (> ?d 7) (< ?d 0)))
@@ -12,6 +11,12 @@
   (object (is-a ADay) (name ?day))
  =>
   (assert (day (aday ?day)))
+)
+
+(defrule specify-recom::init-activities "Crear facts para la valorar actividades"
+  (object (is-a Actividad) (name ?act))
+ =>
+  (assert (activity (act ?act)))
 )
 
 (defrule specify-recom::add-activities "Assigna actividades en orden a los dias"

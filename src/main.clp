@@ -21,6 +21,7 @@
 ; modulo de seleccion de actividades
 (defmodule specify-recom
   (import MAIN ?ALL)
+  (import identify-user ?ALL)
   (export ?ALL))
 ; modulo de presentacion de la solucion
 (defmodule present
@@ -51,6 +52,11 @@
   (slot aday (type INSTANCE) (allowed-classes ADay))
   (slot total-time (type INTEGER) (default 0))
   (slot total-work (type FLOAT) (default 0.0))
+)
+;; -- un actividad para valorar
+(deftemplate activity
+  (slot act (type INSTANCE) (allowed-classes Actividad))
+  (slot value (type INTEGER) (default 0))
 )
 
 ; -- carga de archivos --

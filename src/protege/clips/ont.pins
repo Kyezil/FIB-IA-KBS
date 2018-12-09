@@ -1,4 +1,4 @@
-; Sun Dec 09 11:27:06 CET 2018
+; Sun Dec 09 16:36:36 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -13,7 +13,7 @@
 	(duracion 10 15)
 	(llena [ontologia_Class3])
 	(MET 2.9)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class10] of  ejercicio+de+fuerza
 
@@ -27,7 +27,7 @@
 
 	(actividad "caminar solo")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
-	(duracion 45 10 20 30 40 60 80)
+	(duracion 45 10 20 30 40 60 80 70 90)
 	(llena [ontologia_Class7])
 	(MET 3.5)
 	(solitaria TRUE))
@@ -36,7 +36,7 @@
 
 	(actividad "bicicleta estatica suave")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
-	(duracion 30)
+	(duracion 30 20 40 50 60)
 	(llena [ontologia_Class7])
 	(MET 3.0)
 	(solitaria FALSE))
@@ -48,13 +48,13 @@
 		[ontologia_Class30009]
 		[ontologia_Class30007]
 		[ontologia_Class30008])
-	(duracion 50)
+	(duracion 50 40 60 90)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
 		[ontologia_Class3])
 	(MET 4.5)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class10005] of  relajacion
 
@@ -63,7 +63,7 @@
 		[ontologia_Class30009]
 		[ontologia_Class30007]
 		[ontologia_Class30008])
-	(duracion 30 40 50 60 70)
+	(duracion 30 40 50 60 70 80 90)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
@@ -75,7 +75,7 @@
 
 	(actividad "correr")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
-	(duracion 20 30 40)
+	(duracion 20 30 40 15 45)
 	(llena [ontologia_Class7])
 	(MET 7.0)
 	(solitaria TRUE))
@@ -84,6 +84,7 @@
 
 	(actividad "abdominales")
 	(afecta-parte-del-cuerpo [ontologia_Class30008])
+	(descripcion "3 series de 15 repeticiones con 1 minuto y medio de pausa entre cada serie.")
 	(duracion 5)
 	(llena
 		[ontologia_Class3]
@@ -104,6 +105,7 @@
 
 	(actividad "levantar pesas biceps")
 	(afecta-parte-del-cuerpo [ontologia_Class30007])
+	(descripcion "4 series de 10 repeticiones con 1 minuto y medio de pausa entre cada serie.")
 	(duracion 10)
 	(llena [ontologia_Class3])
 	(MET 8.0)
@@ -138,12 +140,13 @@
 		[ontologia_Class30009]
 		[ontologia_Class30008]
 		[ontologia_Class30007])
-	(duracion 45)
+	(duracion 45 30 60)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class3]
 		[ontologia_Class5])
-	(MET 4.5))
+	(MET 4.5)
+	(solitaria FALSE))
 
 ([ontologia_Class10014] of  baile
 
@@ -151,7 +154,7 @@
 	(afecta-parte-del-cuerpo
 		[ontologia_Class30009]
 		[ontologia_Class30008])
-	(duracion 30)
+	(duracion 30 20 40 50 60)
 	(llena
 		[ontologia_Class7]
 		[ontologia_Class6])
@@ -162,6 +165,7 @@
 
 	(actividad "agachadillas")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "3 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie.")
 	(duracion 5)
 	(llena
 		[ontologia_Class3]
@@ -175,7 +179,7 @@
 	(afecta-parte-del-cuerpo
 		[ontologia_Class30009]
 		[ontologia_Class30008])
-	(duracion 45 20 30 60 70 80 90)
+	(duracion 45 20 30 60 70 80 90 10)
 	(llena
 		[ontologia_Class3]
 		[ontologia_Class7])
@@ -186,7 +190,7 @@
 
 	(actividad "bicicleta estatica moderada")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
-	(duracion 35)
+	(duracion 35 15 25)
 	(llena [ontologia_Class7])
 	(MET 5.5)
 	(solitaria FALSE))
@@ -195,7 +199,7 @@
 
 	(actividad "bicicleta estatica intensa")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
-	(duracion 40)
+	(duracion 40 30 20)
 	(llena [ontologia_Class7])
 	(MET 7.0)
 	(solitaria FALSE))
@@ -204,6 +208,7 @@
 
 	(actividad "abdominales")
 	(afecta-parte-del-cuerpo [ontologia_Class30008])
+	(descripcion "4 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie.")
 	(duracion 10)
 	(llena
 		[ontologia_Class3]
@@ -215,6 +220,7 @@
 
 	(actividad "agachadillas")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "4 series de 10 repeticiones con 1 minuto y medio de pausa entre cada serie.")
 	(duracion 10)
 	(llena
 		[ontologia_Class3]
@@ -262,7 +268,7 @@
 
 	(actividad "caminar despacio")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
-	(duracion 45)
+	(duracion 45 10 20 30 40 50 60 70 80 90)
 	(llena [ontologia_Class7])
 	(MET 2.5)
 	(solitaria FALSE))
@@ -274,7 +280,7 @@
 		[ontologia_Class30009]
 		[ontologia_Class30007]
 		[ontologia_Class30008])
-	(duracion 30 40 50)
+	(duracion 30 40 50 20 60)
 	(llena [ontologia_Class7])
 	(MET 7.0)
 	(solitaria TRUE))
@@ -299,7 +305,7 @@
 
 	(actividad "caminar acompanado")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
-	(duracion 45 10 20 30 40 50 60 80)
+	(duracion 45 10 20 30 40 50 60 80 70 90)
 	(llena [ontologia_Class7])
 	(MET 3.5)
 	(solitaria FALSE))
@@ -311,7 +317,7 @@
 		[ontologia_Class30009]
 		[ontologia_Class30007]
 		[ontologia_Class30008])
-	(duracion 30 40 50)
+	(duracion 30 40 50 60)
 	(llena [ontologia_Class7])
 	(MET 6.0)
 	(solitaria FALSE))
@@ -323,7 +329,7 @@
 		[ontologia_Class30009]
 		[ontologia_Class30007]
 		[ontologia_Class30008])
-	(duracion 15 25 35)
+	(duracion 15 25 35 45)
 	(llena
 		[ontologia_Class5]
 		[ontologia_Class4])
@@ -334,28 +340,21 @@
 
 	(actividad "maquina de musculacion")
 	(afecta-parte-del-cuerpo [ontologia_Class30007])
+	(descripcion "3 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie.")
 	(duracion 5)
 	(llena [ontologia_Class3])
 	(MET 8.0)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class30017] of  maquina+de+musculacion
 
 	(actividad "maquina de musculacion")
 	(afecta-parte-del-cuerpo [ontologia_Class30007])
+	(descripcion "4 series de 10 repeticiones con 1 minuto y medio de pausa entre cada serie.")
 	(duracion 10)
 	(llena [ontologia_Class3])
 	(MET 8.0)
-	(solitaria TRUE))
-
-([ontologia_Class30018] of  maquina+de+musculacion
-
-	(actividad "maquina de musculacion")
-	(afecta-parte-del-cuerpo [ontologia_Class30007])
-	(duracion 15)
-	(llena [ontologia_Class3])
-	(MET 8.0)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class30019] of  levantarse+y+sentarse+silla
 
@@ -366,7 +365,7 @@
 	(duracion 10 15)
 	(llena [ontologia_Class5])
 	(MET 2.9)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class30020] of  andar+con+talones
 
@@ -384,7 +383,7 @@
 	(duracion 15 30 45 60)
 	(llena [ontologia_Class7])
 	(MET 1.5)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class30024] of  relajacion
 
@@ -393,7 +392,7 @@
 		[ontologia_Class30009]
 		[ontologia_Class30007]
 		[ontologia_Class30008])
-	(duracion 30 40 50 60 70)
+	(duracion 30 40 50 60 70 80 90)
 	(llena
 		[ontologia_Class6]
 		[ontologia_Class5]
@@ -412,7 +411,7 @@
 		[ontologia_Class3]
 		[ontologia_Class7])
 	(MET 8.0)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class30027] of  tennis
 
@@ -462,7 +461,8 @@
 	(afecta-parte-del-cuerpo
 		[ontologia_Class30007]
 		[ontologia_Class30008])
-	(duracion 20 40 50 60)
+	(descripcion "Se puede remar en una barca o usando una máquina de remo de gimnasio.")
+	(duracion 40 50 60 20 30)
 	(llena [ontologia_Class7])
 	(MET 3.5)
 	(solitaria TRUE))
@@ -473,7 +473,8 @@
 	(afecta-parte-del-cuerpo
 		[ontologia_Class30007]
 		[ontologia_Class30008])
-	(duracion 20 40 50 60)
+	(descripcion "Se puede remar en una barca o usando una máquina de remo de gimnasio.")
+	(duracion 20 40 30)
 	(llena
 		[ontologia_Class7]
 		[ontologia_Class3])
@@ -486,6 +487,7 @@
 	(afecta-parte-del-cuerpo
 		[ontologia_Class30007]
 		[ontologia_Class30008])
+	(descripcion "4 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie. Levantar y bajar el brazo.")
 	(duracion 10)
 	(llena [ontologia_Class3])
 	(MET 8.0)
@@ -495,6 +497,7 @@
 
 	(actividad "levantar pesas triceps")
 	(afecta-parte-del-cuerpo [ontologia_Class30007])
+	(descripcion "4 series de 10 repeticiones con 1 minuto y medio de pausa entre cada serie. Sujetar la pesa con las dos manos en la espalda y moverla arriba y abajo.")
 	(duracion 10)
 	(llena [ontologia_Class3])
 	(MET 8.0)
@@ -504,6 +507,7 @@
 
 	(actividad "levantar pesas biceps")
 	(afecta-parte-del-cuerpo [ontologia_Class30007])
+	(descripcion "3 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie.")
 	(duracion 5)
 	(llena [ontologia_Class3])
 	(MET 8.0)
@@ -513,6 +517,7 @@
 
 	(actividad "levantar pesas triceps")
 	(afecta-parte-del-cuerpo [ontologia_Class30007])
+	(descripcion "3 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie. Sujetar la pesa con las dos manos en la espalda y moverla arriba y abajo.")
 	(duracion 5)
 	(llena [ontologia_Class3])
 	(MET 8.0)
@@ -536,6 +541,7 @@
 	(afecta-parte-del-cuerpo
 		[ontologia_Class30007]
 		[ontologia_Class30008])
+	(descripcion "3 series de 15 repeticiones con 1 minuto y medio de pausa entre cada serie. Levantar y bajar el brazo.")
 	(duracion 5)
 	(llena [ontologia_Class3])
 	(MET 8.0)
@@ -545,6 +551,7 @@
 
 	(actividad "flexion plantar")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "4 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie. Ponerse de puntillas y mantenerse unos pocos segundos.")
 	(duracion 10)
 	(llena
 		[ontologia_Class3]
@@ -556,6 +563,7 @@
 
 	(actividad "flexion plantar")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "3 series de 15 repeticiones con 1 minuto y medio de pausa entre cada serie. Ponerse de puntillas y mantenerse unos pocos segundos.")
 	(duracion 5)
 	(llena
 		[ontologia_Class3]
@@ -567,6 +575,7 @@
 
 	(actividad "flexion de rodilla")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "4 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie. Doblar la rodilla todo lo que se pueda.")
 	(duracion 10)
 	(llena
 		[ontologia_Class3]
@@ -580,6 +589,7 @@
 	(afecta-parte-del-cuerpo
 		[ontologia_Class30009]
 		[ontologia_Class30008])
+	(descripcion "4 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie. Doblar la cadera todo lo que se pueda.")
 	(duracion 10)
 	(llena
 		[ontologia_Class3]
@@ -591,6 +601,7 @@
 
 	(actividad "flexion de rodilla")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "3 series de 15 repeticiones con 1 minuto y medio de pausa entre cada serie. Doblar la rodilla todo lo que se pueda.")
 	(duracion 5)
 	(llena
 		[ontologia_Class3]
@@ -604,6 +615,7 @@
 	(afecta-parte-del-cuerpo
 		[ontologia_Class30009]
 		[ontologia_Class30008])
+	(descripcion "3 series de 15 repeticiones con 1 minuto y medio de pausa entre cada serie. Doblar la cadera todo lo que se pueda.")
 	(duracion 5)
 	(llena
 		[ontologia_Class3]
@@ -659,6 +671,7 @@
 
 	(actividad "elevacion de piernas")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "3 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie. Estirarse en una esterilla y levantar las piernas tanto como sea posible.")
 	(duracion 5)
 	(llena [ontologia_Class3])
 	(MET 8.0)
@@ -668,6 +681,7 @@
 
 	(actividad "elevacion de piernas")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "4 series de 10 repeticiones con 1 minuto y medio de pausa entre cada serie. Estirarse en una esterilla y levantar las piernas tanto como sea posible.")
 	(duracion 10)
 	(llena [ontologia_Class3])
 	(MET 8.0)
@@ -677,6 +691,7 @@
 
 	(actividad "elevacion lateral de piernas")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "3 series de 12 repeticiones con 1 minuto y medio de pausa entre cada serie. Estirarse en una esterilla y separar las piernas horizontalmente tanto como sea posible.")
 	(duracion 5)
 	(llena
 		[ontologia_Class3]
@@ -688,6 +703,7 @@
 
 	(actividad "elevacion lateral de piernas")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
+	(descripcion "4 series de 10 repeticiones con 1 minuto y medio de pausa entre cada serie. Estirarse en una esterilla y separar las piernas horizontalmente tanto como sea posible.")
 	(duracion 10)
 	(llena
 		[ontologia_Class3]
@@ -784,19 +800,9 @@
 
 ([ontologia_Class30070] of  rotacion
 
-	(actividad "rotacion doble de cadera")
+	(actividad "rotacion de cadera")
 	(afecta-parte-del-cuerpo [ontologia_Class30008])
-	(duracion 5)
-	(llena
-		[ontologia_Class4]
-		[ontologia_Class7])
-	(MET 2.5)
-	(solitaria FALSE))
-
-([ontologia_Class30071] of  rotacion
-
-	(actividad "rotacion simple")
-	(afecta-parte-del-cuerpo [ontologia_Class30008])
+	(descripcion "Hacer girar la cadera en sentido horario y antihorario.")
 	(duracion 5)
 	(llena
 		[ontologia_Class4]
@@ -824,7 +830,7 @@
 
 	(actividad "caminar rapido")
 	(afecta-parte-del-cuerpo [ontologia_Class30009])
-	(duracion 45 10 20 30 40 50 60 80)
+	(duracion 45 10 20 30 40 50 60 80 70 90)
 	(llena [ontologia_Class7])
 	(MET 4.0)
 	(solitaria TRUE))

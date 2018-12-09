@@ -26,6 +26,7 @@
 ; modulo de presentacion de la solucion
 (defmodule present
   (import MAIN ?ALL)
+  (import specify-recom ?ALL)
   (export ?ALL))
 ; volvemos al modulo MAIN
 (focus MAIN)
@@ -40,12 +41,16 @@
 (defclass ADay
   (is-a USER)
   (single-slot main-need (type INSTANCE) (allowed-classes Necesidad))
-  (multislot activities (type INSTANCE) (allowed-classes Actividad))
-)
+  )
 ; -- una semana de recomendacion
 (defclass AWeek
   (is-a USER)
   (multislot days)
+)
+;; -- una actividad para valorar
+(deftemplate activity
+  (slot act (type INSTANCE) (allowed-classes Actividad))
+  (slot value (type INTEGER) (default 0))
 )
 ;; -- un dia para crear la recomendacion
 (deftemplate day
@@ -53,12 +58,17 @@
   (slot total-time (type INTEGER) (default 0))
   (slot total-work (type FLOAT) (default 0.0))
 )
-;; -- un actividad para valorar
-(deftemplate activity
-  (slot act (type INSTANCE) (allowed-classes Actividad))
-  (slot value (type INTEGER) (default 0))
+;; -- un ejercicio en un dia
+(deftemplate day-slot
+  (slot used (type SYMBOL) ; used in recom
+        (allowed-values TRUE FALSE) (default TRUE))
+  (slot day (type INSTANCE); linked to day
+        (allowed-classes ADay))
+  (slot position (type INTEGER)); relative position in day
+  (slot activity (type INSTANCE); activity
+        (allowed-classes Actividad))
+  (slot duration (type INTEGER) (default 0))
 )
-
 ; -- carga de archivos --
 (load "utils.clp")
 (load "identify-user.clp")

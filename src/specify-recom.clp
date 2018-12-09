@@ -125,15 +125,16 @@
      (send (IA (fact-slot-value ?b act)) get-MET)))
 (deffunction intensity-down (?a ?b)
   (not (intensity-up ?a ?b)))
+
 ;;; Creacion del planning concreto
-(defrule specify-recom::add-all-activities "Pone todas las actividades en los días"
+(defrule specify-recom::init-day-slots "Crea todos los slots de dia"
   (declare (salience -100))
-  ?d-f <- (day (aday ?aday)) ; max 1h30
-  (object (is-a ADay) (name ?aday) (main-need ?need) (activities))
+  ?d-f <- (day (aday ?aday))
+  (object (is-a ADay) (name ?aday) (main-need ?need))
  =>
   ;; split all activities in two sets
-  (bind ?set1 (create$))
-  (bind ?set2 (create$))
+  (bind ?set1 (create$)) ; increasing intensity
+  (bind ?set2 (create$)) ; decreasing intensity
   (do-for-all-facts ((?f activity))
       (member$ ?need (send (IA ?f:act) get-llena))
     (if (= 1 (random 1 2))
@@ -151,9 +152,17 @@
   ; (foreach ?a ?set2
   ;   (printout t (send (IA (fact-slot-value ?a act)) get-MET) ","))
   ; (printout t crlf)
-  ;; merge them to day activities
-  (slot-insert$ (IA ?aday) activities 1 (insert$ ?set2 1 ?set1))
+  ;; merge the sets
+  (bind ?full-set (insert$ ?set2 1 ?set1))
+  (foreach ?act ?full-set
+    (assert (day-slot (day ?aday)
+                      (position ?act-index)
+                      (activity (fact-slot-value ?act act))))
+  )
 )
+
+; (defrule specify-recom::select-activities "Selecciona actividades en la lista según la valoración"
+; )
 ; (defrule specify-recom::add-activities "Assigna actividades en orden a los dias"
 ;   ?d-f <- (day (aday ?aday) (total-time ?tt&:(< ?tt 90))) ; max 1h30
 ;   (object (is-a ADay) (name ?aday) (main-need ?need) (activities $?acts))
@@ -170,6 +179,7 @@
 ;   ;; pick one at random
 ;   (bind ?n (length$ ?available-acts))
 ;   (if (> ?n 0)
+
 ;    then ; necessary if there is not enough activities
 ;      (bind ?i (random 1 ?n))
 ;      (bind ?act (nth ?i ?available-acts))
@@ -180,25 +190,10 @@
 ;   )
 ; )
 
-(defrule specify-recom::test-print "Ver la planificación"
-  (declare (salience -1000))
-  ?week <- (object (name [AbstractWeek]))
- =>
-  (printout t "=== Planificacion de la semana ===" crlf)
-  (foreach ?day (send ?week get-days)
-    (printout t "-- Dia " ?day-index " ["
-              (send (IA (send ?day get-main-need)) get-necesidad)
-              "] --" crlf)
-      ; (printout t "actividades " (send ?day get-activities) crlf)
-      (bind ?acts (send ?day get-activities))
-      (foreach ?act ?acts
-        ; (format t " > %s [%dmin]%n"
-        ;         (send ?act get-actividad) (nth 1 (send ?act get-duracion)))
-        (format t " > activity %s,%d value %d%n"
-                (send (IA (fact-slot-value ?act act)) get-actividad)
-                (send (IA (fact-slot-value ?act act)) get-MET)
-                (fact-slot-value ?act value))
-        )
-      (printout t crlf)
-    )
+(defrule specify-recom::done "Pasa a la presentación de la solución"
+  (declare (salience -100))
+  =>
+  (focus present)
 )
+;;
+

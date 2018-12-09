@@ -42,3 +42,6 @@
 
 (deffunction IA (?name)
   (instance-address * ?name))
+
+(deffunction sigmoid (?x)
+  (/ 1 (+ 1 (exp (- 0 (/ ?x 5))))))

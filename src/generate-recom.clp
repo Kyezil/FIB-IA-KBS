@@ -161,17 +161,3 @@
  =>
   (focus specify-recom)
 )
-
-;; TEST ONLY
-(defrule generate-recom::display "Visualiza los dias del planning abstracto"
-  (testing)
-  ?week <- (object (name [AbstractWeek]))
- =>
-  (printout t "=== Planificacion de la semana ===" crlf)
-  (foreach ?day (send ?week get-days)
-    (printout t "> Dia " ?day-index " ["
-              (send (send ?day get-main-need) get-necesidad)
-              "]"
-              crlf)
-    )
-)

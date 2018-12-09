@@ -92,6 +92,36 @@
   (retract ?n)
 )
 
+(defrule generate-recom::health-heart
+  (heart-problems)
+ =>
+  (assert (change-priority "resistencia" 10))
+  (assert (change-priority "fuerza" 10))
+)
+(defrule generate-recom::health-incontinency
+  (incontinency)
+ =>
+  (assert (change-priority "equilibrio" 35))
+)
+(defrule generate-recom::health-osteoroposis
+  (osteoroposis)
+ =>
+  (assert (change-priority "equilibrio" 25))
+  (assert (change-priority "flexibilidad" 25))
+)
+(defrule generate-recom::health-falling-fear
+  (falling-fear)
+ =>
+  (assert (change-priority "equilibrio" 35))
+  (assert (change-priority "coordinacion" 20))
+)
+(defrule generate-recom::health-fas-fallen
+  (has-fallen)
+ =>
+  (assert (change-priority "equilibrio" 25))
+  (assert (change-priority "resitencia" 5))
+)
+
 ;;; Generacion de dias en base a los objetivos
 (defrule generate-recom::generate-abstract-week "Crea un planning segun las prioridades"
   (declare (salience -10)) ; IMPORTANT, lower than day changing

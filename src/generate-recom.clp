@@ -143,8 +143,8 @@
  =>
   (assert (change-priority "equilibrio" 35))
 )
-(defrule generate-recom::health-osteoroposis
-  (osteoroposis)
+(defrule generate-recom::health-osteoporosis
+  (osteoporosis)
  =>
   (assert (change-priority "equilibrio" 25))
   (assert (change-priority "flexibilidad" 25))

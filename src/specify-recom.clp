@@ -2,14 +2,6 @@
 (deffacts specify-recom::INIT-VALUE
   (change-value class caminar 10))
 
-(defrule specify-recom::clamp-day-range "Asegura generar entre 3 y 7 dias"
-  (declare (salience 10))
-  ?o <- (days ?d&:(or (> ?d 7) (< ?d 0)))
- =>
-  (retract ?o)
-  (assert (days (max 0 (min 7 ?d))))
-)
-
 (defrule specify-recom::init-days "Crear facts para la creacion de dias"
   (object (is-a ADay) (name ?day))
  =>
@@ -129,7 +121,7 @@
 ;;; Creacion del planning concreto
 (defrule specify-recom::init-day-slots "Crea todos los slots de dia"
   (declare (salience -100))
-  ?d-f <- (day (aday ?aday))
+  (day (aday ?aday))
   (object (is-a ADay) (name ?aday) (main-need ?need))
  =>
   ;; split all activities in two sets

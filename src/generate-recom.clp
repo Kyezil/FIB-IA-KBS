@@ -39,6 +39,52 @@
   (assert (days 3))
 )
 
+(defrule specify-recom::clamp-day-range "Asegura generar entre 3 y 7 dias"
+  (declare (salience -1)) ; lower than day changing but higher
+  ?o <- (days ?d&:(or (> ?d 7) (< ?d 0)))
+ =>
+  (retract ?o)
+  (assert (days (max 0 (min 7 ?d))))
+)
+
+
+;; Define la cantidad de esfuerzo
+(defrule generate-recom::work1
+  (declare (salience -5))
+  (days 3)
+ =>
+  (assert (work 70))
+)
+(defrule generate-recom::work2
+  (declare (salience -5))
+  (days 4)
+ =>
+  (assert (work 105))
+)
+(defrule generate-recom::work3
+  (declare (salience -5))
+  (days 5)
+ =>
+  (assert (work 140))
+)
+(defrule generate-recom::work4
+  (declare (salience -5))
+  (days 6)
+ =>
+  (assert (work 210))
+)
+(defrule generate-recom::work5
+  (declare (salience -5))
+  (days 7)
+ =>
+  (assert (work 280))
+)
+(defrule generate-recom::YEAH
+  (work ?w)
+ =>
+  (printout t "FOUND WORK " ?w crlf)
+)
+
 ;; Trata condiciones del anciano
 (defrule generate-recom::dependency1 "Trata la dependencia elevada"
   (object (name [Usuario]) (dependencia dependiente_moderado))
@@ -56,14 +102,6 @@
   (assert (add-day -3))
 )
 
-
-(defrule generate-recom::obesity "Trata la obesidad"
-  ?oo <- (obesity)
- =>
-  (retract ?oo)
-  (assert (add-day 1))
-  (assert (change-priority "resistencia" 10))
-)
 
 (defrule generate-recom::add-day "Cambia el numero de dias"
   ?add-o <- (add-day ?inc)
@@ -92,6 +130,13 @@
   (retract ?n)
 )
 
+(defrule generate-recom::obesity "Trata la obesidad"
+  ?oo <- (obesity)
+ =>
+  (retract ?oo)
+  (assert (add-day 1))
+  (assert (change-priority "resistencia" 10))
+)
 (defrule generate-recom::health-heart
   (heart-problems)
  =>

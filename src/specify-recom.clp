@@ -119,7 +119,6 @@
 ;;; Creacion del planning concreto
 (defrule specify-recom::init-day-slots "Crea todos los slots de dia"
   (declare (salience -10))
-  (day (aday ?aday))
   (object (is-a ADay) (name ?aday) (main-need ?need))
  =>
   ;; split all activities in two sets
@@ -159,6 +158,13 @@
 (deffunction specify-recom::get-value-prob (?val)
   (round (* (sigmoid ?val) 100)))
 
+(deffunction specify-recom::is-factible-activity (?act ?rem-time ?rem-work)
+  (bind ?durs (send ?act get-duracion))
+  (bind ?met (send ?act get-MET))
+  (foreach ?dur ?durs
+    (if (and (<= ?dur ?rem-time) (<= (* ?dur ?met) ?rem-work)) then (return TRUE)))
+  (return FALSE))
+
 (defrule specify-recom::select-activities "Selecciona actividades en la lista según la valoración"
   (declare (salience -20))
   (work ?max-w)
@@ -168,16 +174,20 @@
        (total-work ?tw))
   (test (or (< ?tt 30) (< ?tw ?max-w))) ; if tt >= 30 then tw < max-w
  =>
- ; find all unused day-slot in ?aday
-  (bind ?day-slots (find-all-facts ((?f day-slot)) (and (eq ?f:used FALSE)
-                                                       (eq ?f:day ?aday))))
- ; (printout t "remaining unused day-slots for " ?aday " are " ?day-slots crlf)
+ ; find all unused day-slot in ?aday that have factible duration
+  (bind ?day-slots (find-all-facts ((?f day-slot))
+                                   (and (eq ?f:used FALSE)
+                                        (eq ?f:day ?aday)
+                                        (is-factible-activity (IA ?f:activity) (- 90 ?tt) (- ?max-w ?tw)))))
+  ; (printout t "remaining unused day-slots for " ?aday " are " crlf ?day-slots crlf)
  ; select one unused day-slot at random by value
   (bind ?n (+ 1 (length$ ?day-slots)))
-  (bind ?day-slots-prob (create$))
-  (foreach ?day-slot ?day-slots
-    (bind ?day-slots-prob
-      (insert$ ?day-slots-prob ?n (get-value-prob (get-activity-value (fact-slot-value ?day-slot activity))))))
+  (if (< 1 ?n)
+   then
+     (bind ?day-slots-prob (create$))
+     (foreach ?day-slot ?day-slots
+       (bind ?day-slots-prob
+         (insert$ ?day-slots-prob ?n (get-value-prob (get-activity-value (fact-slot-value ?day-slot activity))))))
   ; (printout t " my day slots " crlf ?day-slots " have probability " crlf ?day-slots-prob crlf)
   (bind ?selected-day-slot (select-random-by ?day-slots ?day-slots-prob))
   (bind ?selected-activity (IA (fact-slot-value ?selected-day-slot activity)))
@@ -186,7 +196,7 @@
   (bind ?possible-durations (create$))
   (bind ?activity-MET (send ?selected-activity get-MET))
   (foreach ?dur (send ?selected-activity get-duracion)
-    (if (and (< (+ ?dur ?tt) 90) (or (< ?tt 30) (< (+ ?tw (* ?dur ?activity-MET)) ?max-w)))
+    (if (and (< (+ ?dur ?tt) 90) (< (+ ?tw (* ?dur ?activity-MET)) ?max-w))
      then (bind ?possible-durations (insert$ ?possible-durations 1 ?dur))))
 
   (bind ?n-durations (length$ ?possible-durations))
@@ -197,7 +207,7 @@
   ; (printout t "work amount is " ?work crlf)
      (modify ?day-o (total-time (+ ?tt ?duration)) (total-work (+ ?tw (* ?duration ?activity-MET))))
      (modify ?selected-day-slot (used TRUE) (duration ?duration))
-   )
+   ))
 )
 
 (defrule specify-recom::done "Pasa a la presentación de la solución"

@@ -53,31 +53,31 @@
   (declare (salience -5))
   (days 3)
  =>
-  (assert (work 70))
+  (assert (work 120))
 )
 (defrule generate-recom::work2
   (declare (salience -5))
   (days 4)
  =>
-  (assert (work 105))
+  (assert (work 155))
 )
 (defrule generate-recom::work3
   (declare (salience -5))
   (days 5)
  =>
-  (assert (work 140))
+  (assert (work 170))
 )
 (defrule generate-recom::work4
   (declare (salience -5))
   (days 6)
  =>
-  (assert (work 210))
+  (assert (work 240))
 )
 (defrule generate-recom::work5
   (declare (salience -5))
   (days 7)
  =>
-  (assert (work 280))
+  (assert (work 310))
 )
 
 ;; Trata condiciones del anciano

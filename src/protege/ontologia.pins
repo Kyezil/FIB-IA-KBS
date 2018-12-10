@@ -1,4 +1,4 @@
-; Mon Dec 10 11:44:10 CET 2018
+; Mon Dec 10 19:46:53 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -13,14 +13,6 @@
 	(duracion 10 15)
 	(llena [ontologia_Class3])
 	(MET 2.9)
-	(solitaria FALSE))
-
-([ontologia_Class10] of  ejercicio+de+fuerza
-
-	(actividad "ejercicio de fuerza")
-	(duracion 5)
-	(llena [ontologia_Class3])
-	(MET 8.0)
 	(solitaria FALSE))
 
 ([ontologia_Class10000] of  caminar
@@ -226,42 +218,6 @@
 		[ontologia_Class3]
 		[ontologia_Class5])
 	(MET 8.0)
-	(solitaria FALSE))
-
-([ontologia_Class20026] of  ejercicio+de+equilibrio
-
-	(actividad "ejercicio de equilibrio")
-	(afecta-parte-del-cuerpo
-		[ontologia_Class30009]
-		[ontologia_Class30007]
-		[ontologia_Class30008])
-	(duracion 10 15 20)
-	(llena [ontologia_Class5])
-	(MET 2.9)
-	(solitaria FALSE))
-
-([ontologia_Class20028] of  ejercicio+de+fuerza
-
-	(actividad "ejercicio de fuerza")
-	(duracion 10)
-	(llena [ontologia_Class3])
-	(MET 8.0)
-	(solitaria FALSE))
-
-([ontologia_Class20029] of  ejercicio+de+fuerza
-
-	(actividad "ejercicio de fuerza")
-	(duracion 15)
-	(llena [ontologia_Class3])
-	(MET 8.0)
-	(solitaria FALSE))
-
-([ontologia_Class20030] of  ejercicio+de+resistencia
-
-	(actividad "ejercicio de resistencia")
-	(duracion 20 30 40)
-	(llena [ontologia_Class7])
-	(MET 4.0)
 	(solitaria FALSE))
 
 ([ontologia_Class26] of  caminar

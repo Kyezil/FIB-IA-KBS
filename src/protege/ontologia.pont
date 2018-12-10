@@ -1,4 +1,4 @@
-; Mon Dec 10 11:44:10 CET 2018
+; Mon Dec 10 19:46:53 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -62,6 +62,11 @@
 		(type INSTANCE)
 ;+		(allowed-classes Necesidad)
 		(create-accessor read-write))
+	(single-slot nombre
+;+		(comment "Nombre de la persona")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot nivel-actividad
 ;+		(comment "nivel general de actividad del anciano")
 		(type SYMBOL)
@@ -69,18 +74,8 @@
 		(default undefined)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot nombre
-;+		(comment "Nombre de la persona")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot altura
 ;+		(comment "altura del anciano en cm")
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot edad
-;+		(comment "edad del anciano")
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
@@ -89,6 +84,11 @@
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot edad
+;+		(comment "edad del anciano")
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Anciano "Representa una persona mayor y sus caracteristicas"
@@ -109,17 +109,17 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot nombre
-;+		(comment "Nombre de la persona")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot nivel-actividad
 ;+		(comment "nivel general de actividad del anciano")
 		(type SYMBOL)
 		(allowed-values sedentario-severo sedentario-moderado activo muy-activo undefined)
 		(default undefined)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre
+;+		(comment "Nombre de la persona")
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot edad
 ;+		(comment "edad del anciano")
@@ -153,13 +153,13 @@
 		(type INTEGER)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
+	(single-slot MET
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot actividad
 ;+		(comment "nombre de la actividad")
 		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot MET
-		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot solitaria
@@ -246,10 +246,6 @@
 	(role concrete))
 
 (defclass ejercicio+de+fuerza
-	(is-a Ejercicio)
-	(role concrete))
-
-(defclass ejercicio+de+resistencia
 	(is-a Ejercicio)
 	(role concrete))
 

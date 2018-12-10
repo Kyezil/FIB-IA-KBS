@@ -1,4 +1,4 @@
-; Mon Dec 10 11:44:10 CET 2018
+; Mon Dec 10 19:46:53 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class40121]
-		[ontologia_ProjectKB_Class40122]
-		[ontologia_ProjectKB_Class40123]
-		[ontologia_ProjectKB_Class40124]
-		[ontologia_ProjectKB_Class40125]
-		[ontologia_ProjectKB_Class40126]
-		[ontologia_ProjectKB_Class40127]
-		[ontologia_ProjectKB_Class40128]))
+		[ontologia_ProjectKB_Class30236]
+		[ontologia_ProjectKB_Class30237]
+		[ontologia_ProjectKB_Class30238]
+		[ontologia_ProjectKB_Class30239]
+		[ontologia_ProjectKB_Class30240]
+		[ontologia_ProjectKB_Class30241]
+		[ontologia_ProjectKB_Class30242]
+		[ontologia_ProjectKB_Class30243]))
 
 ([CLSES_TAB] of  Widget
 
@@ -68,7 +68,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_132483_Class0] of  Map
+([KB_095317_Class0] of  Map
 )
 
 ([KB_944513_Class0] of  String
@@ -591,6 +591,193 @@
 ([ontologia_ProjectKB_Class30] of  Property_List
 )
 
+([ontologia_ProjectKB_Class30213] of  Widget
+
+	(is_hidden FALSE)
+	(name "ejercicio de resistencia")
+	(property_list [ontologia_ProjectKB_Class30216])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([ontologia_ProjectKB_Class30216] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class30217]
+		[ontologia_ProjectKB_Class30218]
+		[ontologia_ProjectKB_Class30222]
+		[ontologia_ProjectKB_Class30224]
+		[ontologia_ProjectKB_Class30226]
+		[ontologia_ProjectKB_Class30228]
+		[ontologia_ProjectKB_Class30230]
+		[ontologia_ProjectKB_Class30232]))
+
+([ontologia_ProjectKB_Class30217] of  Property_List
+
+	(name "layout properties"))
+
+([ontologia_ProjectKB_Class30218] of  Widget
+
+	(height 180)
+	(is_hidden FALSE)
+	(name "llena")
+	(property_list [ontologia_ProjectKB_Class30219])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([ontologia_ProjectKB_Class30219] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class30220]
+		[ontologia_ProjectKB_Class30221]))
+
+([ontologia_ProjectKB_Class30220] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class30221] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class30222] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "actividad")
+	(property_list [ontologia_ProjectKB_Class30223])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([ontologia_ProjectKB_Class30223] of  Property_List
+)
+
+([ontologia_ProjectKB_Class30224] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "solitaria")
+	(property_list [ontologia_ProjectKB_Class30225])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([ontologia_ProjectKB_Class30225] of  Property_List
+)
+
+([ontologia_ProjectKB_Class30226] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "descripcion")
+	(property_list [ontologia_ProjectKB_Class30227])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 360))
+
+([ontologia_ProjectKB_Class30227] of  Property_List
+)
+
+([ontologia_ProjectKB_Class30228] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "MET")
+	(property_list [ontologia_ProjectKB_Class30229])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 480))
+
+([ontologia_ProjectKB_Class30229] of  Property_List
+)
+
+([ontologia_ProjectKB_Class30230] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "duracion")
+	(property_list [ontologia_ProjectKB_Class30231])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerListWidget")
+	(width 200)
+	(x 0)
+	(y 780))
+
+([ontologia_ProjectKB_Class30231] of  Property_List
+)
+
+([ontologia_ProjectKB_Class30232] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "afecta-parte-del-cuerpo")
+	(property_list [ontologia_ProjectKB_Class30233])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 900))
+
+([ontologia_ProjectKB_Class30233] of  Property_List
+
+	(properties
+		[ontologia_ProjectKB_Class30234]
+		[ontologia_ProjectKB_Class30235]))
+
+([ontologia_ProjectKB_Class30234] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([ontologia_ProjectKB_Class30235] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([ontologia_ProjectKB_Class30236] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ontologia_ProjectKB_Class30237] of  String
+
+	(name "Necesidad")
+	(string_value "necesidad"))
+
+([ontologia_ProjectKB_Class30238] of  String
+
+	(name "Ejercicio")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class30239] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class30240] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class30241] of  String
+
+	(name "Deporte")
+	(string_value "actividad"))
+
+([ontologia_ProjectKB_Class30242] of  String
+
+	(name "Parte del cuerpo")
+	(string_value "parte-del-cuerpo"))
+
+([ontologia_ProjectKB_Class30243] of  String
+
+	(name "Actividad")
+	(string_value "%3ANAME"))
+
 ([ontologia_ProjectKB_Class30264] of  Widget
 
 	(height 60)
@@ -652,46 +839,6 @@
 
 ([ontologia_ProjectKB_Class40] of  Property_List
 )
-
-([ontologia_ProjectKB_Class40121] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_ProjectKB_Class40122] of  String
-
-	(name "Necesidad")
-	(string_value "necesidad"))
-
-([ontologia_ProjectKB_Class40123] of  String
-
-	(name "Ejercicio")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class40124] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([ontologia_ProjectKB_Class40125] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class40126] of  String
-
-	(name "Deporte")
-	(string_value "actividad"))
-
-([ontologia_ProjectKB_Class40127] of  String
-
-	(name "Actividad")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class40128] of  String
-
-	(name "Parte del cuerpo")
-	(string_value "parte-del-cuerpo"))
 
 ([ontologia_ProjectKB_Class40296] of  Widget
 
@@ -1086,13 +1233,13 @@
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
-		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[ontologia_ProjectKB_Class97]
 		[STANDARD_FACET_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
-		[ontologia_ProjectKB_Class80]
 		[STANDARD_CLASS_FORM_WIDGET]
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
+		[ontologia_ProjectKB_Class80]
 		[ontologia_ProjectKB_Class10115])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")

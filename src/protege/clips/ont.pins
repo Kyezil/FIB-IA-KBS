@@ -1,4 +1,4 @@
-; Sun Dec 09 23:29:18 CET 2018
+; Mon Dec 10 11:44:29 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -450,10 +450,11 @@
 		[ontologia_Class30009]
 		[ontologia_Class30007]
 		[ontologia_Class30008])
+	(descripcion "3 veces con un descanso de 2 minutos entre ellas. Aguantar tanto tiempo como sea posible.")
 	(duracion 10)
 	(llena [ontologia_Class3])
 	(MET 10.0)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class30031] of  remo
 
@@ -530,10 +531,11 @@
 		[ontologia_Class30009]
 		[ontologia_Class30007]
 		[ontologia_Class30008])
+	(descripcion "2 veces con un descanso de 2 minutos entre ellas. Aguantar tanto tiempo como sea posible.")
 	(duracion 5)
 	(llena [ontologia_Class3])
 	(MET 10.0)
-	(solitaria TRUE))
+	(solitaria FALSE))
 
 ([ontologia_Class30040] of  flexiones
 

@@ -67,7 +67,7 @@
      ; (assert (change-priority "equilibrio" 35))
      ;    (assert (change-priority "coordinacion" 20)))
    ;; si diu que si v preguntar per parts del cos
-  (if (si-o-no-p "Ha caído recientmente")
+  (if (si-o-no-p "Ha caído recientemente")
    then (assert (has-fallen)))
      ; (assert (change-priority "equilibrio" 25))
      ;    (assert (change-priority "resitencia" 5)))

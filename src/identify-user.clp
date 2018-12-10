@@ -51,32 +51,42 @@
 ;; Pregunta por el estado de salut del paciente
 (defrule identify-user::health-state "Detecta problemas de salud"
  =>
-  (if (si-o-no-p (str-cat "Tiene problemas cardíacos"))
+  (if (si-o-no-p "Tiene problemas cardíacos")
    then (assert (heart-problems)))
      ; (assert (change-priority "resistencia" 10))
      ;    (assert (change-priority "fuerza" 10)))
-  (if (si-o-no-p (str-cat "Sufre de incontinencia urinaria"))
+  (if (si-o-no-p "Sufre de incontinencia urinaria")
    then (assert (incontinency)))
      ; (assert (change-priority "equilibrio" 35)))
-  (if (si-o-no-p (str-cat "Tiene osteoporosis o artrosis"))
+  (if (si-o-no-p "Tiene osteoporosis o artrosis")
    then (assert (osteoporosis)))
    ; (assert (change-priority "equilibrio" 25))
    ;      (assert (change-priority "flexibilidad" 25)))
-  (if (si-o-no-p (str-cat "Le da miedo caerse"))
+  (if (si-o-no-p "Le da miedo caerse")
    then (assert (falling-fear)))
      ; (assert (change-priority "equilibrio" 35))
      ;    (assert (change-priority "coordinacion" 20)))
    ;; si diu que si v preguntar per parts del cos
-  (if (si-o-no-p (str-cat "Ha caído recientmente"))
+  (if (si-o-no-p "Ha caído recientmente")
    then (assert (has-fallen)))
      ; (assert (change-priority "equilibrio" 25))
      ;    (assert (change-priority "resitencia" 5)))
-  (if (si-o-no-p (str-cat "Tiene hipertensión"))
+  (if (si-o-no-p "Tiene hipertensión")
    then (assert (hypertension)))
-  (if (si-o-no-p (str-cat "Se siente estresado"))
+  (if (si-o-no-p "Se siente estresado")
    then (assert (stress)))
-  (if (si-o-no-p (str-cat "Está deprimido"))
+  (if (si-o-no-p "Está deprimido")
    then (assert (depression)))
+  (if (si-o-no-p "Le duele alguna parte del cuerpo")
+   then (assert (hurt-part)))
+)
+
+(defrule identify-user::hurt-part "Detecta algun dolor en una parte del cuerpo"
+  (hurt-part)
+  (object (name ?part-name) (is-a Parte+del+cuerpo) (parte-del-cuerpo ?part))
+ =>
+  (if (si-o-no-p (str-cat "Puede usar su/sus " ?part))
+   then (assert (hurt ?part-name)))
 )
 
 (defrule identify-user::obesity "Detecta obesidad"

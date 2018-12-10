@@ -16,6 +16,14 @@
   (assert (activity (act ?act)))
 )
 
+(defrule specify-recom::hurt-parts "Eliminar actividades que usen una parte del cuerpo dolida"
+  (declare (salience 100)) ; very high priority
+  (hurt ?part)
+  ?a <- (activity (act ?act&:(member$ ?part (send (IA ?act) get-afecta-parte-del-cuerpo))))
+ =>
+  (retract ?a)
+)
+
 (defrule specify-recom::change-value-class "Cambia la puntuacion de una clase de Actividad"
   ?o <- (change-value class ?class ?val)
  =>

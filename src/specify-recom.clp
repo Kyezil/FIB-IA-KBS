@@ -218,6 +218,25 @@
    ))
 )
 
+(deffunction specify-recom::empty-intersection (?a ?b)
+  (foreach ?el ?a
+    (if (member$ ?el ?b) then (return FALSE)))
+  (return TRUE))
+
+(defrule specify-recom::only-one-part "Fuerza ejercicios de usa sola region del cuerpo por dia"
+  (declare (salience 90)) ; high-priority
+  (day-slot (day ?d) (used TRUE) (activity ?act))
+  (object (is-a Actividad) (name ?act) (afecta-parte-del-cuerpo $?partes))
+  ?ds <- (day-slot (day ?d) (activity ?act2))
+  (object (is-a Actividad) (name ?act2) (afecta-parte-del-cuerpo $?partes2))
+  (test (empty-intersection ?partes ?partes2))
+ =>
+  ; (printout t "FOUND FIRST DAY WITH ACTIVITY" ?act "con partes" $?partes crlf)
+  ; (printout t "FOUND SECOND DAY WITH ACT" ?act2 "con partes" $?partes2 crlf)
+  (retract ?ds) ; elimina el segundo
+)
+
+
 (defrule specify-recom::done "Pasa a la presentación de la solución"
   (declare (salience -100))
   =>

@@ -85,7 +85,7 @@
   (hurt-part)
   (object (name ?part-name) (is-a Parte+del+cuerpo) (parte-del-cuerpo ?part))
  =>
-  (if (si-o-no-p (str-cat "Puede usar su/sus " ?part))
+  (if (not (si-o-no-p (str-cat "Puede usar su/sus " ?part)))
    then (assert (hurt ?part-name)))
 )
 

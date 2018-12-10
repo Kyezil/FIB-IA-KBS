@@ -17,7 +17,6 @@
 )
 
 (defrule specify-recom::change-value-class "Cambia la puntuacion de una clase de Actividad"
-  (declare (salience -10))
   ?o <- (change-value class ?class ?val)
  =>
   (do-for-all-instances ((?ex ?class)) TRUE
@@ -34,7 +33,6 @@
 )
 
 (defrule specify-recom::change-value-need "Cambia la puntuacion de actividades para una necesidad"
-  (declare (salience -10))
   ?o <- (change-value need ?need-name ?val)
   (object (is-a Necesidad) (name ?need) (necesidad ?need-name))
  =>
@@ -42,12 +40,12 @@
     ; (printout t "found activity with need " ?need "> " ?ex crlf)
     (do-for-fact ((?act activity)) (eq ?act:act (instance-name ?ex))
       ; (printout t  "found activity fact" ?act crlf)
-      (assert (activity (act ?act:act) (value (+ ?act:value ?val))))
-      (retract ?act)
+      (modify ?act (act ?act:act) (value (+ ?act:value ?val)))
     )
    )
   (retract ?o)
 )
+
 ;;; Valoracion de ejercicios segun el usuario
 (defrule specify-recom::health-heart
   (heart-problems)
@@ -120,7 +118,7 @@
 
 ;;; Creacion del planning concreto
 (defrule specify-recom::init-day-slots "Crea todos los slots de dia"
-  (declare (salience -100))
+  (declare (salience -10))
   (day (aday ?aday))
   (object (is-a ADay) (name ?aday) (main-need ?need))
  =>
@@ -153,7 +151,42 @@
   )
 )
 
+
+(deffunction specify-recom::get-activity-value (?activity)
+  ; (printout t "GET ACTIVITY VALUE of " ?activity crlf)
+  (fact-slot-value (nth 1 (find-fact ((?act activity)) (eq ?act:act ?activity))) value))
+
+(deffunction specify-recom::get-value-prob (?val)
+  (round (* (sigmoid ?val) 100)))
+
 ; (defrule specify-recom::select-activities "Selecciona actividades en la lista según la valoración"
+;   (declare (salience -20))
+;   (work ?max-w)
+;   (object (is-a ADay) (name ?aday))
+;   ?day-o <- (day (aday ?aday)
+;        (total-time ?tt&:(< ?tt 90))
+;        (total-work ?tw))
+;   ; (test (or (< ?tt 30) (< ?tw ?max-w))) ; if tt >= 30 then tw < max-w
+;  =>
+;  ; find all unused day-slot in ?aday
+;   (bind ?day-slots (find-all-facts ((?f day-slot)) (and (eq ?f:used FALSE)
+;                                                        (eq ?f:day ?aday))))
+;  ; (printout t "remaining unused day-slots for " ?aday " are " ?day-slots crlf)
+;  ; select one unused day-slot at random by value
+;   (bind ?n (+ 1 (length$ ?day-slots)))
+;   (bind ?day-slots-prob (create$))
+;   (foreach ?day-slot ?day-slots
+;     (bind ?day-slots-prob
+;       (insert$ ?day-slots-prob ?n (get-value-prob (get-activity-value (fact-slot-value ?day-slot activity))))))
+;   ; (printout t " my day slots " crlf ?day-slots " have probability " crlf ?day-slots-prob crlf)
+;   (bind ?selected-day-slot (select-random-by ?day-slots ?day-slots-prob))
+;  ; use day-slot
+;   (bind ?duration (nth 1 (send (IA (fact-slot-value ?selected-day-slot activity)) get-duracion)))
+;   (printout t " I selected a day ! " ?selected-day-slot " with duration " ?duration crlf)
+;   (bind ?work     (* ?duration (send (IA (fact-slot-value ?selected-day-slot activity)) get-MET)))
+;   ; (printout t "work amount is " ?work crlf)
+;   (modify ?day-o (total-time (+ ?tt ?duration)) (total-work (+ ?tw ?work)))
+;   (modify ?selected-day-slot (used TRUE) (duration ?duration))
 ; )
 ; (defrule specify-recom::add-activities "Assigna actividades en orden a los dias"
 ;   ?d-f <- (day (aday ?aday) (total-time ?tt&:(< ?tt 90))) ; max 1h30

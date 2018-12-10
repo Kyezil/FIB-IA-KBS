@@ -22,6 +22,7 @@
 (defmodule specify-recom
   (import MAIN ?ALL)
   (import identify-user ?ALL)
+  (import generate-recom ?ALL)
   (export ?ALL))
 ; modulo de presentacion de la solucion
 (defmodule present
@@ -45,7 +46,7 @@
 ; -- una semana de recomendacion
 (defclass AWeek
   (is-a USER)
-  (multislot days)
+  (multislot days (type INSTANCE) (allowed-classes ADay))
 )
 ;; -- una actividad para valorar
 (deftemplate activity
@@ -61,7 +62,7 @@
 ;; -- un ejercicio en un dia
 (deftemplate day-slot
   (slot used (type SYMBOL) ; used in recom
-        (allowed-values TRUE FALSE) (default FALSE))
+        (allowed-values TRUE FALSE) (default TRUE))
   (slot day (type INSTANCE); linked to day
         (allowed-classes ADay))
   (slot position (type INTEGER)); relative position in day

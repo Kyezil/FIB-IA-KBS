@@ -39,12 +39,12 @@
   (assert (days 3))
 )
 
-(defrule specify-recom::clamp-day-range "Asegura generar entre 3 y 7 dias"
+(defrule generate-recom::clamp-day-range "Asegura generar entre 3 y 7 dias"
   (declare (salience -1)) ; lower than day changing but higher
-  ?o <- (days ?d&:(or (> ?d 7) (< ?d 0)))
+  ?o <- (days ?d&:(or (> ?d 7) (< ?d 3)))
  =>
   (retract ?o)
-  (assert (days (max 0 (min 7 ?d))))
+  (assert (days (max 3 (min 7 ?d))))
 )
 
 
@@ -78,11 +78,6 @@
   (days 7)
  =>
   (assert (work 280))
-)
-(defrule generate-recom::YEAH
-  (work ?w)
- =>
-  (printout t "FOUND WORK " ?w crlf)
 )
 
 ;; Trata condiciones del anciano

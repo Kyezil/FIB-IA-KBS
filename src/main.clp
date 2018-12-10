@@ -62,7 +62,7 @@
 ;; -- un ejercicio en un dia
 (deftemplate day-slot
   (slot used (type SYMBOL) ; used in recom
-        (allowed-values TRUE FALSE) (default TRUE))
+        (allowed-values TRUE FALSE) (default FALSE))
   (slot day (type INSTANCE); linked to day
         (allowed-classes ADay))
   (slot position (type INTEGER)); relative position in day

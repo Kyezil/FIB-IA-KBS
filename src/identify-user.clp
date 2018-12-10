@@ -47,7 +47,6 @@
 
 ;; Pregunta por el estado de salut del paciente
 (defrule identify-user::health-state "Detecta problemas de salud"
- (STOP)
  =>
   (if (si-o-no-p (str-cat "Tiene problemas cardiacos"))
    then (assert (heart-problems)))

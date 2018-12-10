@@ -13,7 +13,6 @@
 )
 )
 
-
 (defrule present::test-print "Ver la planificación"
   (declare (salience -1000))
   ?week <- (object (name [AbstractWeek]))
@@ -30,15 +29,14 @@
     (bind ?day-slots (sort pos-dec ?day-slots))
     (foreach ?day-slot ?day-slots
       (bind ?activity (IA (fact-slot-value ?day-slot activity)))
-      (format t "> %s %s [%dmin]%n"
-              (fact-slot-value ?day-slot activity)
+      (format t "> %s [%dmin]%n"
               (send ?activity get-actividad)
               (fact-slot-value ?day-slot duration))
       (bind ?des (send ?activity get-descripcion))
       (if (!= 0 (str-compare ?des ""))
        then (print-description ?des)
       )
-      (printout t crlf)
+      ; (printout t crlf)
       )
     (printout t crlf)
   )

@@ -159,61 +159,46 @@
 (deffunction specify-recom::get-value-prob (?val)
   (round (* (sigmoid ?val) 100)))
 
-; (defrule specify-recom::select-activities "Selecciona actividades en la lista según la valoración"
-;   (declare (salience -20))
-;   (work ?max-w)
-;   (object (is-a ADay) (name ?aday))
-;   ?day-o <- (day (aday ?aday)
-;        (total-time ?tt&:(< ?tt 90))
-;        (total-work ?tw))
-;   ; (test (or (< ?tt 30) (< ?tw ?max-w))) ; if tt >= 30 then tw < max-w
-;  =>
-;  ; find all unused day-slot in ?aday
-;   (bind ?day-slots (find-all-facts ((?f day-slot)) (and (eq ?f:used FALSE)
-;                                                        (eq ?f:day ?aday))))
-;  ; (printout t "remaining unused day-slots for " ?aday " are " ?day-slots crlf)
-;  ; select one unused day-slot at random by value
-;   (bind ?n (+ 1 (length$ ?day-slots)))
-;   (bind ?day-slots-prob (create$))
-;   (foreach ?day-slot ?day-slots
-;     (bind ?day-slots-prob
-;       (insert$ ?day-slots-prob ?n (get-value-prob (get-activity-value (fact-slot-value ?day-slot activity))))))
-;   ; (printout t " my day slots " crlf ?day-slots " have probability " crlf ?day-slots-prob crlf)
-;   (bind ?selected-day-slot (select-random-by ?day-slots ?day-slots-prob))
-;  ; use day-slot
-;   (bind ?duration (nth 1 (send (IA (fact-slot-value ?selected-day-slot activity)) get-duracion)))
-;   (printout t " I selected a day ! " ?selected-day-slot " with duration " ?duration crlf)
-;   (bind ?work     (* ?duration (send (IA (fact-slot-value ?selected-day-slot activity)) get-MET)))
-;   ; (printout t "work amount is " ?work crlf)
-;   (modify ?day-o (total-time (+ ?tt ?duration)) (total-work (+ ?tw ?work)))
-;   (modify ?selected-day-slot (used TRUE) (duration ?duration))
-; )
-; (defrule specify-recom::add-activities "Assigna actividades en orden a los dias"
-;   ?d-f <- (day (aday ?aday) (total-time ?tt&:(< ?tt 90))) ; max 1h30
-;   (object (is-a ADay) (name ?aday) (main-need ?need) (activities $?acts))
-;  =>
-;   ; (printout t "day is " ?aday " with need " ?need crlf)
-;   ;; find available activities
-;   (bind ?rem-time (- 90 ?tt))
-;   (bind ?available-acts
-;     (find-all-instances ((?ins Actividad))
-;                         (and (member$ ?need ?ins:llena)
-;                              (not (member$ ?ins ?acts))
-;                               (<= (nth 1 ?ins:duracion) ?rem-time))))
-;   ;; (printout t ?available-acts)
-;   ;; pick one at random
-;   (bind ?n (length$ ?available-acts))
-;   (if (> ?n 0)
+(defrule specify-recom::select-activities "Selecciona actividades en la lista según la valoración"
+  (declare (salience -20))
+  (work ?max-w)
+  (object (is-a ADay) (name ?aday))
+  ?day-o <- (day (aday ?aday)
+       (total-time ?tt&:(< ?tt 90))
+       (total-work ?tw))
+  (test (or (< ?tt 30) (< ?tw ?max-w))) ; if tt >= 30 then tw < max-w
+ =>
+ ; find all unused day-slot in ?aday
+  (bind ?day-slots (find-all-facts ((?f day-slot)) (and (eq ?f:used FALSE)
+                                                       (eq ?f:day ?aday))))
+ ; (printout t "remaining unused day-slots for " ?aday " are " ?day-slots crlf)
+ ; select one unused day-slot at random by value
+  (bind ?n (+ 1 (length$ ?day-slots)))
+  (bind ?day-slots-prob (create$))
+  (foreach ?day-slot ?day-slots
+    (bind ?day-slots-prob
+      (insert$ ?day-slots-prob ?n (get-value-prob (get-activity-value (fact-slot-value ?day-slot activity))))))
+  ; (printout t " my day slots " crlf ?day-slots " have probability " crlf ?day-slots-prob crlf)
+  (bind ?selected-day-slot (select-random-by ?day-slots ?day-slots-prob))
+  (bind ?selected-activity (IA (fact-slot-value ?selected-day-slot activity)))
+  ;; use day-slot
+  ; select a possible duration
+  (bind ?possible-durations (create$))
+  (bind ?activity-MET (send ?selected-activity get-MET))
+  (foreach ?dur (send ?selected-activity get-duracion)
+    (if (and (< (+ ?dur ?tt) 90) (or (< ?tt 30) (< (+ ?tw (* ?dur ?activity-MET)) ?max-w)))
+     then (bind ?possible-durations (insert$ ?possible-durations 1 ?dur))))
 
-;    then ; necessary if there is not enough activities
-;      (bind ?i (random 1 ?n))
-;      (bind ?act (nth ?i ?available-acts))
-; ;  (printout t "selected activity is ")
-; ;  (send ?act print)
-;      (slot-insert$ (IA ?aday) activities 1 ?act)
-;      (modify ?d-f (total-time (+ ?tt (nth 1 (send ?act get-duracion)))))
-;   )
-; )
+  (bind ?n-durations (length$ ?possible-durations))
+  (if (> ?n-durations 0)
+   then
+     (bind ?duration (nth (random 1 ?n-durations) ?possible-durations))
+     ; (printout t " I selected a day ! " ?selected-day-slot " with duration " ?duration crlf)
+  ; (printout t "work amount is " ?work crlf)
+     (modify ?day-o (total-time (+ ?tt ?duration)) (total-work (+ ?tw (* ?duration ?activity-MET))))
+     (modify ?selected-day-slot (used TRUE) (duration ?duration))
+   )
+)
 
 (defrule specify-recom::done "Pasa a la presentación de la solución"
   (declare (salience -100))
